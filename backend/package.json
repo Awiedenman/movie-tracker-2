@@ -1,0 +1,37 @@
+{
+  "name": "example-api",
+  "version": "1.0.0",
+  "description": "MovieTracker",
+  "engines": {
+    "node": "6.4.0",
+    "npm": "3.10.x"
+  },
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js",
+    "dev-server": "webpack-dev-server --hot --inline --content-base --history-api-fallback",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Taylor Moore",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "bluebird": "^3.3.4",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "express-cors": "0.0.3",
+    "history": "^4.6.3",
+    "pg-promise": "^8.3.0",
+    "raf": "^3.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0"
+  }
+}
