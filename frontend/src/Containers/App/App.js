@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux'
-// import { movieFetch } from '../../helpers/apiCalls';
+import { connect } from 'react-redux'
+import { movieFetch } from '../../helpers/apiCalls';
+import { fetchInitialMovies } from '../../Actions';
 
 class App extends Component {
   constructor( props ){
@@ -8,7 +9,8 @@ class App extends Component {
   }
 
   async componentDidMount(){
-    // const initialFetch = await movieFetch();
+    const initialFetch = await movieFetch();
+    this.props.initialFetchData(initialFetch);
   }
   render() {
     return (
@@ -19,5 +21,9 @@ class App extends Component {
   }
 }
 
+const mapDispatchToProps = dispatch => ({
+  initialFetchData: ( movies ) => dispatch(fetchInitialMovies(movies))
+});
 
-export default  App;
+
+export default connect(null, mapDispatchToProps)(App);
