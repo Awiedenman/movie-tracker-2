@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { movieFetch } from '../../helpers/apiCalls';
+// import { movieFetch } from '../../helpers/apiCalls';
 
 class App extends Component {
   constructor( props ){
@@ -8,7 +8,6 @@ class App extends Component {
 
   async componentDidMount(){
     // const initialFetch = await movieFetch();
-    // console.log(initialFetch);
   }
   render() {
     return (
