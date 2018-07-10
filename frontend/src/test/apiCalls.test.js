@@ -1,7 +1,7 @@
 import { movieFetch } from '../helpers/apiCalls';
 
 describe('HELPERS', () => {
-  test('should call fetch ', async () => {
+  test('should call fetch when movieFetch is called', async () => {
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.resolve({
         ok: true,
