@@ -7,8 +7,8 @@ class App extends Component {
   }
 
   async componentDidMount(){
-    // const initialFetch = await movieFetch();
-    // console.log(initialFetch);
+    const initialFetch = await movieFetch();
+    console.log(initialFetch);
   }
   render() {
     return (
