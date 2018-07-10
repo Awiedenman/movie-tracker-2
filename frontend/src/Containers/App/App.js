@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import { connect } from 'react-redux'
 // import { movieFetch } from '../../helpers/apiCalls';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
       </div>
     );
   }
+}
 
 
-export default App;
+export default  App;

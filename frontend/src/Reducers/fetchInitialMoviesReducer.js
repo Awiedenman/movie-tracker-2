@@ -1,11 +1,13 @@
-import { fetchInitialMoviesReducer } from '../Actions/index';
+import { fetchInitialMovies } from '../Actions/index';
 
-export const fetchInitialMoviesReducer = ( state = [], action ) => {
+const fetchInitialMoviesReducer = ( state = [], action ) => {
 
   switch ( action.type ) {
-    case 'fetchInitialMoviesReducer':
-      return [...state, fetchInitialMoviesReducer];
+    case 'FETCH_INITIAL_MOVIES':
+      return [...state, action.movies];
     default:
       return state;
   }
 };
+
+export default fetchInitialMoviesReducer;
