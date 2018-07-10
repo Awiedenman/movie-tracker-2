@@ -4,8 +4,8 @@ import { mockCleanedMovieList } from '../mock-data/mock-clean-data';
 
 describe('HELPERS', () => {
   test('should return a cleaned movie list', () => {
-    const { cleanInitialMovieRequest } = fetchRequests;
-    const cleanedMovieList = cleanInitialMovieRequest(mockInitialMovieResponse);
+    const { cleanMovieRequest } = fetchRequests;
+    const cleanedMovieList = cleanMovieRequest(mockInitialMovieResponse);
 
     expect(cleanedMovieList).toEqual(mockCleanedMovieList);
   });
