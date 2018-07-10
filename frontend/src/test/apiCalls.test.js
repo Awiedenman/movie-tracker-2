@@ -3,13 +3,15 @@ import { movieFetch } from '../helpers/apiCalls';
 
 describe('HELPERS', () => {
   test('should call fetch when movieFetch is called', async () => {
-    const url = `https://api.themoviedb.org/3/movie/550?api_key=${API_KEY}`;
+    const url = `https://api.themoviedb.org/3/list/1?api_key=${API_KEY}`;
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.resolve({
         ok: true,
         json: () => Promise.resolve()
       }));
+
     await movieFetch();
+
     expect(window.fetch).toHaveBeenCalled();
     expect(window.fetch).toHaveBeenCalledWith(url);
   });
