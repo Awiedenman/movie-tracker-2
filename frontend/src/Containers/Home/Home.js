@@ -20,7 +20,7 @@ export class Home extends Component {
   
   render() {
     // console.log(this.props)
-    const displayMoviesCards = this.props.movies.initialMovies.map(movie => (
+    const displayMoviesCards = this.props.movies.map(movie => (
       <Card 
         {...movie}
         key={movie.id}
@@ -40,8 +40,8 @@ export const mapDispatchToProps = dispatch => ({
   initialFetchData: movies => dispatch(fetchInitialMovies(movies))
 });
 
-export const mapStateToProps = movies => ({
-  movies
+export const mapStateToProps = state => ({
+  movies: state.initialMovies
 });
 
 Home.propTypes = {

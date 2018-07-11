@@ -12,3 +12,11 @@ export const Card = ({ average, id, title, image, overview }) => {
 
   );
 };
+
+Card.propTypes ={
+  average: PropTypes.number,
+  id: PropTypes.number,
+  title: PropTypes.string,
+  image: PropTypes.string,
+  overview: PropTypes.string
+};
