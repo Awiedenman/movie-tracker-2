@@ -1,1 +1,1 @@
-export const cleanMovieRequest = response => (response.items);
+export const cleanMovieResponse = response => (response.items);

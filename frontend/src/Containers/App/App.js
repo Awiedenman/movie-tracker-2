@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { movieFetch } from '../../helpers/apiCalls';
+import { cleanMovieResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies } from '../../Actions';
 import PropTypes from 'prop-types';
 
@@ -10,10 +11,10 @@ export class App extends Component {
   }
   async componentDidMount(){
     const initialFetch = await movieFetch();
-    //cleaner goes here
-    this.props.initialFetchData(initialFetch);
+    const movies = cleanMovieResponse(initialFetch);
+    this.props.initialFetchData(movies);
   }
-  
+
   render() {
     return (
       <div className="App">
@@ -23,12 +24,13 @@ export class App extends Component {
   }
 }
 
-export const mapDispatchToProps = dispatch => ({
-  initialFetchData: ( movies ) => dispatch(fetchInitialMovies(movies))
+
+export const mapStateToProps = state => ({
+  initialMovies: state
 });
 
-export const mapStateToProps = (state) => ({
-  initialMovies: state.initialMovies
+export const mapDispatchToProps = dispatch => ({
+  initialFetchData: movies => dispatch(fetchInitialMovies(movies))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
