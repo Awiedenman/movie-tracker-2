@@ -8,7 +8,12 @@ import { mockCleanedMovieList } from '../mock-data/mock-clean-data';
 describe('Home', () => {
   let wrapper;
   const mockFunc = jest.fn();
-  beforeEach(() => wrapper = shallow(<Home initialFetchData={mockFunc}/>));
+  beforeEach(() => wrapper = shallow(
+    <Home 
+      initialFetchData={mockFunc}
+      movies={mockCleanedMovieList}
+    />
+  ));
 
 
   describe('Home', () => {
@@ -26,25 +31,30 @@ describe('Home', () => {
   describe('mapDispatchToProps', () => {
     test('should call dispatch when MDTP is called', () => {
       const mockDispatch = jest.fn();
-      const actionToDipatch = fetchInitialMovies(mockInitialMovieResponse);
+      const actionToDispatch = fetchInitialMovies(mockInitialMovieResponse);
       const mappedProps = mapDispatchToProps(mockDispatch);
 
       mappedProps.initialFetchData(mockInitialMovieResponse);
 
-      expect(mockDispatch).toHaveBeenCalledWith(actionToDipatch);
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
 
     });
   });
+
 
   describe('mapStateToProps', () => {
     test('should return a props object with a movies array', () => {
       const expected = {
         movies: mockCleanedMovieList
       };
+      
+      const mockState = {
+        initialMovies: mockCleanedMovieList
+      };
+        
+      const actual = mapStateToProps(mockState);
 
-      const mockMappedState = mapStateToProps(mockCleanedMovieList);
-
-      expect(mockMappedState).toEqual(expected);
+      expect(actual).toEqual(expected);
     });
   });
 });

@@ -6,6 +6,17 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Home
     initialFetchData={[Function]}
+    movies={
+        Array [
+            Object {
+              "average": 7.5,
+              "id": 284053,
+              "image": "/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+              "overview": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+              "title": "Thor: Ragnarok",
+            },
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -19,36 +30,24 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h1>
-        home
-</h1>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "home",
-      },
-      "ref": null,
-      "rendered": "home",
-      "type": "h1",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <h1>
+      "children": Array [
+        <h1>
           home
 </h1>,
-      },
-      "ref": null,
-      "rendered": Object {
+        Array [
+          <Unknown
+            average={7.5}
+            id={284053}
+            image="/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
+            overview="Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela."
+            title="Thor: Ragnarok"
+/>,
+        ],
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -59,6 +58,74 @@ ShallowWrapper {
         "rendered": "home",
         "type": "h1",
       },
+      Object {
+        "instance": null,
+        "key": "284053",
+        "nodeType": "function",
+        "props": Object {
+          "average": 7.5,
+          "id": 284053,
+          "image": "/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+          "overview": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+          "title": "Thor: Ragnarok",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            home
+</h1>,
+          Array [
+            <Unknown
+              average={7.5}
+              id={284053}
+              image="/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
+              overview="Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela."
+              title="Thor: Ragnarok"
+/>,
+          ],
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "home",
+          },
+          "ref": null,
+          "rendered": "home",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": "284053",
+          "nodeType": "function",
+          "props": Object {
+            "average": 7.5,
+            "id": 284053,
+            "image": "/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+            "overview": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+            "title": "Thor: Ragnarok",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
