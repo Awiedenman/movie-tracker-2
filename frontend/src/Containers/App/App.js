@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { movieFetch } from '../../helpers/apiCalls';
+import { fetchInitialMovies } from '../../Actions';
+import PropTypes from 'prop-types';
 
-class App extends Component {
+export class App extends Component {
   constructor( props ){
     super( props );
   }
-
   async componentDidMount(){
     const initialFetch = await movieFetch();
-    console.log(initialFetch);
+    //cleaner goes here
+    this.props.initialFetchData(initialFetch);
   }
+  
   render() {
     return (
       <div className="App">
@@ -19,4 +23,16 @@ class App extends Component {
   }
 }
 
-export default App;
+export const mapDispatchToProps = dispatch => ({
+  initialFetchData: ( movies ) => dispatch(fetchInitialMovies(movies))
+});
+
+export const mapStateToProps = (state) => ({
+  initialMovies: state.initialMovies
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+App.propTypes = {
+  initialFetchData: PropTypes.func
+};
