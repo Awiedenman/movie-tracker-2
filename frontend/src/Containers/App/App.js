@@ -6,9 +6,10 @@ import { fetchInitialMovies } from '../../Actions';
 import PropTypes from 'prop-types';
 
 export class App extends Component {
-  constructor( props ){
-    super( props );
+  constructor(props){
+    super(props);
   }
+
   async componentDidMount(){
     const initialFetch = await movieFetch();
     const movies = cleanMovieResponse(initialFetch);

@@ -7,11 +7,19 @@ import { mockCleanedMovieList } from '../mock-data/mock-clean-data';
 
 describe('App', () => {
   let wrapper;
+  const mockFunc = jest.fn();
+  beforeEach(() => wrapper = shallow(<App initialFetchData={mockFunc}/>));
 
-  beforeEach(() => wrapper = shallow(<App />));
 
-  test('renders without crashing', () => {
-    expect(wrapper).toMatchSnapshot();
+  describe('App', () => {
+    test('should ', async () => {
+      await wrapper.instance().componentDidMount();
+      expect(mockFunc).toHaveBeenCalled();
+    });
+
+    test('renders without crashing', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
 

@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders without crashing 1`] = `
+exports[`App App renders without crashing 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <App
+    initialFetchData={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
