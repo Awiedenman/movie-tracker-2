@@ -36,10 +36,10 @@ describe('Login', () => {
       preventDefault: jest.fn()
     };
 
-    const mockState = {
+    wrapper.setState({
       name: 'myname',
       password: 'pass'
-    };
+    });
 
     wrapper.instance().handleSubmit(mockEvent);
     expect(wrapper.state('password')).toEqual('');
