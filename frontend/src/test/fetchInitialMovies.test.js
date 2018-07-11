@@ -1,4 +1,4 @@
-import fetchInitialMoviesReducer from './fetchInitialMoviesReducer';
+import fetchInitialMoviesReducer from '../Reducers/fetchInitialMoviesReducer';
 import * as actions from '../Actions/index';
 // import { mock-clean-data } from '../mock-data/mock-clean-data';
 

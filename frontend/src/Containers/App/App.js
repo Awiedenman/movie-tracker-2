@@ -10,6 +10,7 @@ export class App extends Component {
   }
   async componentDidMount(){
     const initialFetch = await movieFetch();
+    //cleaner goes here
     this.props.initialFetchData(initialFetch);
   }
   
@@ -22,11 +23,11 @@ export class App extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   initialFetchData: ( movies ) => dispatch(fetchInitialMovies(movies))
 });
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   initialMovies: state.initialMovies
 });
 
