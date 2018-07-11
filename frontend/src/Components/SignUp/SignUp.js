@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 export class SignUp extends Component {
@@ -34,8 +35,15 @@ export class SignUp extends Component {
   }
 }
 
-SignUp.propTypes = {
+export const mapStateToProps = (state) => {
+  userInfo: state.userInfo
+};
+
+export const mapDispatchToProps = () => {
 
 };
 
-export default SignUp;
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+
+SignUp.propTypes = {
+};
