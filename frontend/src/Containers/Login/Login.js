@@ -18,8 +18,8 @@ export class Login extends Component {
   }
 
   handleSubmit = event => {
-    event.preventDefault();
     const { email, password } = this.state;
+    event.preventDefault();
     // TODO make a call to props.handleLogin() here
     this.props.handleUserLogin(email, password);
     this.setState({ email: '', password: '' });
@@ -58,5 +58,10 @@ export class Login extends Component {
 export const mapDispatchToProps = dispatch => ({
   handleUserLogin: (email, password) => dispatch(userLogin(email, password))
 });
+
+
+Login.propTypes = {
+
+};
 
 export default connect(null, mapDispatchToProps)(Login);
