@@ -4,7 +4,9 @@ exports[`SignUp should match snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SignUp />,
+  Symbol(enzyme.__unrendered__): <SignUp
+    handleUserSignUp={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -22,17 +24,21 @@ ShallowWrapper {
           Sign Up
 </h1>,
         <form
-          action=""
+          onSubmit={[Function]}
 >
           <input
-                    name=""
+                    name="email"
+                    onChange={[Function]}
                     placeholder="email"
                     type="text"
+                    value=""
           />
           <input
-                    name=""
+                    name="password"
+                    onChange={[Function]}
                     placeholder="password"
                     type="password"
+                    value={undefined}
           />
           <button>
                     Sign Up
@@ -58,22 +64,26 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "action": "",
           "children": Array [
             <input
-              name=""
+              name="email"
+              onChange={[Function]}
               placeholder="email"
               type="text"
+              value=""
 />,
             <input
-              name=""
+              name="password"
+              onChange={[Function]}
               placeholder="password"
               type="password"
+              value={undefined}
 />,
             <button>
               Sign Up
 </button>,
           ],
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -82,9 +92,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "name": "",
+              "name": "email",
+              "onChange": [Function],
               "placeholder": "email",
               "type": "text",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -95,9 +107,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "name": "",
+              "name": "password",
+              "onChange": [Function],
               "placeholder": "password",
               "type": "password",
+              "value": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -131,17 +145,21 @@ ShallowWrapper {
             Sign Up
 </h1>,
           <form
-            action=""
+            onSubmit={[Function]}
 >
             <input
-                        name=""
+                        name="email"
+                        onChange={[Function]}
                         placeholder="email"
                         type="text"
+                        value=""
             />
             <input
-                        name=""
+                        name="password"
+                        onChange={[Function]}
                         placeholder="password"
                         type="password"
+                        value={undefined}
             />
             <button>
                         Sign Up
@@ -167,22 +185,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "action": "",
             "children": Array [
               <input
-                name=""
+                name="email"
+                onChange={[Function]}
                 placeholder="email"
                 type="text"
+                value=""
 />,
               <input
-                name=""
+                name="password"
+                onChange={[Function]}
                 placeholder="password"
                 type="password"
+                value={undefined}
 />,
               <button>
                 Sign Up
 </button>,
             ],
+            "onSubmit": [Function],
           },
           "ref": null,
           "rendered": Array [
@@ -191,9 +213,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "name": "",
+                "name": "email",
+                "onChange": [Function],
                 "placeholder": "email",
                 "type": "text",
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -204,9 +228,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "name": "",
+                "name": "password",
+                "onChange": [Function],
                 "placeholder": "password",
                 "type": "password",
+                "value": undefined,
               },
               "ref": null,
               "rendered": null,

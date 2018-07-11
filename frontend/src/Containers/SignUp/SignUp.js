@@ -41,9 +41,9 @@ export const mapStateToProps = (state) => {
   // userInfo: state.userInfo
 };
 
-export const mapDispatchToProps = (dispatch) => {
-handleUserSignUp: (email, password) => dispatch( userSignUp(email, password)) 
-};
+export const mapDispatchToProps = (dispatch) => ({
+  handleUserSignUp: (email, password) => dispatch( userSignUp(email, password)) 
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
 
