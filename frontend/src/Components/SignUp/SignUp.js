@@ -36,11 +36,11 @@ export class SignUp extends Component {
 }
 
 export const mapStateToProps = (state) => {
-  userInfo: state.userInfo
+  // userInfo: state.userInfo
 };
 
-export const mapDispatchToProps = () => {
-
+export const mapDispatchToProps = (dispatch) => {
+// handleSubmit: (email, password) => dispatch( userSignUp(email, password)) 
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
