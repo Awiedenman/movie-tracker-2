@@ -17,8 +17,10 @@ export class SignUp extends Component {
   }
 
   handleSubmit=(event)=> {
+    const { email, password} = this.state;
     event.preventDefault();
-    
+    this.props.handleUserSignUp(email, password);
+    this.setState({email: '', password: ''});
   }
 
   render() {
@@ -40,10 +42,11 @@ export const mapStateToProps = (state) => {
 };
 
 export const mapDispatchToProps = (dispatch) => {
-// handleSubmit: (email, password) => dispatch( userSignUp(email, password)) 
+handleUserSignUp: (email, password) => dispatch( userSignUp(email, password)) 
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
 
 SignUp.propTypes = {
+  handleUserSignUp: PropTypes.func
 };
