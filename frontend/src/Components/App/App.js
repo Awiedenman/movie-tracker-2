@@ -13,7 +13,7 @@ export const App = () => {
       <Header />
       <section className="main-container">
         <Route exact path="/" component={Home} />
-        <Route exact path="/sign-in" component={SignIn} />
+        <Route exact path="/login" component={SignIn} />
         <Route exact path="/sign-up" component={SignUp} />
       </section>
     </main>
