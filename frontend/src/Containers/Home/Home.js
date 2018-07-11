@@ -5,24 +5,23 @@ import { cleanMovieResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies } from '../../Actions';
 import { Card } from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
-// import '../Home';
 
 export class Home extends Component {
   constructor() {
     super();
   }
 
-  
+
   async componentDidMount(){
     const initialFetch = await movieFetch();
     const movies = cleanMovieResponse(initialFetch);
     this.props.initialFetchData(movies);
   }
-  
+
   render() {
     // console.log(this.props)
     const displayMoviesCards = this.props.movies.map(movie => (
-      <Card 
+      <Card
         {...movie}
         key={movie.id}
       />

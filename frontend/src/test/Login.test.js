@@ -5,7 +5,7 @@ import { Login } from '../Containers/Login/Login';
 describe('Login', () => {
   let wrapper;
 
-  beforeEach(() => wrapper = shallow(<Login />));
+  beforeEach(() => wrapper = shallow(<Login handleUserLogin={jest.fn()}/>));
 
   test('should update the email prop in state change', () => {
     const mockEvent = {
