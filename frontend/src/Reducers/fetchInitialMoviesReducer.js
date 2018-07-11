@@ -1,4 +1,4 @@
-import { fetchInitialMovies } from '../Actions/index';
+// import { fetchInitialMovies } from '../Actions/index';
 
 const fetchInitialMoviesReducer = ( state = [], action ) => {
 

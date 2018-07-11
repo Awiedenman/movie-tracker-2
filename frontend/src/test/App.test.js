@@ -22,12 +22,13 @@ describe('App', () => {
       mappedProps.initialFetchData(mockInitialMovieResponse);
       
       expect(mockDispatch).toHaveBeenCalledWith(actionToDipatch);
-  
+      
     });
   });
-
+  
   describe('mapStateToProps', () => {
-    test('should return a props object with a movies array', () => {
+    test.skip('should return a props object with a movies array', () => {
+      const mockState = mockInitialMovieResponse;
 
     });
   });
