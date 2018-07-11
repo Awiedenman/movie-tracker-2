@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid-template-areas: "header header header header" "movie-list movie-list movie-list movie-list" "movie-list movie-list movie-list movie-list";
+  grid-template-areas: "header header header header" "main-container main-container main-container main-container" "main-container main-container main-container main-container";
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 9rem 1fr 1fr;
   height: 100%;
@@ -14,7 +14,7 @@
   justify-content: space-between;
 }
 
-.movie-list {
+.main-container {
   border: 1px solid blue;
-  grid-area: movie-list;
+  grid-area: main-container;
 }

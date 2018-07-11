@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Movie Tracker
+</h1>,
+        <nav>
+          <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    exact={true}
+                    to="/sign-in"
+          >
+                    SignIn
+          </NavLink>
+          <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/sign-up"
+          >
+                    SignUp
+          </NavLink>
+</nav>,
+      ],
+      "className": "header",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Movie Tracker",
+        },
+        "ref": null,
+        "rendered": "Movie Tracker",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              exact={true}
+              to="/sign-in"
+>
+              SignIn
+</NavLink>,
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/sign-up"
+>
+              SignUp
+</NavLink>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": "SignIn",
+              "exact": true,
+              "to": "/sign-in",
+            },
+            "ref": null,
+            "rendered": "SignIn",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": "SignUp",
+              "to": "/sign-up",
+            },
+            "ref": null,
+            "rendered": "SignUp",
+            "type": [Function],
+          },
+        ],
+        "type": "nav",
+      },
+    ],
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Movie Tracker
+</h1>,
+          <nav>
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        exact={true}
+                        to="/sign-in"
+            >
+                        SignIn
+            </NavLink>
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/sign-up"
+            >
+                        SignUp
+            </NavLink>
+</nav>,
+        ],
+        "className": "header",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Movie Tracker",
+          },
+          "ref": null,
+          "rendered": "Movie Tracker",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                exact={true}
+                to="/sign-in"
+>
+                SignIn
+</NavLink>,
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/sign-up"
+>
+                SignUp
+</NavLink>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "SignIn",
+                "exact": true,
+                "to": "/sign-in",
+              },
+              "ref": null,
+              "rendered": "SignIn",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "SignUp",
+                "to": "/sign-up",
+              },
+              "ref": null,
+              "rendered": "SignUp",
+              "type": [Function],
+            },
+          ],
+          "type": "nav",
+        },
+      ],
+      "type": "header",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

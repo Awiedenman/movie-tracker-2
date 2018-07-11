@@ -9,7 +9,7 @@ const Header = () => {
     <header className="header">
       <h1>Movie Tracker</h1>
       <nav>
-        <NavLink to="/sign-in">SignIn</NavLink>
+        <NavLink exact to="/sign-in">SignIn</NavLink>
         <NavLink to="/sign-up">SignUp</NavLink>
       </nav>
     </header>
