@@ -9,8 +9,8 @@ const Header = () => {
     <header className="header">
       <h1>Movie Tracker</h1>
       <nav>
-        <NavLink exact to="/sign-in">SignIn</NavLink>
-        <NavLink to="/sign-up">SignUp</NavLink>
+        <NavLink exact to="/login">Sign In</NavLink>
+        <NavLink to="/sign-up">Sign Up</NavLink>
       </nav>
     </header>
   );

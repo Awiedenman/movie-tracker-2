@@ -26,16 +26,16 @@ ShallowWrapper {
                     activeClassName="active"
                     aria-current="page"
                     exact={true}
-                    to="/sign-in"
+                    to="/login"
           >
-                    SignIn
+                    Sign In
           </NavLink>
           <NavLink
                     activeClassName="active"
                     aria-current="page"
                     to="/sign-up"
           >
-                    SignUp
+                    Sign Up
           </NavLink>
 </nav>,
       ],
@@ -64,16 +64,16 @@ ShallowWrapper {
               activeClassName="active"
               aria-current="page"
               exact={true}
-              to="/sign-in"
+              to="/login"
 >
-              SignIn
+              Sign In
 </NavLink>,
             <NavLink
               activeClassName="active"
               aria-current="page"
               to="/sign-up"
 >
-              SignUp
+              Sign Up
 </NavLink>,
           ],
         },
@@ -86,12 +86,12 @@ ShallowWrapper {
             "props": Object {
               "activeClassName": "active",
               "aria-current": "page",
-              "children": "SignIn",
+              "children": "Sign In",
               "exact": true,
-              "to": "/sign-in",
+              "to": "/login",
             },
             "ref": null,
-            "rendered": "SignIn",
+            "rendered": "Sign In",
             "type": [Function],
           },
           Object {
@@ -101,11 +101,11 @@ ShallowWrapper {
             "props": Object {
               "activeClassName": "active",
               "aria-current": "page",
-              "children": "SignUp",
+              "children": "Sign Up",
               "to": "/sign-up",
             },
             "ref": null,
-            "rendered": "SignUp",
+            "rendered": "Sign Up",
             "type": [Function],
           },
         ],
@@ -129,16 +129,16 @@ ShallowWrapper {
                         activeClassName="active"
                         aria-current="page"
                         exact={true}
-                        to="/sign-in"
+                        to="/login"
             >
-                        SignIn
+                        Sign In
             </NavLink>
             <NavLink
                         activeClassName="active"
                         aria-current="page"
                         to="/sign-up"
             >
-                        SignUp
+                        Sign Up
             </NavLink>
 </nav>,
         ],
@@ -167,16 +167,16 @@ ShallowWrapper {
                 activeClassName="active"
                 aria-current="page"
                 exact={true}
-                to="/sign-in"
+                to="/login"
 >
-                SignIn
+                Sign In
 </NavLink>,
               <NavLink
                 activeClassName="active"
                 aria-current="page"
                 to="/sign-up"
 >
-                SignUp
+                Sign Up
 </NavLink>,
             ],
           },
@@ -189,12 +189,12 @@ ShallowWrapper {
               "props": Object {
                 "activeClassName": "active",
                 "aria-current": "page",
-                "children": "SignIn",
+                "children": "Sign In",
                 "exact": true,
-                "to": "/sign-in",
+                "to": "/login",
               },
               "ref": null,
-              "rendered": "SignIn",
+              "rendered": "Sign In",
               "type": [Function],
             },
             Object {
@@ -204,11 +204,11 @@ ShallowWrapper {
               "props": Object {
                 "activeClassName": "active",
                 "aria-current": "page",
-                "children": "SignUp",
+                "children": "Sign Up",
                 "to": "/sign-up",
               },
               "ref": null,
-              "rendered": "SignUp",
+              "rendered": "Sign Up",
               "type": [Function],
             },
           ],
