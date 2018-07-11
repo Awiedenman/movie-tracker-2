@@ -44,6 +44,7 @@ ShallowWrapper {
 />,
         ],
       ],
+      "className": "home-container",
     },
     "ref": null,
     "rendered": Array [
@@ -96,6 +97,7 @@ ShallowWrapper {
 />,
           ],
         ],
+        "className": "home-container",
       },
       "ref": null,
       "rendered": Array [

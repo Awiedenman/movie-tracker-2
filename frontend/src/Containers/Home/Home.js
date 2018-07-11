@@ -5,6 +5,7 @@ import { cleanMovieResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies } from '../../Actions';
 import { Card } from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
+// import '../Home';
 
 export class Home extends Component {
   constructor() {
@@ -28,7 +29,7 @@ export class Home extends Component {
     ));
 
     return (
-      <div>
+      <div className='home-container'>
         <h1>home</h1>
         {displayMoviesCards}
       </div>

@@ -26,19 +26,27 @@ ShallowWrapper {
       "children": Array [
         <img
           alt="Movie poster for Thor: Ragnarok"
+          className="card__image"
           src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
 />,
-        <h2>
+        <h2
+          className="card__title"
+>
           Thor: Ragnarok
 </h2>,
-        <h4>
+        <h4
+          className="card__avg"
+>
           Viewer Average: 
           7.5
 </h4>,
-        <p>
+        <p
+          className="card__overview"
+>
           Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
 </p>,
       ],
+      "className": "card",
       "id": 284053,
     },
     "ref": null,
@@ -49,6 +57,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "Movie poster for Thor: Ragnarok",
+          "className": "card__image",
           "src": "https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
         },
         "ref": null,
@@ -61,6 +70,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Thor: Ragnarok",
+          "className": "card__title",
         },
         "ref": null,
         "rendered": "Thor: Ragnarok",
@@ -75,6 +85,7 @@ ShallowWrapper {
             "Viewer Average: ",
             7.5,
           ],
+          "className": "card__avg",
         },
         "ref": null,
         "rendered": Array [
@@ -89,6 +100,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+          "className": "card__overview",
         },
         "ref": null,
         "rendered": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
@@ -106,19 +118,27 @@ ShallowWrapper {
         "children": Array [
           <img
             alt="Movie poster for Thor: Ragnarok"
+            className="card__image"
             src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
 />,
-          <h2>
+          <h2
+            className="card__title"
+>
             Thor: Ragnarok
 </h2>,
-          <h4>
+          <h4
+            className="card__avg"
+>
             Viewer Average: 
             7.5
 </h4>,
-          <p>
+          <p
+            className="card__overview"
+>
             Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
 </p>,
         ],
+        "className": "card",
         "id": 284053,
       },
       "ref": null,
@@ -129,6 +149,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "alt": "Movie poster for Thor: Ragnarok",
+            "className": "card__image",
             "src": "https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
           },
           "ref": null,
@@ -141,6 +162,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Thor: Ragnarok",
+            "className": "card__title",
           },
           "ref": null,
           "rendered": "Thor: Ragnarok",
@@ -155,6 +177,7 @@ ShallowWrapper {
               "Viewer Average: ",
               7.5,
             ],
+            "className": "card__avg",
           },
           "ref": null,
           "rendered": Array [
@@ -169,6 +192,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+            "className": "card__overview",
           },
           "ref": null,
           "rendered": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
