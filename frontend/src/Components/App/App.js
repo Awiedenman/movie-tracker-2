@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import Header from '../../Components/Header/Header';
 import Home from '../../Containers/Home/Home';
-import SignIn from '../../Containers/SignIn/SignIn';
+import Login from '../../Containers/Login/Login';
 import SignUp from '../../Components/SignUp/SignUp';
 
 import './App.css';
@@ -13,7 +13,7 @@ export const App = () => {
       <Header />
       <section className="main-container">
         <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={SignIn} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/sign-up" component={SignUp} />
       </section>
     </main>

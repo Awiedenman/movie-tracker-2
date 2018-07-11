@@ -18,7 +18,7 @@ export class SignIn extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    // TODO make a POST request here
+    // TODO make a call to props.handleLogin() here
 
     this.setState({ email: '', password: '' });
   }
@@ -28,9 +28,20 @@ export class SignIn extends Component {
     return (
       <section>
         <h1>Sign In</h1>
-        <form action="POST" onSubmit={this.handleSubmit}>
-          <input type="text" value={email} name="email" placeholder="email" onChange={this.handleChange} />
-          <input type="password" value={password} name="password" placeholder="password" />
+        <form  onSubmit={this.handleSubmit}>
+          <input type="text"
+            value={email}
+            name="email"
+            placeholder="email"
+            onChange={this.handleChange}
+          />
+          <input
+            type="password"
+            value={password}
+            name="password"
+            placeholder="password"
+            onChange={this.handleChange}
+          />
           <button>Sign In</button>
         </form>
       </section>
