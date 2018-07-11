@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Home, mapDispatchToProps, mapStateToProps } from '../Containers/Home';
+import { Home, mapDispatchToProps, mapStateToProps } from '../Containers/Home/Home';
 import { fetchInitialMovies } from '../Actions';
 import { mockInitialMovieResponse } from '../mock-data/mock-responses';
 import { mockCleanedMovieList } from '../mock-data/mock-clean-data';

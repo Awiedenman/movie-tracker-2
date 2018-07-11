@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { movieFetch } from '../helpers/apiCalls';
-import { cleanMovieResponse } from '../helpers/clean-responses';
-import { fetchInitialMovies } from '../Actions';
+import { movieFetch } from '../../helpers/apiCalls';
+import { cleanMovieResponse } from '../../helpers/clean-responses';
+import { fetchInitialMovies } from '../../Actions';
 import PropTypes from 'prop-types';
 
 export class Home extends Component {
