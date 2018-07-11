@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { movieFetch } from '../../helpers/apiCalls';
 import { fetchInitialMovies } from '../../Actions';
 
-class App extends Component {
+export class App extends Component {
   constructor( props ){
     super( props );
   }
@@ -24,6 +24,5 @@ class App extends Component {
 const mapDispatchToProps = dispatch => ({
   initialFetchData: ( movies ) => dispatch(fetchInitialMovies(movies))
 });
-
 
 export default connect(null, mapDispatchToProps)(App);
