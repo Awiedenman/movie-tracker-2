@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { movieFetch } from '../../helpers/apiCalls';
 import { cleanMovieResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies } from '../../Actions';
+import Header from '../../Components/Header/Header';
 import PropTypes from 'prop-types';
+
+import './App.css';
 
 export class App extends Component {
   constructor(props){
@@ -17,11 +21,13 @@ export class App extends Component {
   }
 
   render() {
-    console.log(this.props.movies);
     return (
-      <div className="App">
-       App
-      </div>
+      <main className="grid-container">
+        <Header />
+        <section className="movie-list" />
+        <Route path="/sign-in" />
+        <Route path="/sign-up" />
+      </main>
     );
   }
 }

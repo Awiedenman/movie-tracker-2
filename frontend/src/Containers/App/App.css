@@ -1,0 +1,20 @@
+.grid-container {
+  display: grid;
+  grid-template-areas: "header header header header" "movie-list movie-list movie-list movie-list" "movie-list movie-list movie-list movie-list";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 9rem 1fr 1fr;
+  height: 100%;
+}
+
+.header {
+  align-items: center;
+  border: 1px solid red;
+  display: flex;
+  grid-area: header;
+  justify-content: space-between;
+}
+
+.movie-list {
+  border: 1px solid blue;
+  grid-area: movie-list;
+}
