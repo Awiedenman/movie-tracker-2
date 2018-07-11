@@ -5,6 +5,6 @@ export const fetchInitialMovies = movies => ({
 
 export const userLogin = (email, password) => ({
   type: 'USER_LOGIN',
-  email: email,
-  password: password
+  email,
+  password
 });

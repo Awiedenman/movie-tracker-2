@@ -31,8 +31,5 @@ describe('Actions', () => {
       const result = userLogin(email, password);
       expect(result).toEqual(mockAction);
     });
-
   });
-
-
 });
