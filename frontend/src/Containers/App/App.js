@@ -6,6 +6,7 @@ import { cleanMovieResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies } from '../../Actions';
 import Header from '../../Components/Header/Header';
 import SignIn from '../../Components/SignIn/SignIn';
+import SignUp from '../../Components/SignUp/SignUp';
 import PropTypes from 'prop-types';
 
 import './App.css';
@@ -28,7 +29,7 @@ export class App extends Component {
         <section className="main-container">
           <Route exact path="/" render={()=> <div><h1>home</h1></div>} />
           <Route exact path="/sign-in" component={SignIn} />
-          <Route exact path="/sign-up" />
+          <Route exact path="/sign-up" component={SignUp} />
         </section>
       </main>
     );
