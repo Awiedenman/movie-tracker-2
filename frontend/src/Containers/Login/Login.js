@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-export class SignIn extends Component {
+export class Login extends Component {
   constructor() {
     super();
     this.state = {
@@ -12,7 +13,6 @@ export class SignIn extends Component {
 
   handleChange = event => {
     const { name, value } = event.target;
-    console.log(name);
     this.setState({ [name]: value });
   }
 
@@ -49,4 +49,12 @@ export class SignIn extends Component {
   }
 }
 
-export default SignIn;
+export const mapStateToProps = state => ({
+
+});
+
+export const mapDispatchToProps = dispatch => ({
+
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
