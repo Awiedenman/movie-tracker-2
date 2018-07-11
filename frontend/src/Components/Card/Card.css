@@ -1,0 +1,10 @@
+.card {
+  height: 60rem;
+  width: 27rem;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.card__image {
+  height: 40.5rem;
+}
