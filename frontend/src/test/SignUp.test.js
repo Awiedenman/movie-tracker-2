@@ -55,4 +55,24 @@ describe('SignUp', () => {
       expect(wrapper.state('password')).toEqual(mockEvent.target.value);
     });
   });
+
+  describe('handleSubmit', () => {
+    test('should reset the value of state to an empty string on submit', () => {
+      const wrapper = shallow(<SignUp handleUserSignUp={jest.fn()} />);
+      const mockEvent = {
+        preventDefault: jest.fn()
+      };
+  
+      wrapper.setState({
+        name: 'Austin',
+        email: 'austin@aol.com',
+        password: 'password'
+      });
+  
+      wrapper.instance().handleSubmit(mockEvent);
+      expect(wrapper.state('name')).toEqual('');
+      expect(wrapper.state('email')).toEqual('');
+      expect(wrapper.state('password')).toEqual('');
+    });
+  });
 });

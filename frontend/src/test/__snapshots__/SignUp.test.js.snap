@@ -27,6 +27,13 @@ ShallowWrapper {
           onSubmit={[Function]}
 >
           <input
+                    name="name"
+                    onChange={[Function]}
+                    placeholder="name"
+                    type="text"
+                    value=""
+          />
+          <input
                     name="email"
                     onChange={[Function]}
                     placeholder="email"
@@ -66,6 +73,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <input
+              name="name"
+              onChange={[Function]}
+              placeholder="name"
+              type="text"
+              value=""
+/>,
+            <input
               name="email"
               onChange={[Function]}
               placeholder="email"
@@ -87,6 +101,21 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "name",
+              "onChange": [Function],
+              "placeholder": "name",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -148,6 +177,13 @@ ShallowWrapper {
             onSubmit={[Function]}
 >
             <input
+                        name="name"
+                        onChange={[Function]}
+                        placeholder="name"
+                        type="text"
+                        value=""
+            />
+            <input
                         name="email"
                         onChange={[Function]}
                         placeholder="email"
@@ -187,6 +223,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <input
+                name="name"
+                onChange={[Function]}
+                placeholder="name"
+                type="text"
+                value=""
+/>,
+              <input
                 name="email"
                 onChange={[Function]}
                 placeholder="email"
@@ -208,6 +251,21 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "name",
+                "onChange": [Function],
+                "placeholder": "name",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
             Object {
               "instance": null,
               "key": undefined,
