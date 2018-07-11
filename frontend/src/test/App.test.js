@@ -39,7 +39,7 @@ describe('App', () => {
   describe('mapStateToProps', () => {
     test('should return a props object with a movies array', () => {
       const expected = {
-        initialMovies: mockCleanedMovieList
+        movies: mockCleanedMovieList
       };
 
       const mockMappedState = mapStateToProps(mockCleanedMovieList);

@@ -17,6 +17,7 @@ export class App extends Component {
   }
 
   render() {
+    console.log(this.props.movies);
     return (
       <div className="App">
        App
@@ -26,8 +27,8 @@ export class App extends Component {
 }
 
 
-export const mapStateToProps = state => ({
-  initialMovies: state
+export const mapStateToProps = movies => ({
+  movies
 });
 
 export const mapDispatchToProps = dispatch => ({
