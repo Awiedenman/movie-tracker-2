@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { userLogin } from '../../Actions/index';
 import PropTypes from 'prop-types';
 
 export class Login extends Component {
@@ -17,9 +18,10 @@ export class Login extends Component {
   }
 
   handleSubmit = event => {
+    const { email, password } = this.state;
     event.preventDefault();
     // TODO make a call to props.handleLogin() here
-
+    this.props.handleUserLogin(email, password);
     this.setState({ email: '', password: '' });
   }
 
@@ -49,12 +51,17 @@ export class Login extends Component {
   }
 }
 
-export const mapStateToProps = state => ({
+// export const mapStateToProps = state => ({
 
-});
+// });
 
 export const mapDispatchToProps = dispatch => ({
-
+  handleUserLogin: (email, password) => dispatch(userLogin(email, password))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+
+Login.propTypes = {
+
+};
+
+export default connect(null, mapDispatchToProps)(Login);

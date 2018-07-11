@@ -5,7 +5,7 @@ import { Login } from '../Containers/Login/Login';
 describe('Login', () => {
   let wrapper;
 
-  beforeEach(() => wrapper = shallow(<Login />));
+  beforeEach(() => wrapper = shallow(<Login handleUserLogin={jest.fn()}/>));
 
   test('should update the email prop in state change', () => {
     const mockEvent = {
@@ -36,10 +36,10 @@ describe('Login', () => {
       preventDefault: jest.fn()
     };
 
-    const mockState = {
+    wrapper.setState({
       name: 'myname',
       password: 'pass'
-    };
+    });
 
     wrapper.instance().handleSubmit(mockEvent);
     expect(wrapper.state('password')).toEqual('');
