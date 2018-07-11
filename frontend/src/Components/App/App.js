@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import Header from '../../Components/Header/Header';
 import Home from '../../Containers/Home/Home';
-import SignIn from '../../Components/SignIn/SignIn';
+import SignIn from '../../Containers/SignIn/SignIn';
 import SignUp from '../../Components/SignUp/SignUp';
 
 import './App.css';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SignIn from '../Components/SignIn/SignIn';
+import SignIn from '../Containers/SignIn/SignIn';
 
 describe('SignIn', () => {
   let wrapper;
