@@ -20,7 +20,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
+        <h1
+          className="login__title"
+>
           Sign In
 </h1>,
         false,
@@ -33,6 +35,7 @@ ShallowWrapper {
                     name="email"
                     onChange={[Function]}
                     placeholder="Email"
+                    required={true}
                     type="text"
                     value=""
           />
@@ -41,6 +44,7 @@ ShallowWrapper {
                     name="password"
                     onChange={[Function]}
                     placeholder="Password"
+                    required={true}
                     type="password"
                     value=""
           />
@@ -61,6 +65,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Sign In",
+          "className": "login__title",
         },
         "ref": null,
         "rendered": "Sign In",
@@ -78,6 +83,7 @@ ShallowWrapper {
               name="email"
               onChange={[Function]}
               placeholder="Email"
+              required={true}
               type="text"
               value=""
 />,
@@ -86,6 +92,7 @@ ShallowWrapper {
               name="password"
               onChange={[Function]}
               placeholder="Password"
+              required={true}
               type="password"
               value=""
 />,
@@ -109,6 +116,7 @@ ShallowWrapper {
               "name": "email",
               "onChange": [Function],
               "placeholder": "Email",
+              "required": true,
               "type": "text",
               "value": "",
             },
@@ -125,6 +133,7 @@ ShallowWrapper {
               "name": "password",
               "onChange": [Function],
               "placeholder": "Password",
+              "required": true,
               "type": "password",
               "value": "",
             },
@@ -157,7 +166,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
+          <h1
+            className="login__title"
+>
             Sign In
 </h1>,
           false,
@@ -170,6 +181,7 @@ ShallowWrapper {
                         name="email"
                         onChange={[Function]}
                         placeholder="Email"
+                        required={true}
                         type="text"
                         value=""
             />
@@ -178,6 +190,7 @@ ShallowWrapper {
                         name="password"
                         onChange={[Function]}
                         placeholder="Password"
+                        required={true}
                         type="password"
                         value=""
             />
@@ -198,6 +211,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Sign In",
+            "className": "login__title",
           },
           "ref": null,
           "rendered": "Sign In",
@@ -215,6 +229,7 @@ ShallowWrapper {
                 name="email"
                 onChange={[Function]}
                 placeholder="Email"
+                required={true}
                 type="text"
                 value=""
 />,
@@ -223,6 +238,7 @@ ShallowWrapper {
                 name="password"
                 onChange={[Function]}
                 placeholder="Password"
+                required={true}
                 type="password"
                 value=""
 />,
@@ -246,6 +262,7 @@ ShallowWrapper {
                 "name": "email",
                 "onChange": [Function],
                 "placeholder": "Email",
+                "required": true,
                 "type": "text",
                 "value": "",
               },
@@ -262,6 +279,7 @@ ShallowWrapper {
                 "name": "password",
                 "onChange": [Function],
                 "placeholder": "Password",
+                "required": true,
                 "type": "password",
                 "value": "",
               },
@@ -319,7 +337,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
+        <h1
+          className="login__title"
+>
           Sign In
 </h1>,
         false,
@@ -332,6 +352,7 @@ ShallowWrapper {
                     name="email"
                     onChange={[Function]}
                     placeholder="Email"
+                    required={true}
                     type="text"
                     value=""
           />
@@ -340,6 +361,7 @@ ShallowWrapper {
                     name="password"
                     onChange={[Function]}
                     placeholder="Password"
+                    required={true}
                     type="password"
                     value=""
           />
@@ -360,6 +382,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Sign In",
+          "className": "login__title",
         },
         "ref": null,
         "rendered": "Sign In",
@@ -377,6 +400,7 @@ ShallowWrapper {
               name="email"
               onChange={[Function]}
               placeholder="Email"
+              required={true}
               type="text"
               value=""
 />,
@@ -385,6 +409,7 @@ ShallowWrapper {
               name="password"
               onChange={[Function]}
               placeholder="Password"
+              required={true}
               type="password"
               value=""
 />,
@@ -408,6 +433,7 @@ ShallowWrapper {
               "name": "email",
               "onChange": [Function],
               "placeholder": "Email",
+              "required": true,
               "type": "text",
               "value": "",
             },
@@ -424,6 +450,7 @@ ShallowWrapper {
               "name": "password",
               "onChange": [Function],
               "placeholder": "Password",
+              "required": true,
               "type": "password",
               "value": "",
             },
@@ -456,7 +483,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
+          <h1
+            className="login__title"
+>
             Sign In
 </h1>,
           false,
@@ -469,6 +498,7 @@ ShallowWrapper {
                         name="email"
                         onChange={[Function]}
                         placeholder="Email"
+                        required={true}
                         type="text"
                         value=""
             />
@@ -477,6 +507,7 @@ ShallowWrapper {
                         name="password"
                         onChange={[Function]}
                         placeholder="Password"
+                        required={true}
                         type="password"
                         value=""
             />
@@ -497,6 +528,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Sign In",
+            "className": "login__title",
           },
           "ref": null,
           "rendered": "Sign In",
@@ -514,6 +546,7 @@ ShallowWrapper {
                 name="email"
                 onChange={[Function]}
                 placeholder="Email"
+                required={true}
                 type="text"
                 value=""
 />,
@@ -522,6 +555,7 @@ ShallowWrapper {
                 name="password"
                 onChange={[Function]}
                 placeholder="Password"
+                required={true}
                 type="password"
                 value=""
 />,
@@ -545,6 +579,7 @@ ShallowWrapper {
                 "name": "email",
                 "onChange": [Function],
                 "placeholder": "Email",
+                "required": true,
                 "type": "text",
                 "value": "",
               },
@@ -561,6 +596,7 @@ ShallowWrapper {
                 "name": "password",
                 "onChange": [Function],
                 "placeholder": "Password",
+                "required": true,
                 "type": "password",
                 "value": "",
               },
