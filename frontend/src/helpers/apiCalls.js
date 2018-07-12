@@ -22,7 +22,7 @@ export const userLoginRequest = async (email, password) => {
   });
 
   if (!response.ok) {
-    throw Error('Oops something went wrong please try again.');
+    throw Error('Email and Password do not match');
   }
 
   return await response.json();

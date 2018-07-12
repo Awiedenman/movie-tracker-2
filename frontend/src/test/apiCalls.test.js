@@ -52,7 +52,7 @@ describe('HELPERS', () => {
           json: () => Promise.reject()
         }));
 
-      await expect(userLoginRequest('email', 'password')).rejects.toEqual(Error('Oops something went wrong please try again.'));
+      await expect(userLoginRequest('email', 'password')).rejects.toEqual(Error('Email and Password do not match'));
     });
 
   });
