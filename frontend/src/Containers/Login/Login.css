@@ -7,6 +7,19 @@
   padding: 3rem 2rem;
 }
 
+.login__title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.login__error {
+  color: red;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .form {
   align-items: center;
   display: flex;
@@ -36,6 +49,8 @@
 .form__button {
   background: none;
   border: 1px solid salmon;
+  border-radius: 0.3rem;
+  font-size: 2.2rem;
   padding: 2rem 4rem;
   width: 30rem;
 }

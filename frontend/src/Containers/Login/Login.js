@@ -28,9 +28,9 @@ export class Login extends Component {
 
     try {
       const user = await userLoginRequest(email, password);
-      this.props.handleUserLogin(user);
+      this.props.handleUserLogin(user.data);
+      this.props.history.push('/');
     } catch (error) {
-
       this.setState({ failedLogin: true, error });
     }
 
@@ -39,10 +39,11 @@ export class Login extends Component {
 
   render() {
     const { email, password, error, failedLogin } = this.state;
+
     return (
       <section className="login">
-        <h1>Sign In</h1>
-        {failedLogin && <p>{error.message}</p>}
+        <h1 className="login__title">Sign In</h1>
+        {failedLogin && <p className="login__error">{error.message}</p>}
         <form className="form"  onSubmit={this.handleSubmit}>
           <input type="text"
             value={email}
@@ -50,6 +51,7 @@ export class Login extends Component {
             placeholder="Email"
             onChange={this.handleChange}
             className="form__input"
+            required
           />
           <input
             type="password"
@@ -58,6 +60,7 @@ export class Login extends Component {
             placeholder="Password"
             onChange={this.handleChange}
             className="form__input"
+            required
           />
           <button className="form__button">Sign In</button>
         </form>
@@ -66,14 +69,13 @@ export class Login extends Component {
   }
 }
 
-// export const mapStateToProps = state => ({
-
-// });
+export const mapStateToProps = state => ({
+  user: state.userInfo
+});
 
 export const mapDispatchToProps = dispatch => ({
   handleUserLogin: user => dispatch(userLogin(user))
 });
-
 
 Login.propTypes = {
   handleUserLogin: PropTypes.func

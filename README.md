@@ -1,9 +1,9 @@
 ##### Iteration 0: Pull in movie API
- - [ ] Pull most recent movies from MovieDB API.
- - [ ] Display each movie on root index `/`
+ - [x] Pull most recent movies from MovieDB API.
+ - [x] Display each movie on root index `/`
 
 ##### Iteration 1: Sign In / Sign Out Functionality
-  - [ ] Be able to sign in on page `/login` and redirect user to `/`
+  - [x] Be able to sign in on page `/login` and redirect user to `/`
     - [ ] Flash "Email and Password do not match" - if password is incorrect
   - [ ] Ability to create a user.
     - [ ] Flash "Email has already been used" - if email has been taken

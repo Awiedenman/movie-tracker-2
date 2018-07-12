@@ -30,12 +30,8 @@ describe('Actions', () => {
 
       const mockAction = {
         type: "USER_LOGIN",
-        user: {
-          email: "tman2272@aol.com",
-          id: 1,
-          name: "Taylor",
-          password: "password"
-        }
+        id: 1,
+        name: "Taylor"
       };
 
       const result = userLogin(mockUser);
