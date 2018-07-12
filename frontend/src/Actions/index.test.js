@@ -56,6 +56,7 @@ describe('Actions', () => {
       };
 
       const result = userSignUp(name, email, password);
+
       expect(result).toEqual(mockAction);
     });
   });
