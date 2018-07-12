@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userLogin } from '../../Actions/index';
+import { userLoginRequest } from '../../helpers/apiCalls';
 import PropTypes from 'prop-types';
 
 export class Login extends Component {
@@ -8,7 +9,8 @@ export class Login extends Component {
     super();
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      failedLogin: false
     };
   }
 
@@ -17,11 +19,16 @@ export class Login extends Component {
     this.setState({ [name]: value });
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     const { email, password } = this.state;
     event.preventDefault();
-    // TODO make a call to props.handleLogin() here
-    this.props.handleUserLogin(email, password);
+    try {
+      const user = await userLoginRequest(email, password);
+      this.props.handleUserLogin(user);
+    } catch (error) {
+      this.setState({ failedLogin: true });
+    }
+
     this.setState({ email: '', password: '' });
   }
 
@@ -56,12 +63,12 @@ export class Login extends Component {
 // });
 
 export const mapDispatchToProps = dispatch => ({
-  handleUserLogin: (email, password) => dispatch(userLogin(email, password))
+  handleUserLogin: user => dispatch(userLogin(user))
 });
 
 
 Login.propTypes = {
-
+  handleUserLogin: PropTypes.func
 };
 
 export default connect(null, mapDispatchToProps)(Login);

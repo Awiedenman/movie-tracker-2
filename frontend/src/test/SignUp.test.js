@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SignUp from '../Components/SignUp/SignUp';
+import { SignUp } from '../Components/SignUp/SignUp';
 
 describe('SignUp', () => {
   let wrapper;

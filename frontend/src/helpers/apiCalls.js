@@ -11,3 +11,19 @@ export const movieFetch = async () => {
 
   return await response.json();
 };
+
+export const userLoginRequest = async (email, password) => {
+  const response = await fetch('http://localhost:3000/api/users',  {
+    method: 'POST',
+    body: JSON.stringify({ email,  password }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+
+  if (!response.ok) {
+    throw Error('Failed to fetch');
+  }
+
+  return await response.json();
+};
