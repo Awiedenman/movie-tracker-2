@@ -22,7 +22,7 @@ export const userLoginRequest = async (email, password) => {
   });
 
   if (!response.ok) {
-    throw Error('Failed to fetch');
+    throw Error('Oops something went wrong please try again.');
   }
 
   return await response.json();

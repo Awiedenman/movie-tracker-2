@@ -52,7 +52,7 @@ describe('HELPERS', () => {
           json: () => Promise.reject()
         }));
 
-      await expect(userLoginRequest('email', 'password')).rejects.toEqual(Error('Failed to fetch'));
+      await expect(userLoginRequest('email', 'password')).rejects.toEqual(Error('Oops something went wrong please try again.'));
     });
 
   });
