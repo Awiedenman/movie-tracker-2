@@ -27,3 +27,16 @@ export const userLoginRequest = async (email, password) => {
 
   return await response.json();
 };
+
+export const userSignUpRequest= async ( name, email, password) =>  {
+  const response = await fetch('http://localhost:3000/api/users', {
+    method: 'POST',
+    body: JSON.stringify({ name, email, password }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+
+  return await response.json();
+  
+};
