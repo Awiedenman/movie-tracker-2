@@ -37,6 +37,10 @@ export const userSignUpRequest= async ( name, email, password) =>  {
     }
   });
 
+  if (!response.ok) {
+    throw Error('Sorry, email has already been used');
+  }
+
   return await response.json();
   
 };
