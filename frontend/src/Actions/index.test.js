@@ -31,5 +31,22 @@ describe('Actions', () => {
       const result = userLogin(email, password);
       expect(result).toEqual(mockAction);
     });
+
+    test('should have type of USER_SIGN_UP', () => {
+      const { userSignUp } = actions;
+      const name = 'Austin';
+      const email = 'austin@aol.com';
+      const password = 'password';
+
+      const mockAction = {
+        type: 'USER_SIGN_UP',
+        name,
+        email,
+        password
+      };
+
+      const result = userSignUp(name, email, password);
+      expect(result).toEqual(mockAction);
+    });
   });
 });

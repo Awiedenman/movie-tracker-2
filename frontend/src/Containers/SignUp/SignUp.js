@@ -6,6 +6,7 @@ export class SignUp extends Component {
   constructor( props ){
     super( props );
     this.state = {
+      name: '',
       email:'',
       password: ''
     };
@@ -20,7 +21,7 @@ export class SignUp extends Component {
     const { email, password} = this.state;
     event.preventDefault();
     this.props.handleUserSignUp(email, password);
-    this.setState({email: '', password: ''});
+    this.setState({name: '', email: '', password: ''});
   }
 
   render() {
@@ -28,6 +29,7 @@ export class SignUp extends Component {
       <section>
         <h1>Sign Up</h1>
         <form onSubmit={this.handleSubmit}>
+          <input onChange={this.handleChange} type="text" placeholder="name" name="name" value={this.state.name}/>
           <input onChange={this.handleChange} type="text" placeholder="email" name='email' value={this.state.email}/>
           <input onChange={this.handleChange} type="password" placeholder="password" name='password' value={this.state.value}/>
           <button>Sign Up</button>
@@ -41,9 +43,9 @@ export const mapStateToProps = (state) => {
   // userInfo: state.userInfo
 };
 
-export const mapDispatchToProps = (dispatch) => {
-handleUserSignUp: (email, password) => dispatch( userSignUp(email, password)) 
-};
+export const mapDispatchToProps = (dispatch) => ({
+  handleUserSignUp: (name, email, password) => dispatch( userSignUp(name, email, password)) 
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
 

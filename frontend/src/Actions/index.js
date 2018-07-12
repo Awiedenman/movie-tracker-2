@@ -8,3 +8,10 @@ export const userLogin = (email, password) => ({
   email,
   password
 });
+
+export const userSignUp = (name, email, password) => ({
+  type: 'USER_SIGN_UP',
+  name,
+  email,
+  password
+});

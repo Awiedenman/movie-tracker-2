@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot when rendered 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    card={
+        Object {
+            "average": 7.5,
+            "id": 284053,
+            "image": "/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+            "overview": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+            "title": "Thor: Ragnarok",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <img
+          alt="Movie poster for undefined"
+          className="card__image"
+          src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/undefined"
+/>,
+        <h2
+          className="card__title"
+/>,
+        <h4
+          className="card__avg"
+>
+          Viewer Average: 
+</h4>,
+        <p
+          className="card__overview"
+/>,
+      ],
+      "className": "card",
+      "id": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Movie poster for undefined",
+          "className": "card__image",
+          "src": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/undefined",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "card__title",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Viewer Average: ",
+            undefined,
+          ],
+          "className": "card__avg",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Viewer Average: ",
+          undefined,
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "card__overview",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            alt="Movie poster for undefined"
+            className="card__image"
+            src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/undefined"
+/>,
+          <h2
+            className="card__title"
+/>,
+          <h4
+            className="card__avg"
+>
+            Viewer Average: 
+</h4>,
+          <p
+            className="card__overview"
+/>,
+        ],
+        "className": "card",
+        "id": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Movie poster for undefined",
+            "className": "card__image",
+            "src": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/undefined",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "card__title",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Viewer Average: ",
+              undefined,
+            ],
+            "className": "card__avg",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Viewer Average: ",
+            undefined,
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "card__overview",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;
