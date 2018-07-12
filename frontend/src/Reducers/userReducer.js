@@ -6,10 +6,9 @@ const userReducer = (state = {}, action) => {
         name: action.name
       };
     case 'USER_SIGN_UP':
+    console.log(action.id)
       return {
-        name: action.name,
-        email: action.email,
-        password: action.password
+        id: action.id
       };
     default:
       return state;

@@ -29,7 +29,7 @@ export const userLoginRequest = async (email, password) => {
 };
 
 export const userSignUpRequest= async ( name, email, password) =>  {
-  const response = await fetch('http://localhost:3000/api/users', {
+  const response = await fetch('http://localhost:3000/api/users/new', {
     method: 'POST',
     body: JSON.stringify({ name, email, password }),
     headers: {
