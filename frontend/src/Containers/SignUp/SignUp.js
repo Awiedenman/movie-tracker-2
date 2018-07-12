@@ -10,7 +10,9 @@ export class SignUp extends Component {
     this.state = {
       userName: '',
       email:'',
-      password: ''
+      password: '',
+      failedSignUp: false,
+      error: null
     };
   }
 
@@ -26,7 +28,7 @@ export class SignUp extends Component {
       const newUserData = await userSignUpRequest( userName, email, password);
       this.props.handleUserSignUp(newUserData);
     } catch (error) {
-      console.log(error.message);
+      this.setState({ error, failedSignUp: true })
     }
     this.setState({userName: '', email: '', password: ''});
   }
@@ -35,6 +37,7 @@ export class SignUp extends Component {
     return (
       <section>
         <h1>Sign Up</h1>
+        { this.state.failedSignUp && <p>{this.state.error.message}</p>}
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} type="text" placeholder="name" name="userName" value={this.state.userName}/>
           <input onChange={this.handleChange} type="text" placeholder="email" name='email' value={this.state.email}/>
