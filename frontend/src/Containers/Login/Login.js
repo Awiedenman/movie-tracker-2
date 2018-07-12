@@ -4,13 +4,16 @@ import { userLogin } from '../../Actions/index';
 import { userLoginRequest } from '../../helpers/apiCalls';
 import PropTypes from 'prop-types';
 
+import './Login.css';
+
 export class Login extends Component {
   constructor() {
     super();
     this.state = {
       email: '',
       password: '',
-      failedLogin: false
+      failedLogin: false,
+      error: null
     };
   }
 
@@ -22,36 +25,41 @@ export class Login extends Component {
   handleSubmit = async event => {
     const { email, password } = this.state;
     event.preventDefault();
+
     try {
       const user = await userLoginRequest(email, password);
       this.props.handleUserLogin(user);
     } catch (error) {
-      this.setState({ failedLogin: true });
+
+      this.setState({ failedLogin: true, error });
     }
 
     this.setState({ email: '', password: '' });
   }
 
   render() {
-    const { email, password } = this.state;
+    const { email, password, error, failedLogin } = this.state;
     return (
-      <section>
+      <section className="login">
         <h1>Sign In</h1>
-        <form  onSubmit={this.handleSubmit}>
+        {failedLogin && <p>{error.message}</p>}
+        <form className="form"  onSubmit={this.handleSubmit}>
           <input type="text"
             value={email}
             name="email"
-            placeholder="email"
+            placeholder="Email"
             onChange={this.handleChange}
+            className="form__input"
           />
           <input
             type="password"
             value={password}
             name="password"
-            placeholder="password"
+            placeholder="Password"
             onChange={this.handleChange}
+            className="form__input"
           />
-          <button>Sign In</button>
+          <button className="form__button">Sign In</button>
         </form>
       </section>
     );

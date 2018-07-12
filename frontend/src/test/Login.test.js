@@ -96,6 +96,11 @@ describe('Login', () => {
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
   });
 
+  test('should match snapshot when hasError', () => {
+    wrapper.setState({ hasError: true });
+    expect(wrapper).toMatchSnapshot();
+  });
+
   test('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });

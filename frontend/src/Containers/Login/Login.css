@@ -1,0 +1,41 @@
+.login,
+.sign-up {
+  border: none;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+  margin: 2rem auto;
+  max-width: 70rem;
+  padding: 3rem 2rem;
+}
+
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form__input {
+  background-color: #eee;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 2rem;
+  height: 3em;
+  margin-bottom: 2rem;
+  opacity: 0.5;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  transition: opacity .3s ease;
+  width: 50rem;
+}
+
+.form__input:focus,
+.form__input:active,
+.form__input:hover {
+  opacity: 1;
+}
+
+.form__button {
+  background: none;
+  border: 1px solid salmon;
+  padding: 2rem 4rem;
+  width: 30rem;
+}
