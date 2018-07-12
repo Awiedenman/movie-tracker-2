@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userLogin } from '../../Actions/index';
+import { userLoginRequest } from '../../helpers/apiCalls';
 import PropTypes from 'prop-types';
+
+import './Login.css';
 
 export class Login extends Component {
   constructor() {
     super();
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      failedLogin: false,
+      error: null
     };
   }
 
@@ -17,34 +22,44 @@ export class Login extends Component {
     this.setState({ [name]: value });
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     const { email, password } = this.state;
     event.preventDefault();
-    // TODO make a call to props.handleLogin() here
-    this.props.handleUserLogin(email, password);
+
+    try {
+      const user = await userLoginRequest(email, password);
+      this.props.handleUserLogin(user);
+    } catch (error) {
+
+      this.setState({ failedLogin: true, error });
+    }
+
     this.setState({ email: '', password: '' });
   }
 
   render() {
-    const { email, password } = this.state;
+    const { email, password, error, failedLogin } = this.state;
     return (
-      <section>
+      <section className="login">
         <h1>Sign In</h1>
-        <form  onSubmit={this.handleSubmit}>
+        {failedLogin && <p>{error.message}</p>}
+        <form className="form"  onSubmit={this.handleSubmit}>
           <input type="text"
             value={email}
             name="email"
-            placeholder="email"
+            placeholder="Email"
             onChange={this.handleChange}
+            className="form__input"
           />
           <input
             type="password"
             value={password}
             name="password"
-            placeholder="password"
+            placeholder="Password"
             onChange={this.handleChange}
+            className="form__input"
           />
-          <button>Sign In</button>
+          <button className="form__button">Sign In</button>
         </form>
       </section>
     );
@@ -56,12 +71,12 @@ export class Login extends Component {
 // });
 
 export const mapDispatchToProps = dispatch => ({
-  handleUserLogin: (email, password) => dispatch(userLogin(email, password))
+  handleUserLogin: user => dispatch(userLogin(user))
 });
 
 
 Login.propTypes = {
-
+  handleUserLogin: PropTypes.func
 };
 
 export default connect(null, mapDispatchToProps)(Login);

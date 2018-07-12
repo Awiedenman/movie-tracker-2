@@ -3,10 +3,9 @@ export const fetchInitialMovies = movies => ({
   movies
 });
 
-export const userLogin = (email, password) => ({
+export const userLogin = user => ({
   type: 'USER_LOGIN',
-  email,
-  password
+  user
 });
 
 export const userSignUp = (name, email, password) => ({

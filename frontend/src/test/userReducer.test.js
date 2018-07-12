@@ -8,15 +8,24 @@ describe('User Reducer', () => {
     expect(result).toEqual(expected);
   });
 
-  test('should return a state of ', () => {
+  test('should return ', () => {
     const { userLogin } = actions;
-    const email= 'he@aol.com';
-    const password = 'passme';
+
     const mockUser = {
-      email,
-      password
+      email: "tman2272@aol.com",
+      id: 1,
+      name: "Taylor",
+      password: "password"
     };
-    const result = userReducer(undefined, userLogin(email, password));
+
+    // const mockUser = {
+    //   email: "tman2272@aol.com",
+    //   id: 1,
+    //   name: "Taylor",
+    //   password: "password"
+    // };
+
+    const result = userReducer(undefined, userLogin(mockUser));
 
     expect(result).toEqual(mockUser);
   });
