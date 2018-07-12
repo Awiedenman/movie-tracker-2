@@ -43,15 +43,21 @@ describe('Actions', () => {
       const name = 'Austin';
       const email = 'austin@aol.com';
       const password = 'password';
+      const id = 34;
 
       const mockAction = {
         type: 'USER_SIGN_UP',
-        name,
-        email,
-        password
+        id 
       };
 
-      const result = userSignUp(name, email, password);
+      const mockUser = {
+        name,
+        email,
+        password,
+        id
+      };
+
+      const result = userSignUp(mockUser);
 
       expect(result).toEqual(mockAction);
     });

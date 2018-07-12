@@ -5,8 +5,14 @@ const userReducer = (state = {}, action) => {
         id: action.id,
         name: action.name
       };
+    case 'USER_SIGN_UP':
+    console.log(action.id)
+      return {
+        id: action.id
+      };
     default:
       return state;
+
   }
 };
 

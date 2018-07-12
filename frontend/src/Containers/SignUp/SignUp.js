@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { userSignUpRequest } from '../../helpers/apiCalls';
+import * as actions from '../../Actions';
 
 export class SignUp extends Component {
   constructor( props ){
     super( props );
     this.state = {
-      name: '',
+      userName: '',
       email:'',
       password: ''
     };
@@ -17,11 +19,16 @@ export class SignUp extends Component {
     this.setState({ [name]: value });
   }
 
-  handleSubmit=(event)=> {
-    const { email, password} = this.state;
+  handleSubmit= async (event)=> {
     event.preventDefault();
-    this.props.handleUserSignUp(email, password);
-    this.setState({name: '', email: '', password: ''});
+    const { userName, email, password} = this.state;
+    try {
+      const newUserData = await userSignUpRequest( userName, email, password);
+      this.props.handleUserSignUp(newUserData);
+    } catch (error) {
+      console.log(error.message);
+    }
+    this.setState({userName: '', email: '', password: ''});
   }
 
   render() {
@@ -29,9 +36,9 @@ export class SignUp extends Component {
       <section>
         <h1>Sign Up</h1>
         <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} type="text" placeholder="name" name="name" value={this.state.name}/>
+          <input onChange={this.handleChange} type="text" placeholder="name" name="userName" value={this.state.userName}/>
           <input onChange={this.handleChange} type="text" placeholder="email" name='email' value={this.state.email}/>
-          <input onChange={this.handleChange} type="password" placeholder="password" name='password' value={this.state.value}/>
+          <input onChange={this.handleChange} type="password" placeholder="password" name='password' value={this.state.password}/>
           <button>Sign Up</button>
         </form>
       </section>
@@ -39,12 +46,12 @@ export class SignUp extends Component {
   }
 }
 
-export const mapStateToProps = (state) => {
-  // userInfo: state.userInfo
-};
+export const mapStateToProps = (state) => ({
+  userInfo: state.userInfo
+});
 
 export const mapDispatchToProps = (dispatch) => ({
-  // handleUserSignUp: (name, email, password) => dispatch( userSignUp(name, email, password))
+  handleUserSignUp: (newUserData) => dispatch(actions.userSignUp(newUserData))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
