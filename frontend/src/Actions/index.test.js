@@ -19,16 +19,26 @@ describe('Actions', () => {
   describe('USER actions', () => {
     test('should have type of USER_LOGIN', () => {
       const { userLogin } = actions;
-      const email = 'some@aol.com';
-      const password = 'password';
 
-      const mockAction = {
-        type: 'USER_LOGIN',
-        email,
-        password
+
+      const mockUser = {
+        id: 1,
+        name: "Taylor",
+        password: "password",
+        email: "tman2272@aol.com"
       };
 
-      const result = userLogin(email, password);
+      const mockAction = {
+        type: "USER_LOGIN",
+        user: {
+          email: "tman2272@aol.com",
+          id: 1,
+          name: "Taylor",
+          password: "password"
+        }
+      };
+
+      const result = userLogin(mockUser);
       expect(result).toEqual(mockAction);
     });
 

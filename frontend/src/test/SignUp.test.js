@@ -12,11 +12,11 @@ describe('SignUp', () => {
   test('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-  
+
   describe('handleChange', () => {
 
     let wrapper;
-    
+
     beforeEach(() => {
       wrapper = shallow(<SignUp handleUserSignUp={jest.fn()} />);
     });
@@ -41,13 +41,13 @@ describe('SignUp', () => {
         }
       };
       wrapper.instance().handleChange(mockEvent);
-      expect(wrapper.state('email')).toEqual(mockEvent.target.value)
+      expect(wrapper.state('email')).toEqual(mockEvent.target.value);
     });
 
     test('should update password prop in state onChange', () => {
       const mockEvent = {
         target: {
-          name: 'password', 
+          name: 'password',
           value: 'password'
         }
       };
@@ -62,13 +62,13 @@ describe('SignUp', () => {
       const mockEvent = {
         preventDefault: jest.fn()
       };
-  
+
       wrapper.setState({
         name: 'Austin',
         email: 'austin@aol.com',
         password: 'password'
       });
-  
+
       wrapper.instance().handleSubmit(mockEvent);
       expect(wrapper.state('name')).toEqual('');
       expect(wrapper.state('email')).toEqual('');

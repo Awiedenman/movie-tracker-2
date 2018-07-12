@@ -44,7 +44,7 @@ export const mapStateToProps = (state) => {
 };
 
 export const mapDispatchToProps = (dispatch) => ({
-  handleUserSignUp: (name, email, password) => dispatch( userSignUp(name, email, password)) 
+  // handleUserSignUp: (name, email, password) => dispatch( userSignUp(name, email, password))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
