@@ -1,10 +1,18 @@
 .card {
-  height: 60rem;
-  width: 27rem;
-  margin: 2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 1rem;
 }
 
 .card__image {
   height: 40.5rem;
+}
+
+.card__overview {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 250px;
 }
