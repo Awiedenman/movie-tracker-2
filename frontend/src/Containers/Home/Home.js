@@ -6,6 +6,8 @@ import { fetchInitialMovies } from '../../Actions';
 import { Card } from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
 
+import './Home.css';
+
 export class Home extends Component {
   constructor() {
     super();
@@ -19,7 +21,6 @@ export class Home extends Component {
   }
 
   render() {
-    // console.log(this.props)
     const displayMoviesCards = this.props.movies.map(movie => (
       <Card
         {...movie}
@@ -28,8 +29,7 @@ export class Home extends Component {
     ));
 
     return (
-      <div className='home-container'>
-        <h1>home</h1>
+      <div className="home-container">
         {displayMoviesCards}
       </div>
     );
