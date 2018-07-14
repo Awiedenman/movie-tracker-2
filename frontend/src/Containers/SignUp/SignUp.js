@@ -45,6 +45,7 @@ export class SignUp extends Component {
             placeholder="Name"
             name="userName"
             className="form__input"
+            required
             value={this.state.userName}
           />
           <input
@@ -53,6 +54,7 @@ export class SignUp extends Component {
             placeholder="Email"
             name="email"
             className="form__input"
+            required
             value={this.state.email}
           />
           <input
@@ -61,6 +63,7 @@ export class SignUp extends Component {
             placeholder="Password"
             name="password"
             className="form__input"
+            required
             value={this.state.password}
           />
           <button className="form__button">Sign Up</button>
