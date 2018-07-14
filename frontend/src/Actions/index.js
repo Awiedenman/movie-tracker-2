@@ -9,7 +9,7 @@ export const userLogin = user => ({
   name: user.name
 });
 
-export const userSignUp = (newUserData) => ({
+export const userSignUp = newUserData => ({
   type: 'USER_SIGN_UP',
   id: newUserData.id
 });

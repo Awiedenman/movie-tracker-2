@@ -1,5 +1,5 @@
 import { API_KEY } from '../api-key';
-import { movieFetch, userLoginRequest } from '../helpers/apiCalls';
+import { movieFetch, userLoginRequest, userSignUpRequest } from '../helpers/apiCalls';
 
 describe('HELPERS', () => {
   describe('Movie Fetch', () => {
@@ -45,7 +45,7 @@ describe('HELPERS', () => {
       expect(window.fetch).toHaveBeenCalled();
     });
 
-    test('should throw an error if fetch fails', async () => {
+    test('should throw an error if Login fetch fails', async () => {
       window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
           ok: false,
@@ -53,7 +53,34 @@ describe('HELPERS', () => {
         }));
 
       await expect(userLoginRequest('email', 'password')).rejects.toEqual(Error('Email and Password do not match'));
+    }); 
+  });
+
+  describe('userSignUpRequest', () => {
+    test('shold call fetch', async () => {
+      window.fetch = jest.fn().mockImplementation(() => 
+        Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve({
+            id : 56,
+            message: "New user created",
+            status: "success"
+          })
+        }));
+        
+      await userSignUpRequest('Austin', 'austin@aol.com', 'password');
+      expect(window.fetch).toHaveBeenCalled();
     });
 
+    test('should throw and error if signUp fetch fails', async () => {
+      
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          ok: false,
+          json: () => Promise.reject()
+        }));
+
+      await expect(userSignUpRequest()).rejects.toEqual(Error('Sorry, email has already been used'));
+    });
   });
 });

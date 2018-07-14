@@ -8,7 +8,7 @@ describe('User Reducer', () => {
     expect(result).toEqual(expected);
   });
 
-  test('should return ', () => {
+  test('should return the user that logged in', () => {
     const { userLogin } = actions;
 
     const mockUser = {
@@ -27,4 +27,19 @@ describe('User Reducer', () => {
 
     expect(result).toEqual(mockCleanedUser);
   });
+
+  test('should return an id of a new user when signed up for the first time', () => {
+    const { userSignUp } = actions;
+
+    const mockUserSignUpResponse = { 
+      id: 56,
+      message: "New user created", 
+      status: "success"
+    };
+
+    const result = userReducer({}, userSignUp(mockUserSignUpResponse));
+
+    expect(result).toEqual({ id: 56 });
+  });
+
 });
