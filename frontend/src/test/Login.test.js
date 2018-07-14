@@ -76,7 +76,7 @@ describe('Login', () => {
 
     await wrapper.instance().handleSubmit(mockEvent);
     expect(window.fetch).toHaveBeenCalled();
-    expect(wrapper.state('failedLogin')).toEqual(true);
+    expect(wrapper.state('failedLogin')).toBe(true);
   });
 
   describe('mapDispatchToProps', () => {
