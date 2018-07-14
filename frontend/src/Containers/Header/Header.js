@@ -8,7 +8,9 @@ import './Header.css';
 export const Header = ({ user }) => {
   return (
     <header className="header">
-      <h1>Movie Tracker</h1>
+      <NavLink exact to="/">
+        <h1>Movie Tracker</h1>
+      </NavLink>
       <nav>
         {user.name && <p>Welcome back {user.name}</p>}
         <NavLink exact to="/login">Sign In</NavLink>

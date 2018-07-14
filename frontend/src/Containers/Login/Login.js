@@ -68,7 +68,6 @@ export class Login extends Component {
   }
 }
 
-
 export const mapDispatchToProps = dispatch => ({
   handleUserLogin: user => dispatch(userLogin(user))
 });

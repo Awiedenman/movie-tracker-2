@@ -4,7 +4,8 @@ import { Header } from '../Containers/Header/Header';
 
 describe('Header', () => {
   let wrapper;
-  const mockUser = {name: 'tman'};
+  const mockUser = { name: 'tman' };
+
   beforeEach(() => wrapper = shallow(<Header user={mockUser} />));
 
   test('should match snapshot', () => {

@@ -32,7 +32,7 @@ describe('Login', () => {
     expect(wrapper.state('password')).toEqual(mockEvent.target.value);
   });
 
-  test('should update the reset state when handleSubmit is invoked', async () => {
+  test('should update reset state when handleSubmit is invoked', async () => {
     const mockEvent = {
       preventDefault: jest.fn()
     };
