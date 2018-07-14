@@ -7,7 +7,8 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Unknown
     user={
         Object {
-            "name": "tman",
+            "id": 1,
+            "name": "Bob",
           }
     }
 />,
@@ -37,7 +38,7 @@ ShallowWrapper {
         <nav>
           <p>
                     Welcome back 
-                    tman
+                    Bob
           </p>
           <NavLink
                     activeClassName="active"
@@ -95,7 +96,7 @@ ShallowWrapper {
           "children": Array [
             <p>
               Welcome back 
-              tman
+              Bob
 </p>,
             <NavLink
               activeClassName="active"
@@ -123,13 +124,13 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "Welcome back ",
-                "tman",
+                "Bob",
               ],
             },
             "ref": null,
             "rendered": Array [
               "Welcome back ",
-              "tman",
+              "Bob",
             ],
             "type": "p",
           },
@@ -188,7 +189,7 @@ ShallowWrapper {
           <nav>
             <p>
                         Welcome back 
-                        tman
+                        Bob
             </p>
             <NavLink
                         activeClassName="active"
@@ -246,7 +247,7 @@ ShallowWrapper {
             "children": Array [
               <p>
                 Welcome back 
-                tman
+                Bob
 </p>,
               <NavLink
                 activeClassName="active"
@@ -274,13 +275,13 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "Welcome back ",
-                  "tman",
+                  "Bob",
                 ],
               },
               "ref": null,
               "rendered": Array [
                 "Welcome back ",
-                "tman",
+                "Bob",
               ],
               "type": "p",
             },

@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 
 import './Header.css';
 
-export const Header = ({ user }) => {
+export const Header = props => {
+  const { user } = props;
+
   return (
     <header className="header">
       <NavLink exact to="/">
@@ -21,10 +23,10 @@ export const Header = ({ user }) => {
 };
 
 Header.propTypes = {
-
+  user: PropTypes.object
 };
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   user: state.userInfo
 });
 
