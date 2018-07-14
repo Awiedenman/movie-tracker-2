@@ -1,11 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Header from '../Components/Header/Header';
+import { Header } from '../Containers/Header/Header';
 
 describe('Header', () => {
   let wrapper;
+  const mockUser = {name: 'tman'};
+  beforeEach(() => wrapper = shallow(<Header user={mockUser} />));
 
-  beforeEach(() => wrapper = shallow(<Header />));
   test('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });

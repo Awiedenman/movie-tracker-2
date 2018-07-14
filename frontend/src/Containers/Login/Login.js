@@ -29,12 +29,11 @@ export class Login extends Component {
     try {
       const user = await userLoginRequest(email, password);
       this.props.handleUserLogin(user.data);
+      this.setState({ email: '', password: '' });
       this.props.history.push('/');
     } catch (error) {
-      this.setState({ failedLogin: true, error });
+      this.setState({ failedLogin: true, error, email: '', password: '' });
     }
-
-    this.setState({ email: '', password: '' });
   }
 
   render() {
@@ -69,9 +68,6 @@ export class Login extends Component {
   }
 }
 
-export const mapStateToProps = state => ({
-  user: state.userInfo
-});
 
 export const mapDispatchToProps = dispatch => ({
   handleUserLogin: user => dispatch(userLogin(user))

@@ -4,7 +4,13 @@ exports[`Header should match snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Header />,
+  Symbol(enzyme.__unrendered__): <Unknown
+    user={
+        Object {
+            "name": "tman",
+          }
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -22,6 +28,10 @@ ShallowWrapper {
           Movie Tracker
 </h1>,
         <nav>
+          <p>
+                    Welcome back 
+                    tman
+          </p>
           <NavLink
                     activeClassName="active"
                     aria-current="page"
@@ -60,6 +70,10 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <p>
+              Welcome back 
+              tman
+</p>,
             <NavLink
               activeClassName="active"
               aria-current="page"
@@ -79,6 +93,23 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Welcome back ",
+                "tman",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Welcome back ",
+              "tman",
+            ],
+            "type": "p",
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -125,6 +156,10 @@ ShallowWrapper {
             Movie Tracker
 </h1>,
           <nav>
+            <p>
+                        Welcome back 
+                        tman
+            </p>
             <NavLink
                         activeClassName="active"
                         aria-current="page"
@@ -163,6 +198,10 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              <p>
+                Welcome back 
+                tman
+</p>,
               <NavLink
                 activeClassName="active"
                 aria-current="page"
@@ -182,6 +221,23 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Welcome back ",
+                  "tman",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Welcome back ",
+                "tman",
+              ],
+              "type": "p",
+            },
             Object {
               "instance": null,
               "key": undefined,
