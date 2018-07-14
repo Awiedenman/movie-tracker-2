@@ -1,14 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import './Header.css';
 
-const Header = () => {
+export const Header = ({ user }) => {
   return (
     <header className="header">
-      <h1>Movie Tracker</h1>
+      <NavLink exact to="/">
+        <h1>Movie Tracker</h1>
+      </NavLink>
       <nav>
+        {user.name && <p>Welcome back {user.name}</p>}
         <NavLink exact to="/login">Sign In</NavLink>
         <NavLink to="/sign-up">Sign Up</NavLink>
       </nav>
@@ -20,4 +24,8 @@ Header.propTypes = {
 
 };
 
-export default Header;
+const mapStateToProps = state => ({
+  user: state.userInfo
+});
+
+export default connect(mapStateToProps)(Header);
