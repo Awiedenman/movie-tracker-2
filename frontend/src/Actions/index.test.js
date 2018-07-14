@@ -47,7 +47,7 @@ describe('Actions', () => {
 
       const mockAction = {
         type: 'USER_SIGN_UP',
-        id 
+        id
       };
 
       const mockUser = {
@@ -61,5 +61,17 @@ describe('Actions', () => {
 
       expect(result).toEqual(mockAction);
     });
+
+    test('should have type of USER_SIGN_OUT', () => {
+      const { userSignOut } = actions;
+
+      const mockAction = {
+        type: 'USER_SIGN_OUT'
+      };
+
+      const result = userSignOut();
+      expect(result).toEqual(mockAction);
+    });
+
   });
 });

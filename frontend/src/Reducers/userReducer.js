@@ -9,6 +9,8 @@ const userReducer = (state = {}, action) => {
       return {
         id: action.id
       };
+    case 'USER_SIGN_OUT':
+      return {};
     default:
       return state;
 
