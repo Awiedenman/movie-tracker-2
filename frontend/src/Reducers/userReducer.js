@@ -6,7 +6,6 @@ const userReducer = (state = {}, action) => {
         name: action.name
       };
     case 'USER_SIGN_UP':
-    console.log(action.id)
       return {
         id: action.id
       };
