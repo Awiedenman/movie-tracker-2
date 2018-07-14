@@ -13,3 +13,7 @@ export const userSignUp = newUserData => ({
   type: 'USER_SIGN_UP',
   id: newUserData.id
 });
+
+export const userSignOut = () => ({
+  type: 'USER_SIGN_OUT'
+});
