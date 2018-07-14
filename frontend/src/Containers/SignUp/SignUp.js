@@ -26,7 +26,6 @@ export class SignUp extends Component {
     const { userName, email, password } = this.state;
     try {
       const newUserData = await userSignUpRequest(userName, email, password);
-      console.log('newUserData', newUserData);
       this.props.handleUserSignUp(newUserData);
     } catch (error) {
       this.setState({ error, failedSignUp: true });
