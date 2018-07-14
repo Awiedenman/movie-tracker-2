@@ -8,7 +8,7 @@ import './Header.css';
 
 export const Header = props => {
   const { user, signOut } = props;
-  // console.log(props);
+
   return (
     <header className="header">
       <NavLink exact to="/">
