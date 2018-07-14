@@ -26,6 +26,7 @@ describe('Header', () => {
           name: 'Bob'
         }
       };
+
       const actual = mapStateToProps(mockState);
       expect(actual).toEqual(mockUser);
     });
