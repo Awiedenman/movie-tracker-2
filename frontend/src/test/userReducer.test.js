@@ -31,15 +31,21 @@ describe('User Reducer', () => {
   test('should return an id of a new user when signed up for the first time', () => {
     const { userSignUp } = actions;
 
-    const mockUserSignUpResponse = { 
+    const mockUserSignUpResponse = {
       id: 56,
-      message: "New user created", 
+      message: "New user created",
       status: "success"
     };
 
     const result = userReducer({}, userSignUp(mockUserSignUpResponse));
 
     expect(result).toEqual({ id: 56 });
+  });
+
+  test('should return empty object when user signs out', () => {
+    const { userSignOut } = actions;
+    const result = userReducer(undefined, userSignOut());
+    expect(result).toEqual({});
   });
 
 });
