@@ -5,9 +5,9 @@
 ##### Iteration 1: Sign In / Sign Out Functionality
   - [x] Be able to sign in on page `/login` and redirect user to `/`
     - [x] Flash "Email and Password do not match" - if password is incorrect
-  - [ ] Ability to create a user.
-    - [ ] Flash "Email has already been used" - if email has been taken
-  - [ ] The user has the ability to sign out.
+  - [x] Ability to create a user.
+    - [x] Flash "Email has already been used" - if email has been taken
+  - [x] The user has the ability to sign out.
 
 ##### Iteration 2: Favorites
   - [ ] Each movie should be displayed with a favorite button.
