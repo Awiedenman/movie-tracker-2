@@ -27,10 +27,11 @@ export class SignUp extends Component {
     try {
       const newUserData = await userSignUpRequest(userName, email, password);
       this.props.handleUserSignUp(newUserData);
+      this.setState({userName: '', email: '', password: ''});
+      this.props.history.push('/');
     } catch (error) {
       this.setState({ error, failedSignUp: true });
     }
-    this.setState({userName: '', email: '', password: ''});
   }
 
   render() {
