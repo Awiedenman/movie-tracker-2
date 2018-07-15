@@ -7,14 +7,20 @@ import { Card } from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
 
 import './Home.css';
+import { SignUp } from '../SignUp/SignUp';
 
 export class Home extends Component {
   constructor() {
     super();
+    this.state = {
+      loggedIn: false
+    };
   }
 
   toggleFavorite = (id) => {
     console.log('id', id);
+    this.state.loggedIn ? null : this.props.history.push('/sign-up');
+    
   }
   async componentDidMount(){
     const initialFetch = await movieFetch();
