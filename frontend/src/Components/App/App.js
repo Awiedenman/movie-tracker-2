@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from '../../Containers/Header/Header';
 import Home from '../../Containers/Home/Home';
 import Login from '../../Containers/Login/Login';
@@ -12,9 +12,12 @@ export const App = () => {
     <main className="grid-container">
       <Header />
       <section className="main-container">
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/sign-up" component={SignUp} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/sign-up" component={SignUp} />
+          <Redirect to="/" component={Home}/>
+        </Switch>
       </section>
     </main>
   );
