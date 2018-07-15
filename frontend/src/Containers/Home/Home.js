@@ -2,26 +2,23 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { movieFetch } from '../../helpers/apiCalls';
 import { cleanMovieResponse } from '../../helpers/clean-responses';
-import { fetchInitialMovies, addfavorite } from '../../Actions';
+import { fetchInitialMovies /*addFavorite*/} from '../../Actions';
 import { Card } from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
-
 import './Home.css';
 import { SignUp } from '../SignUp/SignUp';
 
 export class Home extends Component {
   constructor() {
     super();
-    this.state = {
-      loggedIn: false
-    };
   }
 
   toggleFavorite = (id) => {
     console.log('id', id);
-    this.state.loggedIn ? null : this.props.history.push('/sign-up');
-    
+    // this.state.loggedIn && this.props.favorites(id) ;
+    // : this.props.history.push('/sign-up');
   }
+
   async componentDidMount(){
     const initialFetch = await movieFetch();
     const movies = cleanMovieResponse(initialFetch);
@@ -46,8 +43,8 @@ export class Home extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  initialFetchData: movies => dispatch(fetchInitialMovies(movies)),
-  favorites: favorite => dispatch(addfavorite(favorite))
+  initialFetchData: movies => dispatch(fetchInitialMovies(movies))
+  // favorites: id => dispatch(addFavorite(id))
 });
 
 export const mapStateToProps = state => ({

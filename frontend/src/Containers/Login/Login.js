@@ -14,6 +14,7 @@ export class Login extends Component {
       password: '',
       failedLogin: false,
       error: null
+      // loggedIn: false
     };
   }
 
@@ -32,7 +33,7 @@ export class Login extends Component {
       this.setState({ email: '', password: '' });
       this.props.history.push('/');
     } catch (error) {
-      this.setState({ failedLogin: true, error, email: '', password: '' });
+      this.setState({ failedLogin: true, error, email: '', password: ''});
     }
   }
 
