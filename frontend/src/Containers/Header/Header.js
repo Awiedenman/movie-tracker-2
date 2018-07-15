@@ -16,6 +16,7 @@ export const Header = props => {
       </Link>
       <nav>
         {user.name && <p>Welcome back {user.name}</p>}
+        {user.id && !user.name && <p>Thanks for signing up</p>}
         {
           user.id ?
             <button className="sign-out" onClick={() => signOut()}>Sign Out</button>
