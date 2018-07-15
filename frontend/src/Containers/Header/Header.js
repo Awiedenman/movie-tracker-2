@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { userSignOut } from '../../Actions/index';
 import PropTypes from 'prop-types';
@@ -11,9 +11,9 @@ export const Header = props => {
 
   return (
     <header className="header">
-      <NavLink exact to="/">
+      <Link exact to="/">
         <h1>Movie Tracker</h1>
-      </NavLink>
+      </Link>
       <nav>
         {user.name && <p>Welcome back {user.name}</p>}
         {
@@ -21,9 +21,10 @@ export const Header = props => {
             <button className="sign-out" onClick={() => signOut()}>Sign Out</button>
             :
             <div>
-              <NavLink exact className="sign-in" to="/login">Sign In</NavLink>
+              <NavLink exact to="/login">Sign In</NavLink>
               <NavLink exact to="/sign-up">Sign Up</NavLink>
             </div>
+
         }
       </nav>
     </header>
@@ -43,4 +44,4 @@ export const mapDispatchToProps = dispatch => ({
   signOut: () => dispatch(userSignOut())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
