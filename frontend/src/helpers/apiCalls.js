@@ -2,7 +2,6 @@ import { API_KEY } from '../api-key';
 
 export const movieFetch = async () => {
   const url = `https://api.themoviedb.org/3/list/1?api_key=${API_KEY}`;
-
   const response = await fetch(url);
 
   if (!response.ok) {
@@ -42,5 +41,5 @@ export const userSignUpRequest= async ( name, email, password) =>  {
   }
 
   return await response.json();
-  
+
 };

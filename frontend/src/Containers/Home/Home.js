@@ -5,21 +5,19 @@ import { cleanMovieResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies /*addFavorite*/} from '../../Actions';
 import { Card } from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
+
 import './Home.css';
-import { SignUp } from '../SignUp/SignUp';
 
 export class Home extends Component {
   constructor() {
     super();
   }
 
-  toggleFavorite = (id) => {
+  toggleFavorite = id => {
     console.log('id', id);
-    // this.state.loggedIn && this.props.favorites(id) ;
-    // : this.props.history.push('/sign-up');
   }
 
-  async componentDidMount(){
+  async componentDidMount () {
     const initialFetch = await movieFetch();
     const movies = cleanMovieResponse(initialFetch);
     this.props.initialFetchData(movies);
@@ -29,6 +27,7 @@ export class Home extends Component {
     const displayMoviesCards = this.props.movies.map(movie => (
       <Card
         {...movie}
+        userId={this.props.userId}
         key={movie.id}
         toggleFavorite={this.toggleFavorite}
       />
@@ -42,18 +41,20 @@ export class Home extends Component {
   }
 }
 
+Home.propTypes = {
+  initialFetchData: PropTypes.func,
+  movies: PropTypes.arrayOf(PropTypes.object),
+  userId: PropTypes.number
+};
+
+export const mapStateToProps = state => ({
+  movies: state.initialMovies,
+  userId: state.userInfo.id
+});
+
 export const mapDispatchToProps = dispatch => ({
   initialFetchData: movies => dispatch(fetchInitialMovies(movies))
   // favorites: id => dispatch(addFavorite(id))
 });
-
-export const mapStateToProps = state => ({
-  movies: state.initialMovies
-});
-
-Home.propTypes = {
-  initialFetchData: PropTypes.func,
-  movies: PropTypes.arrayOf(PropTypes.object)
-};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

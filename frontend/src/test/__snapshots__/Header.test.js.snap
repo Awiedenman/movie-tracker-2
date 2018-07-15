@@ -26,16 +26,14 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          exact={true}
+        <Link
+          replace={false}
           to="/"
 >
           <h1>
                     Movie Tracker
           </h1>
-</NavLink>,
+</Link>,
         <nav>
           <p>
                     Welcome back 
@@ -56,14 +54,12 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
           "children": <h1>
             Movie Tracker
 </h1>,
-          "exact": true,
+          "replace": false,
           "to": "/",
         },
         "ref": null,
@@ -90,6 +86,7 @@ ShallowWrapper {
               Welcome back 
               Bob
 </p>,
+            false,
             <button
               className="sign-out"
               onClick={[Function]}
@@ -117,6 +114,7 @@ ShallowWrapper {
             ],
             "type": "p",
           },
+          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -143,16 +141,14 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            exact={true}
+          <Link
+            replace={false}
             to="/"
 >
             <h1>
                         Movie Tracker
             </h1>
-</NavLink>,
+</Link>,
           <nav>
             <p>
                         Welcome back 
@@ -173,14 +169,12 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
             "children": <h1>
               Movie Tracker
 </h1>,
-            "exact": true,
+            "replace": false,
             "to": "/",
           },
           "ref": null,
@@ -207,6 +201,7 @@ ShallowWrapper {
                 Welcome back 
                 Bob
 </p>,
+              false,
               <button
                 className="sign-out"
                 onClick={[Function]}
@@ -234,6 +229,7 @@ ShallowWrapper {
               ],
               "type": "p",
             },
+            false,
             Object {
               "instance": null,
               "key": undefined,
@@ -285,22 +281,19 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          exact={true}
+        <Link
+          replace={false}
           to="/"
 >
           <h1>
                     Movie Tracker
           </h1>
-</NavLink>,
+</Link>,
         <nav>
           <div>
                     <NavLink
                               activeClassName="active"
                               aria-current="page"
-                              className="sign-in"
                               exact={true}
                               to="/login"
                     >
@@ -324,14 +317,12 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
           "children": <h1>
             Movie Tracker
 </h1>,
-          "exact": true,
+          "replace": false,
           "to": "/",
         },
         "ref": null,
@@ -355,11 +346,11 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             undefined,
+            undefined,
             <div>
               <NavLink
                             activeClassName="active"
                             aria-current="page"
-                            className="sign-in"
                             exact={true}
                             to="/login"
               >
@@ -379,6 +370,7 @@ ShallowWrapper {
         "ref": null,
         "rendered": Array [
           undefined,
+          undefined,
           Object {
             "instance": null,
             "key": undefined,
@@ -388,7 +380,6 @@ ShallowWrapper {
                 <NavLink
                   activeClassName="active"
                   aria-current="page"
-                  className="sign-in"
                   exact={true}
                   to="/login"
 >
@@ -414,7 +405,6 @@ ShallowWrapper {
                   "activeClassName": "active",
                   "aria-current": "page",
                   "children": "Sign In",
-                  "className": "sign-in",
                   "exact": true,
                   "to": "/login",
                 },
@@ -453,22 +443,19 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            exact={true}
+          <Link
+            replace={false}
             to="/"
 >
             <h1>
                         Movie Tracker
             </h1>
-</NavLink>,
+</Link>,
           <nav>
             <div>
                         <NavLink
                                     activeClassName="active"
                                     aria-current="page"
-                                    className="sign-in"
                                     exact={true}
                                     to="/login"
                         >
@@ -492,14 +479,12 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
             "children": <h1>
               Movie Tracker
 </h1>,
-            "exact": true,
+            "replace": false,
             "to": "/",
           },
           "ref": null,
@@ -523,11 +508,11 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               undefined,
+              undefined,
               <div>
                 <NavLink
                                 activeClassName="active"
                                 aria-current="page"
-                                className="sign-in"
                                 exact={true}
                                 to="/login"
                 >
@@ -547,6 +532,7 @@ ShallowWrapper {
           "ref": null,
           "rendered": Array [
             undefined,
+            undefined,
             Object {
               "instance": null,
               "key": undefined,
@@ -556,7 +542,6 @@ ShallowWrapper {
                   <NavLink
                     activeClassName="active"
                     aria-current="page"
-                    className="sign-in"
                     exact={true}
                     to="/login"
 >
@@ -582,7 +567,6 @@ ShallowWrapper {
                     "activeClassName": "active",
                     "aria-current": "page",
                     "children": "Sign In",
-                    "className": "sign-in",
                     "exact": true,
                     "to": "/login",
                   },

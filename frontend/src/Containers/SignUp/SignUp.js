@@ -16,21 +16,22 @@ export class SignUp extends Component {
     };
   }
 
-  handleChange=(event)=> {
+  handleChange= event => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   }
 
-  handleSubmit = async (event) => {
+  handleSubmit = async event => {
     event.preventDefault();
     const { userName, email, password } = this.state;
     try {
       const newUserData = await userSignUpRequest(userName, email, password);
       this.props.handleUserSignUp(newUserData);
+      this.setState({userName: '', email: '', password: ''});
+      this.props.history.push('/');
     } catch (error) {
       this.setState({ error, failedSignUp: true });
     }
-    this.setState({userName: '', email: '', password: ''});
   }
 
   render() {
@@ -73,16 +74,12 @@ export class SignUp extends Component {
   }
 }
 
-// export const mapStateToProps = (state) => ({
-//   userInfo: state.userInfo
-// });
-
-export const mapDispatchToProps = (dispatch) => ({
-  handleUserSignUp: (newUserData) => dispatch(actions.userSignUp(newUserData))
-});
-
-export default connect(null, mapDispatchToProps)(SignUp);
-
 SignUp.propTypes = {
   handleUserSignUp: PropTypes.func
 };
+
+export const mapDispatchToProps = dispatch => ({
+  handleUserSignUp: newUserData => dispatch(actions.userSignUp(newUserData))
+});
+
+export default connect(null, mapDispatchToProps)(SignUp);

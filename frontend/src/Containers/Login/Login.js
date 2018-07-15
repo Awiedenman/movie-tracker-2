@@ -14,7 +14,6 @@ export class Login extends Component {
       password: '',
       failedLogin: false,
       error: null
-      // loggedIn: false
     };
   }
 
