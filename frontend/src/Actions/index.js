@@ -6,7 +6,8 @@ export const fetchInitialMovies = movies => ({
 export const userLogin = user => ({
   type: 'USER_LOGIN',
   id: user.id,
-  name: user.name
+  name: user.name,
+  loggedIn: user.loggedIn
 });
 
 export const userSignUp = newUserData => ({
@@ -17,3 +18,8 @@ export const userSignUp = newUserData => ({
 export const userSignOut = () => ({
   type: 'USER_SIGN_OUT'
 });
+
+// export const addFavorite = favorite => ({
+//   type: 'ADD_FAVORITE',
+//   favorite
+// });
