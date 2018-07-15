@@ -15,8 +15,6 @@ export class Home extends Component {
 
   toggleFavorite = id => {
     console.log('id', id);
-    // this.state.loggedIn && this.props.favorites(id) ;
-    // : this.props.history.push('/sign-up');
   }
 
   async componentDidMount () {
@@ -29,6 +27,7 @@ export class Home extends Component {
     const displayMoviesCards = this.props.movies.map(movie => (
       <Card
         {...movie}
+        userId={this.props.userId}
         key={movie.id}
         toggleFavorite={this.toggleFavorite}
       />
@@ -44,11 +43,13 @@ export class Home extends Component {
 
 Home.propTypes = {
   initialFetchData: PropTypes.func,
-  movies: PropTypes.arrayOf(PropTypes.object)
+  movies: PropTypes.arrayOf(PropTypes.object),
+  userId: PropTypes.number
 };
 
 export const mapStateToProps = state => ({
-  movies: state.initialMovies
+  movies: state.initialMovies,
+  userId: state.userInfo.id
 });
 
 export const mapDispatchToProps = dispatch => ({

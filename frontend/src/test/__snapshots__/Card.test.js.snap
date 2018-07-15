@@ -24,11 +24,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div
-          onClick={[Function]}
->
-          ♡
-</div>,
+        <Route
+          render={[Function]}
+/>,
         <img
           alt="Movie poster for Thor: Ragnarok"
           className="card__image"
@@ -59,14 +57,13 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
-          "children": "♡",
-          "onClick": [Function],
+          "render": [Function],
         },
         "ref": null,
-        "rendered": "♡",
-        "type": "div",
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -133,11 +130,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div
-            onClick={[Function]}
->
-            ♡
-</div>,
+          <Route
+            render={[Function]}
+/>,
           <img
             alt="Movie poster for Thor: Ragnarok"
             className="card__image"
@@ -168,14 +163,13 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": "♡",
-            "onClick": [Function],
+            "render": [Function],
           },
           "ref": null,
-          "rendered": "♡",
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,

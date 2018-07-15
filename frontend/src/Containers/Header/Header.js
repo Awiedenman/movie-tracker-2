@@ -11,7 +11,7 @@ export const Header = props => {
 
   return (
     <header className="header">
-      <Link exact to="/">
+      <Link to="/">
         <h1>Movie Tracker</h1>
       </Link>
       <nav>

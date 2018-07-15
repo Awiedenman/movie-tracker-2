@@ -8,10 +8,12 @@ import { mockCleanedMovieList } from '../mock-data/mock-clean-data';
 describe('Home', () => {
   let wrapper;
   const mockFunc = jest.fn();
+
   beforeEach(() => wrapper = shallow(
-    <Home 
+    <Home
       initialFetchData={mockFunc}
       movies={mockCleanedMovieList}
+      userId={1}
     />
   ));
 
@@ -45,13 +47,17 @@ describe('Home', () => {
   describe('mapStateToProps', () => {
     test('should return a props object with a movies array', () => {
       const expected = {
-        movies: mockCleanedMovieList
+        movies: mockCleanedMovieList,
+        userId: 1
       };
-      
+
       const mockState = {
-        initialMovies: mockCleanedMovieList
+        initialMovies: mockCleanedMovieList,
+        userInfo: {
+          id: 1
+        }
       };
-        
+
       const actual = mapStateToProps(mockState);
 
       expect(actual).toEqual(expected);

@@ -1,12 +1,22 @@
 import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './Card.css';
 
-export const Card = ({ average, id, title, image, overview, toggleFavorite }) => {
+export const Card = props => {
+  const { average, id, title, image, overview, toggleFavorite, userId } = props;
+
   return (
     <div  className='card' id={id}>
-      <div onClick={() => toggleFavorite(id)}>♡</div>
+      <Route render={({ history }) => (
+        <button
+          onClick={userId ? () => toggleFavorite(id) : () => { history.push('/sign-up'); }}
+        >
+      ♡
+        </button>
+      )}
+      />
       <img className='card__image'
         src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image}`}
         alt={`Movie poster for ${title}`}
@@ -24,5 +34,6 @@ Card.propTypes ={
   title: PropTypes.string,
   image: PropTypes.string,
   overview: PropTypes.string,
-  toggleFavorite: PropTypes.func
+  toggleFavorite: PropTypes.func,
+  userId: PropTypes.number
 };
