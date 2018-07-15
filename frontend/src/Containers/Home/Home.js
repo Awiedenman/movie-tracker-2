@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { movieFetch } from '../../helpers/apiCalls';
 import { cleanMovieResponse } from '../../helpers/clean-responses';
-import { fetchInitialMovies } from '../../Actions';
+import { fetchInitialMovies, addfavorite } from '../../Actions';
 import { Card } from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
 
@@ -46,7 +46,8 @@ export class Home extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  initialFetchData: movies => dispatch(fetchInitialMovies(movies))
+  initialFetchData: movies => dispatch(fetchInitialMovies(movies)),
+  favorites: favorite => dispatch(addfavorite(favorite))
 });
 
 export const mapStateToProps = state => ({
