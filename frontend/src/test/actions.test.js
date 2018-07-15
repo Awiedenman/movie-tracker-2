@@ -1,4 +1,4 @@
-import * as actions from './index';
+import * as actions from '../Actions';
 import { mockCleanedMovieList } from '../mock-data/mock-clean-data';
 
 

@@ -4,7 +4,6 @@ const userReducer = (state = {}, action) => {
       return {
         id: action.id,
         name: action.name
-        // loggedIn: action.loggedIn
       };
     case 'USER_SIGN_UP':
       return {
