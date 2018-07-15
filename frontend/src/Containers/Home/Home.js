@@ -13,7 +13,9 @@ export class Home extends Component {
     super();
   }
 
-
+  toggleFavorite = (id) => {
+    console.log('id', id);
+  }
   async componentDidMount(){
     const initialFetch = await movieFetch();
     const movies = cleanMovieResponse(initialFetch);
@@ -25,6 +27,7 @@ export class Home extends Component {
       <Card
         {...movie}
         key={movie.id}
+        toggleFavorite={this.toggleFavorite}
       />
     ));
 
