@@ -4,17 +4,16 @@ import { movieFetch } from '../../helpers/apiCalls';
 import { cleanMovieResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies, addFavorite } from '../../Actions';
 import { Card } from '../../Components/Card/Card';
+
 import PropTypes from 'prop-types';
 
 import './Home.css';
 
 export class Home extends Component {
-
   toggleFavorite = (movie, userId) => {
     // console.log('movie', movie);
     this.props.favorites(movie);
     // postUserfavorties(movie.id, userId, movie.title, movie.image, movie.average, movie.overview);
-
   }
 
   async componentDidMount () {

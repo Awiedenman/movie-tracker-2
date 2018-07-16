@@ -22,21 +22,28 @@ ShallowWrapper {
         <section
           className="main-container"
 >
-          <Route
-                    component={[Function]}
-                    exact={true}
-                    path="/"
-          />
-          <Route
-                    component={[Function]}
-                    exact={true}
-                    path="/login"
-          />
-          <Route
-                    component={[Function]}
-                    exact={true}
-                    path="/sign-up"
-          />
+          <Switch>
+                    <Route
+                              component={[Function]}
+                              exact={true}
+                              path="/"
+                    />
+                    <Route
+                              component={[Function]}
+                              exact={true}
+                              path="/login"
+                    />
+                    <Route
+                              component={[Function]}
+                              exact={true}
+                              path="/sign-up"
+                    />
+                    <Redirect
+                              component={[Function]}
+                              push={false}
+                              to="/"
+                    />
+          </Switch>
 </section>,
       ],
       "className": "grid-container",
@@ -57,83 +64,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <Route
-              component={[Function]}
-              exact={true}
-              path="/"
-/>,
-            <Route
-              component={[Function]}
-              exact={true}
-              path="/login"
-/>,
-            <Route
-              component={[Function]}
-              exact={true}
-              path="/sign-up"
-/>,
-          ],
-          "className": "main-container",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/login",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/sign-up",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "section",
-      },
-    ],
-    "type": "main",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <withRouter(Connect(Component)) />,
-          <section
-            className="main-container"
->
+          "children": <Switch>
             <Route
                         component={[Function]}
                         exact={true}
@@ -149,25 +80,19 @@ ShallowWrapper {
                         exact={true}
                         path="/sign-up"
             />
-</section>,
-        ],
-        "className": "grid-container",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+            <Redirect
+                        component={[Function]}
+                        push={false}
+                        to="/"
+            />
+</Switch>,
+          "className": "main-container",
         },
-        Object {
+        "ref": null,
+        "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
             "children": Array [
               <Route
@@ -185,8 +110,12 @@ ShallowWrapper {
                 exact={true}
                 path="/sign-up"
 />,
+              <Redirect
+                component={[Function]}
+                push={false}
+                to="/"
+/>,
             ],
-            "className": "main-container",
           },
           "ref": null,
           "rendered": Array [
@@ -229,7 +158,190 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "push": false,
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
           ],
+          "type": [Function],
+        },
+        "type": "section",
+      },
+    ],
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <withRouter(Connect(Component)) />,
+          <section
+            className="main-container"
+>
+            <Switch>
+                        <Route
+                                    component={[Function]}
+                                    exact={true}
+                                    path="/"
+                        />
+                        <Route
+                                    component={[Function]}
+                                    exact={true}
+                                    path="/login"
+                        />
+                        <Route
+                                    component={[Function]}
+                                    exact={true}
+                                    path="/sign-up"
+                        />
+                        <Redirect
+                                    component={[Function]}
+                                    push={false}
+                                    to="/"
+                        />
+            </Switch>
+</section>,
+        ],
+        "className": "grid-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Switch>
+              <Route
+                            component={[Function]}
+                            exact={true}
+                            path="/"
+              />
+              <Route
+                            component={[Function]}
+                            exact={true}
+                            path="/login"
+              />
+              <Route
+                            component={[Function]}
+                            exact={true}
+                            path="/sign-up"
+              />
+              <Redirect
+                            component={[Function]}
+                            push={false}
+                            to="/"
+              />
+</Switch>,
+            "className": "main-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/"
+/>,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/login"
+/>,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/sign-up"
+/>,
+                <Redirect
+                  component={[Function]}
+                  push={false}
+                  to="/"
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/login",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/sign-up",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "push": false,
+                  "to": "/",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
           "type": "section",
         },
       ],

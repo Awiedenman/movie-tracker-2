@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
+  position: relative;
 }
 
 .card__image {
@@ -11,8 +12,27 @@
 }
 
 .card__overview {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 250px;
+}
+
+.card__description {
+  align-items: center;
+  background: rgba(29, 106, 154, 0.72);
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity .2s, visibility .2s;
+  visibility: hidden;
+}
+
+.card:hover .card__description {
+  opacity: 1;
+  visibility: visible;
 }

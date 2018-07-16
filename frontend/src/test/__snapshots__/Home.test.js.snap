@@ -32,7 +32,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Unknown
+        <Card
           average={7.5}
           id={284053}
           image="/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
@@ -73,7 +73,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Unknown
+          <Card
             average={7.5}
             id={284053}
             image="/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
