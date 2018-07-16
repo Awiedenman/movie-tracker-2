@@ -3,16 +3,12 @@ import { connect } from 'react-redux';
 import { movieFetch } from '../../helpers/apiCalls';
 import { cleanMovieResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies /*addFavorite*/} from '../../Actions';
-import { Card } from '../../Components/Card/Card';
+import Card from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
 
 import './Home.css';
 
 export class Home extends Component {
-  constructor() {
-    super();
-  }
-
   toggleFavorite = id => {
     console.log('id', id);
   }

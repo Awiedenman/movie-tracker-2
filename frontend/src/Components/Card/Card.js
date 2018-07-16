@@ -37,3 +37,5 @@ Card.propTypes ={
   toggleFavorite: PropTypes.func,
   userId: PropTypes.number
 };
+
+export default Card;
