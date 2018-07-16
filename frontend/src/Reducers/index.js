@@ -5,6 +5,6 @@ import { favoritesReducer } from './favoritesReducer';
 
 export default combineReducers({
   initialMovies: fetchInitialMoviesReducer,
-  userInfo: userReducer
-  // favorites: favoritesReducer
+  userInfo: userReducer,
+  favorites: favoritesReducer
 });
