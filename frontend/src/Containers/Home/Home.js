@@ -10,9 +10,10 @@ import './Home.css';
 
 export class Home extends Component {
 
-  toggleFavorite = movie => {
-    console.log('movie', movie);
+  toggleFavorite = (movie, userId) => {
+    // console.log('movie', movie);
     this.props.favorites(movie);
+    // postUserfavorties(movie.id, userId, movie.title, movie.image, movie.average, movie.overview);
 
   }
 

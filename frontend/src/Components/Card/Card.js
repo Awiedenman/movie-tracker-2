@@ -5,14 +5,13 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 export const Card = ({ movie, userId, toggleFavorite } )=> {
-  // console.log(movie)
   // const { average, id, title, image, overview, toggleFavorite, userId } = props;
 
   return (
     <div  className='card' id={movie.id}>
       <Route render={({ history }) => (
         <button
-          onClick={userId ? () => toggleFavorite(movie) : () => { history.push('/sign-up'); }}
+          onClick={userId ? () => toggleFavorite(movie, userId) : () => { history.push('/sign-up'); }}
         >
       ♡
         </button>
