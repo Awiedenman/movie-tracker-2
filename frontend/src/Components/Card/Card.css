@@ -13,7 +13,6 @@
 }
 
 .card .content {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.75)));
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
   bottom: 0;
   height: 30rem;
@@ -21,11 +20,7 @@
   opacity: 0;
   padding: 40px 10px 10px 10px;
   position: absolute;
-  -webkit-transform: translateY(100%) translateX(-50%);
-  -ms-transform: translateY(100%) translateX(-50%);
   transform: translateY(100%) translateX(-50%);
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
   transition-duration: 1s;
   width: 100%;
   width: 26.9rem;
