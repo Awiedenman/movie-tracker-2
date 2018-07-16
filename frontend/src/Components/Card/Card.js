@@ -22,12 +22,14 @@ const Card = props => {
   );
 };
 
-Card.propTypes ={
-  average: PropTypes.number,
-  id: PropTypes.number,
-  title: PropTypes.string,
-  image: PropTypes.string,
-  overview: PropTypes.string,
+Card.propTypes = {
+  movie: PropTypes.shape({
+    average: PropTypes.number,
+    id: PropTypes.number,
+    title: PropTypes.string,
+    image: PropTypes.string,
+    overview: PropTypes.string
+  }),
   toggleFavorite: PropTypes.func,
   userId: PropTypes.number
 };
