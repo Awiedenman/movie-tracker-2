@@ -4,12 +4,14 @@ exports[`Card should match the snapshot when rendered 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
+  Symbol(enzyme.__unrendered__): <Card
     average={7.5}
     id={284053}
     image="/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
     overview="Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela."
     title="Thor: Ragnarok"
+    toggleFavorite={[Function]}
+    userId={1}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -24,47 +26,40 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Route
-          render={[Function]}
-/>,
         <img
           alt="Movie poster for Thor: Ragnarok"
           className="card__image"
           src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
 />,
         <h2
-          className="card__title"
+          className="card__title card__description"
 >
           Thor: Ragnarok
 </h2>,
         <h4
-          className="card__avg"
+          className="card__avg card__description"
 >
           Viewer Average: 
           7.5
 </h4>,
         <p
-          className="card__overview"
+          className="card__overview card__description"
 >
           Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
 </p>,
+        <button
+          className=""
+          onClick={[Function]}
+>
+          ♡
+</button>,
+        false,
       ],
       "className": "card",
       "id": 284053,
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "render": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -84,7 +79,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Thor: Ragnarok",
-          "className": "card__title",
+          "className": "card__title card__description",
         },
         "ref": null,
         "rendered": "Thor: Ragnarok",
@@ -99,7 +94,7 @@ ShallowWrapper {
             "Viewer Average: ",
             7.5,
           ],
-          "className": "card__avg",
+          "className": "card__avg card__description",
         },
         "ref": null,
         "rendered": Array [
@@ -114,12 +109,26 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
-          "className": "card__overview",
+          "className": "card__overview card__description",
         },
         "ref": null,
         "rendered": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
         "type": "p",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "♡",
+          "className": "",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "♡",
+        "type": "button",
+      },
+      false,
     ],
     "type": "div",
   },
@@ -130,47 +139,40 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Route
-            render={[Function]}
-/>,
           <img
             alt="Movie poster for Thor: Ragnarok"
             className="card__image"
             src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
 />,
           <h2
-            className="card__title"
+            className="card__title card__description"
 >
             Thor: Ragnarok
 </h2>,
           <h4
-            className="card__avg"
+            className="card__avg card__description"
 >
             Viewer Average: 
             7.5
 </h4>,
           <p
-            className="card__overview"
+            className="card__overview card__description"
 >
             Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
 </p>,
+          <button
+            className=""
+            onClick={[Function]}
+>
+            ♡
+</button>,
+          false,
         ],
         "className": "card",
         "id": 284053,
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -190,7 +192,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Thor: Ragnarok",
-            "className": "card__title",
+            "className": "card__title card__description",
           },
           "ref": null,
           "rendered": "Thor: Ragnarok",
@@ -205,7 +207,7 @@ ShallowWrapper {
               "Viewer Average: ",
               7.5,
             ],
-            "className": "card__avg",
+            "className": "card__avg card__description",
           },
           "ref": null,
           "rendered": Array [
@@ -220,12 +222,26 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
-            "className": "card__overview",
+            "className": "card__overview card__description",
           },
           "ref": null,
           "rendered": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
           "type": "p",
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "♡",
+            "className": "",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "♡",
+          "type": "button",
+        },
+        false,
       ],
       "type": "div",
     },
