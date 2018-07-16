@@ -5,7 +5,8 @@ import Register from '../Register/Register';
 import './Card.css';
 
 const Card = props => {
-  const { average, id, title, image, overview, toggleFavorite, userId } = props;
+  const { movie, toggleFavorite, userId } = props;
+  const { id, image, title, average, overview } = movie;
 
   return (
     <div  className="card" id={id}>
