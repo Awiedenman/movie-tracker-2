@@ -13,9 +13,9 @@ export class Home extends Component {
     super();
   }
 
-  toggleFavorite = id => {
-    console.log('id', id);
-    this.props.favorites(id);
+  toggleFavorite = movie => {
+    console.log('movie', movie);
+    this.props.favorites(movie);
 
   }
 
@@ -57,7 +57,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   initialFetchData: movies => dispatch(fetchInitialMovies(movies)),
-  favorites: id => dispatch(addFavorite(id))
+  favorites: movie => dispatch(addFavorite(movie))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
