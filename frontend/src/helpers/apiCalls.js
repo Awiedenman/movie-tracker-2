@@ -43,13 +43,14 @@ export const userSignUpRequest = async ( name, email, password) =>  {
   return await response.json();
 };
 
-// export const postUserfavorties = async ( userId, movie ) => {
-//   const response = await fetch('http://localhost:3000/api/users/favorites/new', {
-//     method: 'POST',
-//     body: JSON.stringify({ userId, ...movie }),
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   });
-//   return response.json();
-// };
+export const postUserFavorites = async ( userId, movie ) => {
+  console.log(movie, userId)
+  // const response = await fetch('http://localhost:3000/api/users/favorites/new', {
+  //   method: 'POST',
+  //   body: JSON.stringify({ userId, ...movie }),
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   }
+  // });
+  // return response.json();
+};

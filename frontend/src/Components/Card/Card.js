@@ -17,7 +17,7 @@ const Card = props => {
       <h2 className="card__title card__description">{title}</h2>
       <h4 className="card__avg card__description">Viewer Average: {average}</h4>
       <p className="card__overview card__description" >{overview}</p>
-      {userId && <button className=""onClick={() => toggleFavorite(id)}>♡</button>}
+      {userId && <button className=""onClick={() => toggleFavorite(movie, userId)}>♡</button>}
       {!userId && <Register />}
     </div>
   );
