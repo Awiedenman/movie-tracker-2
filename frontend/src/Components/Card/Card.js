@@ -9,16 +9,21 @@ const Card = props => {
   const { id, image, title, average, overview } = movie;
 
   return (
-    <div  className="card" id={id}>
-      <img className="card__image"
+    <div
+      className="card" id={id}
+      style={{background: `url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image}) top no-repeat` }}
+    >
+      {/* <img className="card__image"
         src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image}`}
         alt={`Movie poster for ${title}`}
-      />
-      <h2 className="card__title card__description">{title}</h2>
-      <h4 className="card__avg card__description">Viewer Average: {average}</h4>
-      <p className="card__overview card__description" >{overview}</p>
-      {userId && <button className=""onClick={() => toggleFavorite(movie, userId)}>♡</button>}
-      {!userId && <Register />}
+      /> */}
+      <div className="content card__description">
+        <h2 className="card__title ">{title}</h2>
+        <h4 className="card__avg">Viewer Average: {average}</h4>
+        <p className="card__overview" >{overview}</p>
+        {userId && <button className=""onClick={() => toggleFavorite(id)}>♡</button>}
+        {!userId && <Register />}
+      </div>
     </div>
   );
 };
