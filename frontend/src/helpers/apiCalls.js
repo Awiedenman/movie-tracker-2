@@ -27,7 +27,7 @@ export const userLoginRequest = async (email, password) => {
   return await response.json();
 };
 
-export const userSignUpRequest= async ( name, email, password) =>  {
+export const userSignUpRequest = async ( name, email, password) =>  {
   const response = await fetch('http://localhost:3000/api/users/new', {
     method: 'POST',
     body: JSON.stringify({ name, email, password }),
@@ -41,5 +41,15 @@ export const userSignUpRequest= async ( name, email, password) =>  {
   }
 
   return await response.json();
-
 };
+
+// export const postUserfavorties = async ( userId, movie ) => {
+//   const response = await fetch('http://localhost:3000/api/users/favorites/new', {
+//     method: 'POST',
+//     body: JSON.stringify({ userId, ...movie }),
+//     headers: {
+//       'Content-Type': 'application/json'
+//     }
+//   });
+//   return response.json();
+// };

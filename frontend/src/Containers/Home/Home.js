@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { movieFetch } from '../../helpers/apiCalls';
 import { cleanMovieResponse } from '../../helpers/clean-responses';
-import { fetchInitialMovies /*addFavorite*/} from '../../Actions';
+import { fetchInitialMovies, addFavorite } from '../../Actions';
 import { Card } from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
 
 import './Home.css';
 
 export class Home extends Component {
-  constructor() {
-    super();
-  }
 
-  toggleFavorite = id => {
-    console.log('id', id);
+  toggleFavorite = (movie, userId) => {
+    // console.log('movie', movie);
+    this.props.favorites(movie);
+    // postUserfavorties(movie.id, userId, movie.title, movie.image, movie.average, movie.overview);
+
   }
 
   async componentDidMount () {
@@ -26,7 +26,7 @@ export class Home extends Component {
   render() {
     const displayMoviesCards = this.props.movies.map(movie => (
       <Card
-        {...movie}
+        movie={movie}
         userId={this.props.userId}
         key={movie.id}
         toggleFavorite={this.toggleFavorite}
@@ -44,7 +44,8 @@ export class Home extends Component {
 Home.propTypes = {
   initialFetchData: PropTypes.func,
   movies: PropTypes.arrayOf(PropTypes.object),
-  userId: PropTypes.number
+  userId: PropTypes.number,
+  favorites: PropTypes.func
 };
 
 export const mapStateToProps = state => ({
@@ -53,8 +54,8 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  initialFetchData: movies => dispatch(fetchInitialMovies(movies))
-  // favorites: id => dispatch(addFavorite(id))
+  initialFetchData: movies => dispatch(fetchInitialMovies(movies)),
+  favorites: movie => dispatch(addFavorite(movie))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
