@@ -16,7 +16,7 @@ describe('Card', () => {
 
   beforeEach(() => wrapper = shallow(
     <Card
-      {...mockMovie}
+      movie={mockMovie}
       toggleFavorite={mockFunc}
       userId={mockUser}
     />
