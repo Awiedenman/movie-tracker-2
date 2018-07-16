@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userLogin } from '../../Actions/index';
-import { userLoginRequest } from '../../helpers/apiCalls';
+import { userLoginRequest, fetchUserFavorites } from '../../helpers/apiCalls';
 import PropTypes from 'prop-types';
+// import { fetchUserFavorites } from '../../helpers/apiCalls';
 
 import './Login.css';
 
@@ -28,11 +29,21 @@ export class Login extends Component {
 
     try {
       const user = await userLoginRequest(email, password);
+      console.log(user.data.id)
       this.props.handleUserLogin(user.data);
+      this.retreiveUserFavorites(user.data.id)
       this.setState({ email: '', password: '' });
       this.props.history.push('/');
     } catch (error) {
       this.setState({ failedLogin: true, error, email: '', password: ''});
+    }
+  }
+
+  retreiveUserFavorites = (user) => {
+    try {
+      fetchUserFavorites(user.data.id);
+    } catch (error) {
+      Error('Sorry, wecould not retreive your favorites at this time.');
     }
   }
 
@@ -67,6 +78,10 @@ export class Login extends Component {
     );
   }
 }
+
+export const maspStateToProps = ( state ) =>({
+  userInfo: state.userInfo
+});
 
 export const mapDispatchToProps = dispatch => ({
   handleUserLogin: user => dispatch(userLogin(user))

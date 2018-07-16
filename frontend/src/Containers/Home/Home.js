@@ -18,8 +18,10 @@ export class Home extends Component {
     } catch (error){
       Error('shit broke');
     }
+    // this.retreiveUserFavorites(userId);
+    // userSignOut
   }
-
+  
   async componentDidMount () {
     const initialFetch = await movieFetch();
     const movies = cleanMovieResponse(initialFetch);
