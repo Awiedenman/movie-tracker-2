@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { movieFetch, postUserFavorites } from '../../helpers/apiCalls';
 import { cleanMovieResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies, addFavorite } from '../../Actions';
 import Card from '../../Components/Card/Card';
 
-import PropTypes from 'prop-types';
 
 import './Home.css';
 
@@ -57,7 +57,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   initialFetchData: movies => dispatch(fetchInitialMovies(movies)),
-  favorites: (movie, userId )=> dispatch(addFavorite(movie, userId))
+  favorites: (movie, userId)=> dispatch(addFavorite(movie, userId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
