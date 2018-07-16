@@ -29,111 +29,172 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <img
-          alt="Movie poster for Thor: Ragnarok"
-          className="card__image"
-          src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
-/>,
-        <h2
-          className="card__title card__description"
+      "children": <div
+        className="overlay"
 >
-          Thor: Ragnarok
-</h2>,
-        <h4
-          className="card__avg card__description"
->
-          Viewer Average: 
-          7.5
-</h4>,
-        <p
-          className="card__overview card__description"
->
-          Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
-</p>,
-        <button
-          className=""
-          onClick={[Function]}
->
-          ♡
-</button>,
-        false,
-      ],
+        <div
+                className="card__content"
+        >
+                <h2
+                        className="card__title "
+                >
+                        Thor: Ragnarok
+                </h2>
+                <h4
+                        className="card__avg"
+                >
+                        Viewer Average: 
+                        7.5
+                </h4>
+                <p
+                        className="card__overview"
+                >
+                        Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
+                </p>
+                <button
+                        className="card__button"
+                        onClick={[Function]}
+                >
+                        ♡
+                </button>
+        </div>
+</div>,
       "className": "card",
       "id": 284053,
+      "style": Object {
+        "background": "url(https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg) top center no-repeat",
+      },
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "alt": "Movie poster for Thor: Ragnarok",
-          "className": "card__image",
-          "src": "https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="card__content"
+>
+          <h2
+                    className="card__title "
+          >
+                    Thor: Ragnarok
+          </h2>
+          <h4
+                    className="card__avg"
+          >
+                    Viewer Average: 
+                    7.5
+          </h4>
+          <p
+                    className="card__overview"
+          >
+                    Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
+          </p>
+          <button
+                    className="card__button"
+                    onClick={[Function]}
+          >
+                    ♡
+          </button>
+</div>,
+        "className": "overlay",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Thor: Ragnarok",
-          "className": "card__title card__description",
-        },
-        "ref": null,
-        "rendered": "Thor: Ragnarok",
-        "type": "h2",
-      },
-      Object {
+      "ref": null,
+      "rendered": Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Viewer Average: ",
-            7.5,
+            <h2
+              className="card__title "
+>
+              Thor: Ragnarok
+</h2>,
+            <h4
+              className="card__avg"
+>
+              Viewer Average: 
+              7.5
+</h4>,
+            <p
+              className="card__overview"
+>
+              Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
+</p>,
+            <button
+              className="card__button"
+              onClick={[Function]}
+>
+              ♡
+</button>,
+            false,
           ],
-          "className": "card__avg card__description",
+          "className": "card__content",
         },
         "ref": null,
         "rendered": Array [
-          "Viewer Average: ",
-          7.5,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Thor: Ragnarok",
+              "className": "card__title ",
+            },
+            "ref": null,
+            "rendered": "Thor: Ragnarok",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Viewer Average: ",
+                7.5,
+              ],
+              "className": "card__avg",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Viewer Average: ",
+              7.5,
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+              "className": "card__overview",
+            },
+            "ref": null,
+            "rendered": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "♡",
+              "className": "card__button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "♡",
+            "type": "button",
+          },
+          false,
         ],
-        "type": "h4",
+        "type": "div",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
-          "className": "card__overview card__description",
-        },
-        "ref": null,
-        "rendered": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "♡",
-          "className": "",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "♡",
-        "type": "button",
-      },
-      false,
-    ],
+      "type": "div",
+    },
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -142,111 +203,172 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <img
-            alt="Movie poster for Thor: Ragnarok"
-            className="card__image"
-            src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
-/>,
-          <h2
-            className="card__title card__description"
+        "children": <div
+          className="overlay"
 >
-            Thor: Ragnarok
-</h2>,
-          <h4
-            className="card__avg card__description"
->
-            Viewer Average: 
-            7.5
-</h4>,
-          <p
-            className="card__overview card__description"
->
-            Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
-</p>,
-          <button
-            className=""
-            onClick={[Function]}
->
-            ♡
-</button>,
-          false,
-        ],
+          <div
+                    className="card__content"
+          >
+                    <h2
+                              className="card__title "
+                    >
+                              Thor: Ragnarok
+                    </h2>
+                    <h4
+                              className="card__avg"
+                    >
+                              Viewer Average: 
+                              7.5
+                    </h4>
+                    <p
+                              className="card__overview"
+                    >
+                              Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
+                    </p>
+                    <button
+                              className="card__button"
+                              onClick={[Function]}
+                    >
+                              ♡
+                    </button>
+          </div>
+</div>,
         "className": "card",
         "id": 284053,
+        "style": Object {
+          "background": "url(https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg) top center no-repeat",
+        },
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "alt": "Movie poster for Thor: Ragnarok",
-            "className": "card__image",
-            "src": "https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="card__content"
+>
+            <h2
+                        className="card__title "
+            >
+                        Thor: Ragnarok
+            </h2>
+            <h4
+                        className="card__avg"
+            >
+                        Viewer Average: 
+                        7.5
+            </h4>
+            <p
+                        className="card__overview"
+            >
+                        Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
+            </p>
+            <button
+                        className="card__button"
+                        onClick={[Function]}
+            >
+                        ♡
+            </button>
+</div>,
+          "className": "overlay",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Thor: Ragnarok",
-            "className": "card__title card__description",
-          },
-          "ref": null,
-          "rendered": "Thor: Ragnarok",
-          "type": "h2",
-        },
-        Object {
+        "ref": null,
+        "rendered": Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Viewer Average: ",
-              7.5,
+              <h2
+                className="card__title "
+>
+                Thor: Ragnarok
+</h2>,
+              <h4
+                className="card__avg"
+>
+                Viewer Average: 
+                7.5
+</h4>,
+              <p
+                className="card__overview"
+>
+                Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
+</p>,
+              <button
+                className="card__button"
+                onClick={[Function]}
+>
+                ♡
+</button>,
+              false,
             ],
-            "className": "card__avg card__description",
+            "className": "card__content",
           },
           "ref": null,
           "rendered": Array [
-            "Viewer Average: ",
-            7.5,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Thor: Ragnarok",
+                "className": "card__title ",
+              },
+              "ref": null,
+              "rendered": "Thor: Ragnarok",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Viewer Average: ",
+                  7.5,
+                ],
+                "className": "card__avg",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Viewer Average: ",
+                7.5,
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+                "className": "card__overview",
+              },
+              "ref": null,
+              "rendered": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "♡",
+                "className": "card__button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "♡",
+              "type": "button",
+            },
+            false,
           ],
-          "type": "h4",
+          "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
-            "className": "card__overview card__description",
-          },
-          "ref": null,
-          "rendered": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "♡",
-            "className": "",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "♡",
-          "type": "button",
-        },
-        false,
-      ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],
