@@ -28,6 +28,7 @@
   color: inherit;
   cursor: pointer;
   font: inherit;
+  font-size: 1.4rem;
   outline: inherit;
   padding: 0;
 }
@@ -77,5 +78,6 @@
 }
 
 .card:hover {
-  transform: scale(1.015);
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.2), 0 2px 1px 0 rgba(0,0,0,.14), 0 3px 1px -1px rgba(0,0,0,.12);
+  transform: scale(1.008)
 }

@@ -11,7 +11,7 @@ const Card = props => {
   return (
     <div
       className="card" id={id}
-      style={{background: `url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image}) top center no-repeat` }}
+      style={{ background: `url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image}) top center no-repeat` }}
     >
       <div className="overlay">
         <div className="card__content">

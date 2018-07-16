@@ -63,9 +63,10 @@ export const postUserFavorites = async ( movie, userId ) => {
       'Content-Type': 'application/json'
     }
   });
+
   if (!response.ok) {
     throw Error('Sorry, there was problem saving you favorite. Please try again later.');
   }
-  // console.log(response)
+
   return response.json();
 };
