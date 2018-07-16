@@ -9,9 +9,6 @@ import PropTypes from 'prop-types';
 import './Home.css';
 
 export class Home extends Component {
-  constructor() {
-    super();
-  }
 
   toggleFavorite = movie => {
     console.log('movie', movie);
@@ -28,7 +25,7 @@ export class Home extends Component {
   render() {
     const displayMoviesCards = this.props.movies.map(movie => (
       <Card
-        {...movie}
+        movie={movie}
         userId={this.props.userId}
         key={movie.id}
         toggleFavorite={this.toggleFavorite}
