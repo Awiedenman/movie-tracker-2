@@ -11,9 +11,12 @@ import './Home.css';
 
 export class Home extends Component {
   toggleFavorite = (movie, userId) => {
-    console.log('movie', movie, 'userId', userId);
     this.props.favorites(movie, userId);
-    postUserFavorites(movie, userId);
+    try {
+      postUserFavorites(movie, userId);
+    } catch (error){
+      Error('shit broke');
+    }
   }
 
   async componentDidMount () {

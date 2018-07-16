@@ -73,5 +73,22 @@ describe('Actions', () => {
       expect(result).toEqual(mockAction);
     });
 
+    test('should have a type of ADD_FAVORITE', () => {
+      const { addFavorite } = actions;
+      const movie = { movie: 'Thor'};
+      const userId = 1;
+
+      const mockAction = {
+        type: 'ADD_FAVORITE',
+        favorite: movie,
+        userId
+      };
+
+      const result = addFavorite(movie, userId);
+
+      expect(result).toEqual(mockAction);
+
+    });
+
   });
 });
