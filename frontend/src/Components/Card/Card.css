@@ -1,50 +1,67 @@
 .card {
   align-items: center;
+  background: cover;
   display: flex;
   flex-direction: column;
   height: 60rem;
   justify-content: center;
-  padding: 1rem;
   position: relative;
 }
 
-.card__image {
-  height: 40.5rem;
+.card__title {
+  font-size: 1.9rem;
 }
 
-.card .content {
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
-  bottom: 0;
-  height: 30rem;
-  left: 50%;
-  opacity: 0;
-  padding: 40px 10px 10px 10px;
-  position: absolute;
-  transform: translateY(100%) translateX(-50%);
-  transition-duration: 1s;
-  width: 100%;
-  width: 26.9rem;
+.card__avg {
+  font-size: 1.6rem;
 }
 
-.card__description {
+.card__overview {
+  font-size: 1.3rem;
+}
+
+.card__button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  outline: inherit;
+  padding: 0;
+}
+
+.card__content {
   align-items: center;
-  background: rgba(29, 106, 154, 0.72);
-  bottom: 0;
   color: #fff;
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: center;
-  left: 0;
-  opacity: 0;
   padding: 2rem;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: opacity .2s, visibility .2s;
-  visibility: hidden;
+  text-align: center;
+  transition: .5s ease;
+  width: 100%;
 }
 
-.card:hover .card__description {
-  opacity: 1;
+.overlay {
+  background: linear-gradient(
+    to bottom,
+    black,
+    rgba(0, 0, 0, 0.7)
+  );
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: .5s ease;
+  visibility: hidden;
+  width: 100%;
+}
+
+.card:hover .card__content {
+  visibility: visible;
+}
+
+.card:hover .overlay {
+  opacity: .7;
   visibility: visible;
 }
