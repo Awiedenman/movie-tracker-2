@@ -43,14 +43,29 @@ export const userSignUpRequest = async ( name, email, password) =>  {
   return await response.json();
 };
 
-export const postUserFavorites = async ( userId, movie ) => {
-  console.log(movie, userId)
-  // const response = await fetch('http://localhost:3000/api/users/favorites/new', {
-  //   method: 'POST',
-  //   body: JSON.stringify({ userId, ...movie }),
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   }
-  // });
-  // return response.json();
+export const postUserFavorites = async ( movie, userId ) => {
+  const { id, title, image, releaseDate, overview, average } = movie;
+
+  const favoriteToPost = {
+    movie_id: id,
+    user_id: userId,
+    title: title,
+    poster_path: image,
+    release_date: releaseDate,
+    vote_average: average,
+    overview: overview
+  };
+
+  const response = await fetch('http://localhost:3000/api/users/favorites/new', {
+    method: 'POST',
+    body: JSON.stringify(favoriteToPost),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  if (!response.ok) {
+    throw Error('Sorry, there was problem saving you favorite. Please try again later.');
+  }
+  // console.log(response)
+  return response.json();
 };
