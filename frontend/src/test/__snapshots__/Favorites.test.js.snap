@@ -5,6 +5,14 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Favorites
+    favorites={
+        Array [
+            Object {
+              "id": 2,
+              "name": "thor",
+            },
+          ]
+    }
     movies={
         Array [
             Object {
@@ -36,17 +44,18 @@ ShallowWrapper {
           favorites={
                     Array [
                               Object {
-                                "id": 1,
+                                "id": 2,
                                 "name": "thor",
                               },
                             ]
           }
           movie={
                     Object {
-                              "id": 1,
+                              "id": 2,
                               "name": "thor",
                             }
           }
+          toggleFavorite={[Function]}
           userId={1}
 />,
       ],
@@ -56,19 +65,20 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "1",
+        "key": "2",
         "nodeType": "function",
         "props": Object {
           "favorites": Array [
             Object {
-              "id": 1,
+              "id": 2,
               "name": "thor",
             },
           ],
           "movie": Object {
-            "id": 1,
+            "id": 2,
             "name": "thor",
           },
+          "toggleFavorite": [Function],
           "userId": 1,
         },
         "ref": null,
@@ -89,17 +99,18 @@ ShallowWrapper {
             favorites={
                         Array [
                                     Object {
-                                      "id": 1,
+                                      "id": 2,
                                       "name": "thor",
                                     },
                                   ]
             }
             movie={
                         Object {
-                                    "id": 1,
+                                    "id": 2,
                                     "name": "thor",
                                   }
             }
+            toggleFavorite={[Function]}
             userId={1}
 />,
         ],
@@ -109,19 +120,20 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "1",
+          "key": "2",
           "nodeType": "function",
           "props": Object {
             "favorites": Array [
               Object {
-                "id": 1,
+                "id": 2,
                 "name": "thor",
               },
             ],
             "movie": Object {
-              "id": 1,
+              "id": 2,
               "name": "thor",
             },
+            "toggleFavorite": [Function],
             "userId": 1,
           },
           "ref": null,
@@ -148,7 +160,15 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Favorites
-    movies={Array []}
+    favorites={Array []}
+    movies={
+        Array [
+            Object {
+              "id": 1,
+              "name": "thor",
+            },
+          ]
+    }
     user={
         Object {
             "id": 1,
@@ -207,6 +227,90 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": "Please Add Favorites",
+        "type": "h2",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;
+
+exports[`Favorites should match snapshot when no user present in 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Favorites
+    favorites={Array []}
+    movies={
+        Array [
+            Object {
+              "id": 1,
+              "name": "thor",
+            },
+          ]
+    }
+    user={Object {}}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <h2>
+        Please Sign In/Sign Up to add Favorites
+</h2>,
+      "className": "home-container",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Please Sign In/Sign Up to add Favorites",
+      },
+      "ref": null,
+      "rendered": "Please Sign In/Sign Up to add Favorites",
+      "type": "h2",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <h2>
+          Please Sign In/Sign Up to add Favorites
+</h2>,
+        "className": "home-container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Please Sign In/Sign Up to add Favorites",
+        },
+        "ref": null,
+        "rendered": "Please Sign In/Sign Up to add Favorites",
         "type": "h2",
       },
       "type": "div",

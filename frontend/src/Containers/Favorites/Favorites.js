@@ -6,14 +6,28 @@ import Card from '../../Components/Card/Card';
 import './Favorites.css';
 
 export class Favorites extends Component {
+  toggleFavorite = (movie, userId) => {
+    const { favorites } = this.props;
+    const favoritedMovie = favorites.find(favorite => favorite.movie_id === movie.id);
+
+    if (!favoritedMovie) {
+      // postUserFavorites(movie, userId);
+      // this.props.addFavorite(movie);
+    } else {
+      // TODO remove movie from db here
+    }
+  }
+
   render() {
-    const { movies, user } = this.props;
-    const userFavorites = movies.map(movie =>
+    const { favorites, user } = this.props;
+
+    const userFavorites = favorites.map(movie =>
       <Card
         movie={movie}
         key={movie.id}
         userId={user.id}
-        favorites={movies}
+        toggleFavorite={this.toggleFavorite}
+        favorites={favorites}
       />
     );
 
@@ -25,7 +39,7 @@ export class Favorites extends Component {
       );
     }
 
-    if (!movies.length) {
+    if (!favorites.length) {
       return (
         <div className="home-container">
           <h2>Please Add Favorites</h2>
@@ -43,12 +57,12 @@ export class Favorites extends Component {
 
 Favorites.propTypes = {
   user: PropTypes.object,
-  movies: PropTypes.arrayOf(PropTypes.object)
+  favorites: PropTypes.arrayOf(PropTypes.object)
 };
 
 export const mapStateToProps = state => ({
   user: state.userInfo,
-  movies: state.favorites
+  favorites: state.favorites
 });
 
 export default connect(mapStateToProps)(Favorites);

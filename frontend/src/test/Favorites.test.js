@@ -11,23 +11,22 @@ describe('Favorites', () => {
     id: 1
   };
   const mockFunc = jest.fn();
+  const mockFavorites = [{name: 'thor', id: 2}];
+
 
   const mockMovie = [{name:'thor', id: 1}];
   beforeEach(() => wrapper = shallow(
     <Favorites
       user={mockUser}
       movies={mockMovie}
+      favorites={mockFavorites}
     />
   ));
-
-  test('should match snapshot when no user present', () => {
-    wrapper = shallow(<Favorites user={{}} movies={mockMovie}/>);
-  });
 
   describe('mapStateToProps', () => {
     test('should return a props object with a movies array', () => {
       const expected = {
-        movies: mockMovie,
+        favorites: mockMovie,
         user: {
           id: 1
         }
@@ -47,8 +46,24 @@ describe('Favorites', () => {
   });
 
   test('should match snapshot when no movies present in favorites', () => {
-    wrapper = shallow(<Favorites user={mockUser} movies={[]} />);
+    wrapper = shallow(
+      <Favorites
+        user={mockUser}
+        movies={mockMovie}
+        favorites={[]}
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 
+  test('should match snapshot when no user present in', () => {
+    wrapper = shallow(
+      <Favorites
+        user={{}}
+        movies={mockMovie}
+        favorites={[]}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 

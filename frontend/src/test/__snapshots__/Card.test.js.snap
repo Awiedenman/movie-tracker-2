@@ -63,7 +63,7 @@ ShallowWrapper {
                         Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
                 </p>
                 <button
-                        className="card__button undefined"
+                        className="card__button favorite"
                         onClick={[Function]}
                 >
                         ♡
@@ -101,7 +101,7 @@ ShallowWrapper {
                     Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
           </p>
           <button
-                    className="card__button undefined"
+                    className="card__button favorite"
                     onClick={[Function]}
           >
                     ♡
@@ -133,7 +133,7 @@ ShallowWrapper {
               Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
 </p>,
             <button
-              className="card__button undefined"
+              className="card__button favorite"
               onClick={[Function]}
 >
               ♡
@@ -192,7 +192,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "♡",
-              "className": "card__button undefined",
+              "className": "card__button favorite",
               "onClick": [Function],
             },
             "ref": null,
@@ -236,7 +236,7 @@ ShallowWrapper {
                               Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
                     </p>
                     <button
-                              className="card__button undefined"
+                              className="card__button favorite"
                               onClick={[Function]}
                     >
                               ♡
@@ -274,7 +274,7 @@ ShallowWrapper {
                         Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
             </p>
             <button
-                        className="card__button undefined"
+                        className="card__button favorite"
                         onClick={[Function]}
             >
                         ♡
@@ -306,7 +306,7 @@ ShallowWrapper {
                 Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.
 </p>,
               <button
-                className="card__button undefined"
+                className="card__button favorite"
                 onClick={[Function]}
 >
                 ♡
@@ -365,7 +365,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "♡",
-                "className": "card__button undefined",
+                "className": "card__button favorite",
                 "onClick": [Function],
               },
               "ref": null,

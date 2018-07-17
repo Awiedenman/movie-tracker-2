@@ -36,6 +36,18 @@ describe('Card', () => {
     expect(mockFunc).toHaveBeenCalled();
   });
 
+  test('should not add class name when movie not in favorites', () => {
+    wrapper = shallow(
+      <Card
+        movie={mockMovie}
+        toggleFavorite={mockFunc}
+        userId={mockUser}
+        favorites={[]}
+      />
+    );
+    expect(wrapper.find('.not-favorite')).toBeDefined();
+  });
+
 
   test('should match the snapshot when rendered', () => {
     expect(wrapper).toMatchSnapshot();

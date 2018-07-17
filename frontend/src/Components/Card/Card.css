@@ -85,3 +85,7 @@
 .favorite {
   color: red;
 }
+
+.not-favorite {
+  color: #fff;
+}
