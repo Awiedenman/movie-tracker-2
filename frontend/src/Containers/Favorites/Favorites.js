@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { postUserFavorites, fetchUserFavorites } from '../../helpers/apiCalls';
+import { removeFavorite } from '../../Actions';
 import Card from '../../Components/Card/Card';
 
 import './Favorites.css';
 
 export class Favorites extends Component {
   toggleFavorite = (movie, userId) => {
-    const { favorites } = this.props;
-    const favoritedMovie = favorites.find(favorite => favorite.movie_id === movie.id);
 
-    if (!favoritedMovie) {
-      // postUserFavorites(movie, userId);
-      // this.props.addFavorite(movie);
-    } else {
-      // TODO remove movie from db here
-    }
+    this.props.removeFavorite(movie);
+    // TODO remove movie from db here
   }
 
   render() {
@@ -57,12 +53,17 @@ export class Favorites extends Component {
 
 Favorites.propTypes = {
   user: PropTypes.object,
-  favorites: PropTypes.arrayOf(PropTypes.object)
+  favorites: PropTypes.arrayOf(PropTypes.object),
+  removeFavorite: PropTypes.func
 };
 
 export const mapStateToProps = state => ({
   user: state.userInfo,
   favorites: state.favorites
+});
+
+export const mapDispatchToProps = dispatch => ({
+  removeFavorite: movie => dispatch(removeFavorite(movie))
 });
 
 export default connect(mapStateToProps)(Favorites);

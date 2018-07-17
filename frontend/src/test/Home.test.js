@@ -5,7 +5,7 @@ import { fetchInitialMovies, addFavorite, addExistingFavorites, removeFavorite }
 import { mockInitialMovieResponse } from '../mock-data/mock-responses';
 import { mockCleanedMovieList } from '../mock-data/mock-clean-data';
 import { postUserFavorites, fetchUserFavorites } from '../helpers/apiCalls';
-import { cleanMovieResponse } from '../helpers/clean-responses';
+import { cleanMovieResponse, cleanFavoritesResponse } from '../helpers/clean-responses';
 
 jest.mock('../helpers/apiCalls');
 jest.mock('../helpers/clean-responses');
@@ -15,6 +15,7 @@ describe('Home', () => {
   const mockFetchData = jest.fn();
   const mockAddFav = jest.fn();
   const mockFavFunc = jest.fn();
+  const mockRemoveFav = jest.fn();
   const mockFavorites = [{ title: 'Thor', id: 2 }, { title: 'Nerds', id: 3 }];
 
   beforeEach(() => wrapper = shallow(
@@ -25,6 +26,7 @@ describe('Home', () => {
       addFavorite={mockAddFav}
       userFavorites={mockFavorites}
       getUserFavorites={mockFavFunc}
+      removeFavorite={mockRemoveFav}
     />
   ));
 
@@ -33,6 +35,7 @@ describe('Home', () => {
       await wrapper.instance().componentDidMount();
       cleanMovieResponse();
       fetchUserFavorites();
+      cleanFavoritesResponse();
       expect(mockFetchData).toHaveBeenCalled();
     });
 
@@ -50,6 +53,28 @@ describe('Home', () => {
       await postUserFavorites();
       expect(mockAddFav).toHaveBeenCalled();
     });
+
+    test('should call removeFavorite if movie is favortied', async () => {
+      const mockFavorites = [{ movie_id: 1 }, { movie_id: 2}];
+      const mockMovie = { id: 2 };
+      const mockUserId = 6;
+
+      wrapper = shallow(
+        <Home
+          initialFetchData={mockFetchData}
+          movies={mockCleanedMovieList}
+          userId={1}
+          addFavorite={mockAddFav}
+          userFavorites={mockFavorites}
+          getUserFavorites={mockFavFunc}
+          removeFavorite={mockRemoveFav}
+        />
+      );
+
+      await wrapper.instance().toggleFavorite(mockMovie, mockUserId);
+      expect(mockRemoveFav).toHaveBeenCalled();
+    });
+
   });
 
   describe('mapDispatchToProps', () => {

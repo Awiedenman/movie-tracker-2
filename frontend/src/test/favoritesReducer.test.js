@@ -10,7 +10,6 @@ describe('favoritesReducer', () => {
   });
 
   test('should return a new state when a favorite is added', () => {
-    // const mockUserId = 30;
     const mockFavorite = {
       movie_id: 11111,
       title: 'Thor',
@@ -19,21 +18,29 @@ describe('favoritesReducer', () => {
       vote_average: 7.5,
       overview: 'what a movie!'
     };
-    
+
 
     const result = favoritesReducer([], actions.addFavorite(mockFavorite));
-    const expected =  [ 
-      {  
+    const expected =  [
+      {
         movie_id: 11111,
         title: 'Thor',
         poster_path: 'thor.png',
         release_date: 202020202,
         vote_average: 7.5,
         overview: 'what a movie!'
-      } 
+      }
     ];
     expect(result).toEqual(expected);
   });
+
+  test('should remove a favorite when REMOVE_FAVORITE ', () => {
+    const mockState = [{movie_id: 1}, { movie_id: 2 }];
+    const expected = [{ movie_id: 2 }];
+    const result = favoritesReducer(mockState, actions.removeFavorite({ id: 1 }));
+    expect(result).toEqual(expected);
+  });
+
 
   test('should clear out the users favorites from the store when they have logged out', () => {
     const result = favoritesReducer([{title: 'Thor'}, {title: 'Batman'}], actions.clearUserFavorites());
@@ -47,6 +54,6 @@ describe('favoritesReducer', () => {
 
     const result = favoritesReducer([], actions.addExistingFavorites(mockFavorites));
 
-    expect(result).toEqual(expected)
+    expect(result).toEqual(expected);
   });
 });

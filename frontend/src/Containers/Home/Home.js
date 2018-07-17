@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { movieFetch, postUserFavorites, fetchUserFavorites } from '../../helpers/apiCalls';
-import { cleanMovieResponse } from '../../helpers/clean-responses';
+import { cleanMovieResponse, cleanFavoritesResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies, addFavorite, removeFavorite, addExistingFavorites } from '../../Actions';
 import Card from '../../Components/Card/Card';
 
@@ -15,8 +15,9 @@ export class Home extends Component {
      const movies = cleanMovieResponse(currentMovies);
      this.props.initialFetchData(movies);
      if (userId) {
-       const favorites = await fetchUserFavorites(userId);
-       this.props.getUserFavorites(favorites.data);
+       const response = await fetchUserFavorites(userId);
+       const favorites = await cleanFavoritesResponse(response);
+       this.props.getUserFavorites(favorites);
      }
    }
 
@@ -28,7 +29,8 @@ export class Home extends Component {
       postUserFavorites(movie, userId);
       this.props.addFavorite(movie);
     } else {
-      // TODO remove movie from db here
+      this.props.removeFavorite(movie);
+      // TODO delte from db here
     }
   }
 
@@ -71,7 +73,7 @@ export const mapDispatchToProps = dispatch => ({
   initialFetchData: movies => dispatch(fetchInitialMovies(movies)),
   addFavorite: movie => dispatch(addFavorite(movie)),
   getUserFavorites: favorites => dispatch(addExistingFavorites(favorites)),
-  removeFavorite: (movie, userId) => dispatch(removeFavorite(movie, userId))
+  removeFavorite: movie => dispatch(removeFavorite(movie))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
