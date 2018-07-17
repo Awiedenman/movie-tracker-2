@@ -21,8 +21,13 @@ export class Home extends Component {
    }
 
   toggleFavorite = (movie, userId) => {
-    this.props.addFavorite(movie, userId);
-    postUserFavorites(movie, userId);
+    const { userFavorites } = this.props;
+    console.log(userFavorites.indexOf(movie.id));
+    console.log(userFavorites);
+    if (userFavorites.indexOf(movie.id) > -1) {
+      postUserFavorites(movie, userId);
+      this.props.addFavorite(movie);
+    }
   }
 
   render() {
@@ -61,7 +66,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   initialFetchData: movies => dispatch(fetchInitialMovies(movies)),
-  addFavorite: (movie, userId) => dispatch(addFavorite(movie, userId)),
+  addFavorite: movie => dispatch(addFavorite(movie)),
   getUserFavorites: favorites => dispatch(addExistingFavorites(favorites)),
   removeFavorite: (movie, userId) => dispatch(removeFavorite(movie, userId))
 });

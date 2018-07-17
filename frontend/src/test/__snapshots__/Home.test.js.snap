@@ -23,8 +23,12 @@ ShallowWrapper {
     userFavorites={
         Array [
             Object {
-              "id": 1,
+              "id": 2,
               "title": "Thor",
+            },
+            Object {
+              "id": 3,
+              "title": "Nerds",
             },
           ]
     }

@@ -23,10 +23,9 @@ export const clearUserFavorites = () => ({
   type: 'CLEAR_USER_FAVORITES'
 });
 
-export const addFavorite = (movie, userId) => ({
+export const addFavorite = movie => ({
   type: 'ADD_FAVORITE',
-  favorite: movie,
-  userId
+  favorite: movie
 });
 
 export const removeFavorite = () => ({

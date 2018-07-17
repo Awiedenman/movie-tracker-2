@@ -15,7 +15,7 @@ describe('Home', () => {
   const mockFetchData = jest.fn();
   const mockAddFav = jest.fn();
   const mockFavFunc = jest.fn();
-  const mockFavorites = [{ title: 'Thor', id: 1 }];
+  const mockFavorites = [{ title: 'Thor', id: 2 }, { title: 'Nerds', id: 3 }];
 
   beforeEach(() => wrapper = shallow(
     <Home
@@ -36,7 +36,6 @@ describe('Home', () => {
       expect(mockFetchData).toHaveBeenCalled();
     });
 
-
     test('renders without crashing', () => {
       expect(wrapper).toMatchSnapshot();
     });
@@ -44,17 +43,14 @@ describe('Home', () => {
 
   describe('toggleFavorites',  () => {
     test('this.props.addFavorite should be called', async () => {
-      const mockMovie = { title: 'batman', average: 7};
+      const mockMovie = { title: 'batman', average: 7, id: 3};
       const mockUserId = 6;
 
       await wrapper.instance().toggleFavorite(mockMovie, mockUserId);
       await postUserFavorites();
       expect(mockAddFav).toHaveBeenCalled();
     });
-
-
   });
-
 
   describe('mapDispatchToProps', () => {
     test('should call dispatch initialFetchData is called', () => {
@@ -65,7 +61,6 @@ describe('Home', () => {
       mappedProps.initialFetchData(mockInitialMovieResponse);
 
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
-
     });
 
     test('should call dispatch when addFavorites is invoked', () => {

@@ -1,14 +1,12 @@
-export const favoritesReducer = ( state = [], action) => {
-  // console.log(action)
+export const favoritesReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_FAVORITE':
-      return [...state, {favorite: action.favorite, userId: action.userId}];
+      return [...state, action.favorite];
     case 'Remove_FAVORITE':
       return [...state];
-     
-    case 'CLEAR_USER_FAVORITES': 
+    case 'CLEAR_USER_FAVORITES':
       return [];
-    case 'ADD_EXISTING_FAVORITES': 
+    case 'ADD_EXISTING_FAVORITES':
       return action.favorites;
     default:
       return state;
