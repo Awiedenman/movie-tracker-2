@@ -95,7 +95,10 @@ export const mapDispatchToProps = dispatch => ({
 
 Login.propTypes = {
   handleUserLogin: PropTypes.func,
-  setUserFavorites: PropTypes.func
+  setUserFavorites: PropTypes.func,
+  userInfo: PropTypes.shape({
+    id: PropTypes.num
+  })
 };
 
 export default connect(maspStateToProps, mapDispatchToProps)(Login);
