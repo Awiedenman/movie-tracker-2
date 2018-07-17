@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Home
-    favorites={[Function]}
+    addFavorite={[Function]}
     initialFetchData={[Function]}
     movies={
         Array [
