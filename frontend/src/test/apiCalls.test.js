@@ -85,8 +85,7 @@ describe('HELPERS', () => {
   });
 
   describe('postUserFavorites', () => {
-    test('should POST favorite on click', async () => {
-      // const mockPostFavorite = jest.fn();
+    test('should call fetch', async () => {
       const mockUrl = "http://localhost:3000/api/users/favorites/new";
       const mockOptionsObject = 
         {
