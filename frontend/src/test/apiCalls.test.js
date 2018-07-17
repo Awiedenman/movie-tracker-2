@@ -132,7 +132,7 @@ describe('HELPERS', () => {
   describe('fetchUserFavorites', () => {
     test('should fetchUserFavorites', async () => {
       const mockUserId = 1;
-      const mockUrl = "http://localhost:3000/api/users/1/fvorites";
+      const mockUrl = "http://localhost:3000/api/users/1/favorites";
 
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,

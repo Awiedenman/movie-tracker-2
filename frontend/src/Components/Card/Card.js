@@ -6,12 +6,12 @@ import './Card.css';
 
 const Card = props => {
   const { movie, toggleFavorite, userId } = props;
-  const { id, image, title, average, overview } = movie;
+  const { id, image, title, average, overview, poster_path } = movie;
 
   return (
     <div
-      className="card" id={id}
-      style={{ background: `url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image}) top center no-repeat` }}
+      className="card"
+      style={{ background: `url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image || poster_path}) top center no-repeat` }}
     >
       <div className="overlay">
         <div className="card__content">

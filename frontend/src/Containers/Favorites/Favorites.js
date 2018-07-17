@@ -2,19 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Card from '../../Components/Card/Card';
-import { fetchUserFavorites } from '../../helpers/apiCalls';
+
+import './Favorites.css';
 
 export class Favorites extends Component {
-  componentDidMount =  () => {
-    const { user } = this.props;
-    if (user.id) {
-      fetchUserFavorites(user.id);
-    }
-  }
-
   render() {
     const { movies, user } = this.props;
-    const userFavorites = movies.map(movie => <Card movie={movie.favorite} key={movie.id} userId={user.id}/>);
+    const userFavorites = movies.map(movie => <Card movie={movie} key={movie.id} userId={user.id}/>);
 
     if (!user.id) {
       return (
@@ -33,7 +27,7 @@ export class Favorites extends Component {
     }
 
     return (
-      <div className="home-container ">
+      <div className="favorite-container">
         {userFavorites}
       </div>
     );
