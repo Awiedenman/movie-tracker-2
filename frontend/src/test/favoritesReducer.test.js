@@ -36,8 +36,17 @@ describe('favoritesReducer', () => {
   });
 
   test('should clear out the users favorites from the store when they have logged out', () => {
-     const result = favoritesReducer([{title: 'Thor'}, {title: 'Batman'}], actions.clearUserFavorites());
+    const result = favoritesReducer([{title: 'Thor'}, {title: 'Batman'}], actions.clearUserFavorites());
 
-     expect(result).toEqual([]);
+    expect(result).toEqual([]);
+  });
+
+  test('should populate existing user favorites on login', () => {
+    const mockFavorites = [{title: 'Batman'}, {title: 'Superman' }, {title: 'Howard the Duck' }];
+    const expected = [{title: 'Batman'}, {title: 'Superman' }, {title: 'Howard the Duck' }];
+
+    const result = favoritesReducer([], actions.addExistingFavorites(mockFavorites));
+
+    expect(result).toEqual(expected)
   });
 });

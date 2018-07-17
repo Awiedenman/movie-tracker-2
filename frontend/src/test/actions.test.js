@@ -90,15 +90,13 @@ describe('Actions', () => {
     test('should have a type of ADD_FAVORITE', () => {
       const { addFavorite } = actions;
       const movie = { movie: 'Thor'};
-      const userId = 1;
 
       const mockAction = {
         type: 'ADD_FAVORITE',
-        favorite: movie,
-        userId
+        favorite: movie
       };
 
-      const result = addFavorite(movie, userId);
+      const result = addFavorite(movie);
 
       expect(result).toEqual(mockAction);
 
