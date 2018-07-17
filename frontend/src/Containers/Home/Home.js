@@ -29,8 +29,8 @@ export class Home extends Component {
         postUserFavorites(movie, userId);
         this.props.addFavorite(movie);
       } else {
+        await deleteUserFavorite(movie.id, userId);
         this.props.removeFavorite(movie);
-        await deleteUserFavorite(userId, movie.id);
       }
     }
 
