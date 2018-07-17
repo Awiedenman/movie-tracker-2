@@ -14,13 +14,15 @@ export const Header = props => {
       <Link to="/">
         <h1>Movie Tracker</h1>
       </Link>
-      <Link to="favorites">favorites</Link>
       <nav>
         {user.name && <p>Welcome back {user.name}</p>}
         {user.id && !user.name && <p>Thanks for signing up</p>}
         {
           user.id ?
-            <button className="sign-out" onClick={() => signOut() && clearUserFavorites() }>Sign Out</button>
+            <div>
+              <button className="sign-out" onClick={() => signOut() && clearUserFavorites() }>Sign Out</button>
+              <Link to="favorites">favorites</Link>
+            </div>
             :
             <div>
               <NavLink exact to="/login">Sign In</NavLink>

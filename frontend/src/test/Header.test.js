@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Header, mapStateToProps, mapDispatchToProps } from '../Containers/Header/Header';
-import { userSignOut } from '../Actions';
+import { userSignOut, clearUserFavorites } from '../Actions';
 
 describe('Header', () => {
   let wrapper;
@@ -11,10 +11,13 @@ describe('Header', () => {
   };
 
   const mockFunc = jest.fn();
+  const mockClearUsersFavorites = jest.fn();
 
   beforeEach(() => wrapper = shallow(
-    <Header user={user}
+    <Header
+      user={user}
       signOut={mockFunc}
+      clearUserFavorites={mockClearUsersFavorites}
     />
   ));
 
@@ -57,12 +60,21 @@ describe('Header', () => {
 
       expect(mockDispatch).toHaveBeenCalledWith(mockActionToDispatch);
     });
+
+    test('should call dispatch with the action clearUserFavorites', () => {
+      const mockDispatch = jest.fn();
+      const mockActionToDispatch = clearUserFavorites();
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.clearUserFavorites();
+
+      expect(mockDispatch).toHaveBeenCalledWith(mockActionToDispatch);
+    });
   });
 
 
   test('should match when logged out', () => {
     wrapper = shallow(<Header user={{}} />);
-
     expect(wrapper).toMatchSnapshot();
   });
 

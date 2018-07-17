@@ -60,7 +60,6 @@ ShallowWrapper {
         </div>
 </div>,
       "className": "card",
-      "id": 284053,
       "style": Object {
         "background": "url(https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg) top center no-repeat",
       },
@@ -234,7 +233,6 @@ ShallowWrapper {
           </div>
 </div>,
         "className": "card",
-        "id": 284053,
         "style": Object {
           "background": "url(https://image.tmdb.org/t/p/w600_and_h900_bestv2//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg) top center no-repeat",
         },

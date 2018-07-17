@@ -1,5 +1,5 @@
 import { API_KEY } from '../api-key';
-import { movieFetch, userLoginRequest, userSignUpRequest, postUserFavorites } from '../helpers/apiCalls';
+import { movieFetch, userLoginRequest, userSignUpRequest, postUserFavorites, fetchUserFavorites} from '../helpers/apiCalls';
 
 describe('HELPERS', () => {
   describe('Movie Fetch', () => {
@@ -53,12 +53,12 @@ describe('HELPERS', () => {
         }));
 
       await expect(userLoginRequest('email', 'password')).rejects.toEqual(Error('Email and Password do not match'));
-    }); 
+    });
   });
 
   describe('userSignUpRequest', () => {
     test('shold call fetch', async () => {
-      window.fetch = jest.fn().mockImplementation(() => 
+      window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
           ok: true,
           json: () => Promise.resolve({
@@ -67,27 +67,27 @@ describe('HELPERS', () => {
             status: "success"
           })
         }));
-        
+
       await userSignUpRequest('Austin', 'austin@aol.com', 'password');
       expect(window.fetch).toHaveBeenCalled();
     });
 
     test('should throw and error if signUp fetch fails', async () => {
-      
       window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
           ok: false,
           json: () => Promise.reject()
         }));
 
-      await expect(userSignUpRequest()).rejects.toEqual(Error('Sorry, email has already been used'));
+      await expect(userSignUpRequest())
+        .rejects.toEqual(Error('Sorry, email has already been used'));
     });
   });
 
   describe('postUserFavorites', () => {
-    test('should call fetch', async () => {
+    test('should POST favorite on click', async () => {
       const mockUrl = "http://localhost:3000/api/users/favorites/new";
-      const mockOptionsObject = 
+      const mockOptionsObject =
         {
           method: 'POST',
           body: JSON.stringify({
@@ -101,7 +101,7 @@ describe('HELPERS', () => {
           }),
           headers: {
             'Content-Type': 'application/json'
-          } 
+          }
         };
 
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
@@ -124,7 +124,42 @@ describe('HELPERS', () => {
         json: ()=> Promise.reject()
       }));
 
-      await expect(postUserFavorites({movie: 'Thor', id: 32323})).rejects.toEqual(Error('Sorry, there was problem saving you favorite. Please try again later.'));
+      await expect(postUserFavorites({movie: 'Thor', id: 32323}))
+        .rejects.toEqual(Error('Sorry, there was problem saving you favorite. Please try again later.'));
+    });
+  });
+
+  describe('fetchUserFavorites', () => {
+    test('should fetchUserFavorites', async () => {
+      const mockUserId = 1;
+      const mockUrl = "http://localhost:3000/api/users/1/favorites";
+
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve()
+      }));
+
+      await fetchUserFavorites(mockUserId);
+
+      expect(window.fetch).toHaveBeenCalledWith(mockUrl);
+    });
+
+    test('should throw an error if favorites fetch fails', async () => {
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.reject(Error('Sorry, we could not retrieve you favorites at this time')));
+
+      await expect(fetchUserFavorites(1))
+        .rejects.toEqual(Error('Sorry, we could not retrieve you favorites at this time'));
+    });
+
+    test('should throw an error if fetchFavorites ', async () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: false,
+        json: () => Promise.reject()
+      }));
+
+      await expect(fetchUserFavorites())
+        .rejects.toEqual(Error('Sorry, we could not retrieve you favorites at this time'));
     });
   });
 });

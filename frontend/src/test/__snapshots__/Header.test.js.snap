@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
+    clearUserFavorites={[Function]}
     signOut={[Function]}
     user={
         Object {
@@ -34,23 +35,25 @@ ShallowWrapper {
                     Movie Tracker
           </h1>
 </Link>,
-        <Link
-          replace={false}
-          to="favorites"
->
-          favorites
-</Link>,
         <nav>
           <p>
                     Welcome back 
                     Bob
           </p>
-          <button
-                    className="sign-out"
-                    onClick={[Function]}
-          >
-                    Sign Out
-          </button>
+          <div>
+                    <button
+                              className="sign-out"
+                              onClick={[Function]}
+                    >
+                              Sign Out
+                    </button>
+                    <Link
+                              replace={false}
+                              to="favorites"
+                    >
+                              favorites
+                    </Link>
+          </div>
 </nav>,
       ],
       "className": "header",
@@ -85,19 +88,6 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": "favorites",
-          "replace": false,
-          "to": "favorites",
-        },
-        "ref": null,
-        "rendered": "favorites",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -106,12 +96,20 @@ ShallowWrapper {
               Bob
 </p>,
             false,
-            <button
-              className="sign-out"
-              onClick={[Function]}
->
-              Sign Out
-</button>,
+            <div>
+              <button
+                            className="sign-out"
+                            onClick={[Function]}
+              >
+                            Sign Out
+              </button>
+              <Link
+                            replace={false}
+                            to="favorites"
+              >
+                            favorites
+              </Link>
+</div>,
           ],
         },
         "ref": null,
@@ -139,13 +137,51 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Sign Out",
-              "className": "sign-out",
-              "onClick": [Function],
+              "children": Array [
+                <button
+                  className="sign-out"
+                  onClick={[Function]}
+>
+                  Sign Out
+</button>,
+                <Link
+                  replace={false}
+                  to="favorites"
+>
+                  favorites
+</Link>,
+              ],
             },
             "ref": null,
-            "rendered": "Sign Out",
-            "type": "button",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Sign Out",
+                  "className": "sign-out",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Sign Out",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "favorites",
+                  "replace": false,
+                  "to": "favorites",
+                },
+                "ref": null,
+                "rendered": "favorites",
+                "type": [Function],
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "nav",
@@ -168,23 +204,25 @@ ShallowWrapper {
                         Movie Tracker
             </h1>
 </Link>,
-          <Link
-            replace={false}
-            to="favorites"
->
-            favorites
-</Link>,
           <nav>
             <p>
                         Welcome back 
                         Bob
             </p>
-            <button
-                        className="sign-out"
-                        onClick={[Function]}
-            >
-                        Sign Out
-            </button>
+            <div>
+                        <button
+                                    className="sign-out"
+                                    onClick={[Function]}
+                        >
+                                    Sign Out
+                        </button>
+                        <Link
+                                    replace={false}
+                                    to="favorites"
+                        >
+                                    favorites
+                        </Link>
+            </div>
 </nav>,
         ],
         "className": "header",
@@ -219,19 +257,6 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "favorites",
-            "replace": false,
-            "to": "favorites",
-          },
-          "ref": null,
-          "rendered": "favorites",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -240,12 +265,20 @@ ShallowWrapper {
                 Bob
 </p>,
               false,
-              <button
-                className="sign-out"
-                onClick={[Function]}
->
-                Sign Out
-</button>,
+              <div>
+                <button
+                                className="sign-out"
+                                onClick={[Function]}
+                >
+                                Sign Out
+                </button>
+                <Link
+                                replace={false}
+                                to="favorites"
+                >
+                                favorites
+                </Link>
+</div>,
             ],
           },
           "ref": null,
@@ -273,13 +306,51 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Sign Out",
-                "className": "sign-out",
-                "onClick": [Function],
+                "children": Array [
+                  <button
+                    className="sign-out"
+                    onClick={[Function]}
+>
+                    Sign Out
+</button>,
+                  <Link
+                    replace={false}
+                    to="favorites"
+>
+                    favorites
+</Link>,
+                ],
               },
               "ref": null,
-              "rendered": "Sign Out",
-              "type": "button",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Sign Out",
+                    "className": "sign-out",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Sign Out",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "favorites",
+                    "replace": false,
+                    "to": "favorites",
+                  },
+                  "ref": null,
+                  "rendered": "favorites",
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
           ],
           "type": "nav",
@@ -326,12 +397,6 @@ ShallowWrapper {
           <h1>
                     Movie Tracker
           </h1>
-</Link>,
-        <Link
-          replace={false}
-          to="favorites"
->
-          favorites
 </Link>,
         <nav>
           <div>
@@ -381,19 +446,6 @@ ShallowWrapper {
           "rendered": "Movie Tracker",
           "type": "h1",
         },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": "favorites",
-          "replace": false,
-          "to": "favorites",
-        },
-        "ref": null,
-        "rendered": "favorites",
         "type": [Function],
       },
       Object {
@@ -508,12 +560,6 @@ ShallowWrapper {
                         Movie Tracker
             </h1>
 </Link>,
-          <Link
-            replace={false}
-            to="favorites"
->
-            favorites
-</Link>,
           <nav>
             <div>
                         <NavLink
@@ -562,19 +608,6 @@ ShallowWrapper {
             "rendered": "Movie Tracker",
             "type": "h1",
           },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "favorites",
-            "replace": false,
-            "to": "favorites",
-          },
-          "ref": null,
-          "rendered": "favorites",
           "type": [Function],
         },
         Object {
