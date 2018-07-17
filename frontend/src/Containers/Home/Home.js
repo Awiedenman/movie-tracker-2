@@ -22,11 +22,13 @@ export class Home extends Component {
 
   toggleFavorite = (movie, userId) => {
     const { userFavorites } = this.props;
-    console.log(userFavorites.indexOf(movie.id));
-    console.log(userFavorites);
-    if (userFavorites.indexOf(movie.id) > -1) {
+    const favoritedMovie = userFavorites.find(favorite => favorite.movie_id === movie.id);
+
+    if (!favoritedMovie) {
       postUserFavorites(movie, userId);
       this.props.addFavorite(movie);
+    } else {
+      // TODO remove movie from db here
     }
   }
 
