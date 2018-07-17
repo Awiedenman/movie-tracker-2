@@ -29,8 +29,11 @@ export const addFavorite = (movie, userId) => ({
   userId
 });
 
+export const removeFavorite = () => ({
+  type: 'REMOVE_FAVORITE'
+});
+
 export const addExistingFavorites = (existingUserFavorites) => {
-  console.log(existingUserFavorites)
   return {
     type: 'ADD_EXISTING_FAVORITES',
     favorites : existingUserFavorites
