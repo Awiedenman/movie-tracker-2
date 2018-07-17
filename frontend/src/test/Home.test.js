@@ -36,6 +36,7 @@ describe('Home', () => {
       expect(mockFetchData).toHaveBeenCalled();
     });
 
+
     test('renders without crashing', () => {
       expect(wrapper).toMatchSnapshot();
     });
