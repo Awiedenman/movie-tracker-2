@@ -68,10 +68,24 @@ describe('Actions', () => {
       const mockAction = {
         type: 'USER_SIGN_OUT'
       };
-
       const result = userSignOut();
       expect(result).toEqual(mockAction);
     });
+     
+    test('should have a type of CLEAR_USER_FAVORITES', () => {
+      const { clearUserFavorites } = actions;
+
+      const mockAction = {
+        type: 'CLEAR_USER_FAVORITES'
+      };
+
+      const result = clearUserFavorites();
+
+      expect(result).toEqual(mockAction);
+
+    });
+
+
 
     test('should have a type of ADD_FAVORITE', () => {
       const { addFavorite } = actions;
@@ -88,6 +102,31 @@ describe('Actions', () => {
 
       expect(result).toEqual(mockAction);
 
+    });
+
+    test('should have a type of REMOVE_FAVORITE', () => {
+      const { removeFavorite } = actions;
+
+      const mockAction = {
+        type: 'REMOVE_FAVORITE'
+      };
+
+      const result = removeFavorite();
+
+      expect(result).toEqual(mockAction);
+    });
+
+    test('should have a type of ADD_EXISTING_FAVORITES', () => {
+      const { addExistingFavorites } = actions;
+      const mockExistingUserFavorites = [{ title: 'thor'}, {title: 'GI Joe' }];
+      const mockAction = {
+        type: 'ADD_EXISTING_FAVORITES',
+        favorites: mockExistingUserFavorites
+      };
+
+      const result = addExistingFavorites(mockExistingUserFavorites);
+
+      expect(result).toEqual(mockAction);
     });
 
   });
