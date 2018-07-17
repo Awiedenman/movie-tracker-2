@@ -72,7 +72,7 @@ export const postUserFavorites = async (movie, userId) => {
 };
 
 export const fetchUserFavorites = async userId => {
-  const response = await fetch(`http://localhost:3000/api/users/${userId}/fvorites`);
+  const response = await fetch(`http://localhost:3000/api/users/${userId}/favorites`);
 
   if (!response.ok) {
     throw Error('Sorry, we could not retrieve you favorites at this time');

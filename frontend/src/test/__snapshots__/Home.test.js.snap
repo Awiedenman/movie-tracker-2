@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Home
     addFavorite={[Function]}
+    getUserFavorites={[Function]}
     initialFetchData={[Function]}
     movies={
         Array [
@@ -16,6 +17,14 @@ ShallowWrapper {
               "overview": "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
               "releaseDate": "2017-10-25",
               "title": "Thor: Ragnarok",
+            },
+          ]
+    }
+    userFavorites={
+        Array [
+            Object {
+              "id": 1,
+              "title": "Thor",
             },
           ]
     }

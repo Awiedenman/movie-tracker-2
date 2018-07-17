@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { movieFetch, postUserFavorites } from '../../helpers/apiCalls';
+import { movieFetch, postUserFavorites, fetchUserFavorites } from '../../helpers/apiCalls';
 import { cleanMovieResponse } from '../../helpers/clean-responses';
-import { fetchInitialMovies, addFavorite, removeFavorite } from '../../Actions';
+import { fetchInitialMovies, addFavorite, removeFavorite, addExistingFavorites } from '../../Actions';
 import Card from '../../Components/Card/Card';
 
 import './Home.css';
 
 export class Home extends Component {
+   componentDidMount = async () => {
+     const { userId } = this.props;
+     const currentMovies = await movieFetch();
+     const movies = cleanMovieResponse(currentMovies);
+     this.props.initialFetchData(movies);
+     if (userId) {
+       const favorites = await fetchUserFavorites(userId);
+       this.props.getUserFavorites(favorites.data);
+     }
+   }
+
   toggleFavorite = (movie, userId) => {
     this.props.addFavorite(movie, userId);
     postUserFavorites(movie, userId);
-  }
-
-  async componentDidMount() {
-    const initialFetch = await movieFetch();
-    const movies = cleanMovieResponse(initialFetch);
-    this.props.initialFetchData(movies);
   }
 
   render() {
@@ -44,7 +49,8 @@ Home.propTypes = {
   userId: PropTypes.number,
   removeFavorite: PropTypes.func,
   userFavorites: PropTypes.array,
-  addFavorite: PropTypes.func
+  addFavorite: PropTypes.func,
+  getUserFavorites: PropTypes.func
 };
 
 export const mapStateToProps = state => ({
@@ -56,6 +62,7 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   initialFetchData: movies => dispatch(fetchInitialMovies(movies)),
   addFavorite: (movie, userId) => dispatch(addFavorite(movie, userId)),
+  getUserFavorites: favorites => dispatch(addExistingFavorites(favorites)),
   removeFavorite: (movie, userId) => dispatch(removeFavorite(movie, userId))
 });
 

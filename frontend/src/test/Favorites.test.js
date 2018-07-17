@@ -20,11 +20,6 @@ describe('Favorites', () => {
     />
   ));
 
-  test('should call fetchUserFavorites onMount', async () => {
-    await wrapper.instance().componentDidMount();
-    expect(fetchUserFavorites).toHaveBeenCalledWith(mockUser.id);
-  });
-
   test('should match snapshot when no user present', () => {
     wrapper = shallow(<Favorites user={{}} movies={mockMovie}/>);
   });
@@ -50,6 +45,7 @@ describe('Favorites', () => {
       expect(actual).toEqual(expected);
     });
   });
+
   test('should match snapshot when no movies present in favorites', () => {
     wrapper = shallow(<Favorites user={mockUser} movies={[]} />);
 
