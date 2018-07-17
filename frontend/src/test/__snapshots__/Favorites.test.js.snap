@@ -33,6 +33,14 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
+          favorites={
+                    Array [
+                              Object {
+                                "id": 1,
+                                "name": "thor",
+                              },
+                            ]
+          }
           movie={
                     Object {
                               "id": 1,
@@ -51,6 +59,12 @@ ShallowWrapper {
         "key": "1",
         "nodeType": "function",
         "props": Object {
+          "favorites": Array [
+            Object {
+              "id": 1,
+              "name": "thor",
+            },
+          ],
           "movie": Object {
             "id": 1,
             "name": "thor",
@@ -72,6 +86,14 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
+            favorites={
+                        Array [
+                                    Object {
+                                      "id": 1,
+                                      "name": "thor",
+                                    },
+                                  ]
+            }
             movie={
                         Object {
                                     "id": 1,
@@ -90,6 +112,12 @@ ShallowWrapper {
           "key": "1",
           "nodeType": "function",
           "props": Object {
+            "favorites": Array [
+              Object {
+                "id": 1,
+                "name": "thor",
+              },
+            ],
             "movie": Object {
               "id": 1,
               "name": "thor",

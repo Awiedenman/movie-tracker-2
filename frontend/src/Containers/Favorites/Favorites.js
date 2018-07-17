@@ -8,7 +8,14 @@ import './Favorites.css';
 export class Favorites extends Component {
   render() {
     const { movies, user } = this.props;
-    const userFavorites = movies.map(movie => <Card movie={movie} key={movie.id} userId={user.id}/>);
+    const userFavorites = movies.map(movie =>
+      <Card
+        movie={movie}
+        key={movie.id}
+        userId={user.id}
+        favorites={movies}
+      />
+    );
 
     if (!user.id) {
       return (

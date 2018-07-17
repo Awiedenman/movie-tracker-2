@@ -5,8 +5,16 @@ import Register from '../Register/Register';
 import './Card.css';
 
 const Card = props => {
-  const { movie, toggleFavorite, userId } = props;
+  const { movie, toggleFavorite, userId, favorites } = props;
   const { id, image, title, average, vote_average, overview, poster_path } = movie;
+
+  const isFavorite = () => {
+    const favorite = favorites.find(favorite => favorite.movie_id === id);
+    if (favorite) {
+      return 'favorite';
+    }
+    return;
+  };
 
   return (
     <div
@@ -18,7 +26,7 @@ const Card = props => {
           <h2 className="card__title ">{title}</h2>
           <h4 className="card__avg">Viewer Average: {average || vote_average}</h4>
           <p className="card__overview" >{overview}</p>
-          {userId && <button className="card__button"onClick={() => toggleFavorite(movie, userId)}>♡</button>}
+          {userId && <button className={`card__button ${isFavorite()}`} onClick={() => toggleFavorite(movie, userId)}>♡</button>}
           {!userId && <Register />}
         </div>
       </div>
@@ -35,7 +43,8 @@ Card.propTypes = {
     overview: PropTypes.string
   }),
   toggleFavorite: PropTypes.func,
-  userId: PropTypes.number
+  userId: PropTypes.number,
+  favorites: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default Card;
