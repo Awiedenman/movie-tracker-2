@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Favorites, mapStateToProps } from '../Containers/Favorites/Favorites';
+import { Favorites, mapStateToProps, mapDispatchToProps } from '../Containers/Favorites/Favorites';
 import { fetchUserFavorites } from '../helpers/apiCalls';
+import { removeFavorite } from '../Actions';
 
 jest.mock('../helpers/apiCalls.js');
 
@@ -10,9 +11,8 @@ describe('Favorites', () => {
   const mockUser = {
     id: 1
   };
-  const mockFunc = jest.fn();
   const mockFavorites = [{name: 'thor', id: 2}];
-
+  const mockRemoveFunc = jest.fn();
 
   const mockMovie = [{name:'thor', id: 1}];
   beforeEach(() => wrapper = shallow(
@@ -20,6 +20,7 @@ describe('Favorites', () => {
       user={mockUser}
       movies={mockMovie}
       favorites={mockFavorites}
+      removeFavorite={mockRemoveFunc}
     />
   ));
 
@@ -45,6 +46,17 @@ describe('Favorites', () => {
     });
   });
 
+  describe('mapDispatchToProps', () => {
+    const mockDispatch = jest.fn();
+    const mockMovie = { title: 'batman', id: 2 };
+    const mockUserId = 1;
+    const actionToDispatch = removeFavorite(mockUserId, mockMovie);
+    const mappedProps = mapDispatchToProps(mockDispatch);
+    mappedProps.removeFavorite(mockUserId, mockMovie);
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+  });
+
+
   test('should match snapshot when no movies present in favorites', () => {
     wrapper = shallow(
       <Favorites
@@ -54,6 +66,16 @@ describe('Favorites', () => {
       />
     );
     expect(wrapper).toMatchSnapshot();
+  });
+
+
+  test('should should call removeFavorite if favorite already in fav array', async () => {
+    const mockMovie = { title: 'Nerds', id: 3 };
+    const mockUserId = 1;
+
+    await wrapper.instance().toggleFavorite(mockMovie, mockUserId);
+    await removeFavorite();
+    expect(mockRemoveFunc).toHaveBeenCalled();
   });
 
   test('should match snapshot when no user present in', () => {
