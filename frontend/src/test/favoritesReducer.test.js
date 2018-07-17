@@ -9,8 +9,8 @@ describe('favoritesReducer', () => {
     expect(result).toEqual(expected);
   });
 
-  test('should return a new state', () => {
-    const mockUserId = 30;
+  test('should return a new state when a favorite is added', () => {
+    // const mockUserId = 30;
     const mockFavorite = {
       movie_id: 11111,
       title: 'Thor',
@@ -21,23 +21,32 @@ describe('favoritesReducer', () => {
     };
     
 
-    const result = favoritesReducer([], actions.addFavorite(mockFavorite, mockUserId));
+    const result = favoritesReducer([], actions.addFavorite(mockFavorite));
     const expected =  [ 
-      { 
-        favorite: {
-          movie_id: 11111,
-          title: 'Thor',
-          poster_path: 'thor.png',
-          release_date: 202020202,
-          vote_average: 7.5,
-          overview: 'what a movie!'
-        },
-        userId: 30 
+      {  
+        movie_id: 11111,
+        title: 'Thor',
+        poster_path: 'thor.png',
+        release_date: 202020202,
+        vote_average: 7.5,
+        overview: 'what a movie!'
       } 
     ];
-
     expect(result).toEqual(expected);
-    
+  });
 
+  test('should clear out the users favorites from the store when they have logged out', () => {
+    const result = favoritesReducer([{title: 'Thor'}, {title: 'Batman'}], actions.clearUserFavorites());
+
+    expect(result).toEqual([]);
+  });
+
+  test('should populate existing user favorites on login', () => {
+    const mockFavorites = [{title: 'Batman'}, {title: 'Superman' }, {title: 'Howard the Duck' }];
+    const expected = [{title: 'Batman'}, {title: 'Superman' }, {title: 'Howard the Duck' }];
+
+    const result = favoritesReducer([], actions.addExistingFavorites(mockFavorites));
+
+    expect(result).toEqual(expected)
   });
 });

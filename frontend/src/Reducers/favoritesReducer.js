@@ -2,7 +2,7 @@ export const favoritesReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_FAVORITE':
       return [...state, action.favorite];
-    case 'Remove_FAVORITE':
+    case 'REMOVE_FAVORITE':
       return [...state];
     case 'CLEAR_USER_FAVORITES':
       return [];
