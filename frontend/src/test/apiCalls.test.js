@@ -1,5 +1,5 @@
 import { API_KEY } from '../api-key';
-import { movieFetch, userLoginRequest, userSignUpRequest, postUserFavorites, fetchUserFavorites} from '../helpers/apiCalls';
+import { movieFetch, userLoginRequest, userSignUpRequest, postUserFavorites, fetchUserFavorites, deleteUserfavorite} from '../helpers/apiCalls';
 
 describe('HELPERS', () => {
   describe('Movie Fetch', () => {
@@ -152,7 +152,7 @@ describe('HELPERS', () => {
         .rejects.toEqual(Error('Sorry, we could not retrieve you favorites at this time'));
     });
 
-    test('should throw an error if fetchFavorites ', async () => {
+    test('should throw an error if fetchFavorites fails ', async () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: false,
         json: () => Promise.reject()
@@ -162,4 +162,33 @@ describe('HELPERS', () => {
         .rejects.toEqual(Error('Sorry, we could not retrieve you favorites at this time'));
     });
   });
+
+  describe('deleteUserFavorite', () => {
+    it('should call fetch', async () => {
+      const mockMovieId = 1111;
+      const mockUserId = 1;
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve({"status": "success", "message": "One row was deleted"})
+      }));
+      
+   
+      const result = await deleteUserfavorite(mockUserId, mockMovieId);
+
+      const expected = {"status": "success", "message": "One row was deleted"};
+
+      await expect(result).toEqual(expected);
+    });
+
+    it('should throw and error if deleteUserFavorites fails', async () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: false,
+        json: () => Promise.reject()
+      }));
+
+      await expect(deleteUserfavorite())
+        .rejects.toEqual(Error('Sorry, we could not remove your favorite at this time.'));
+    });
+  });
+
 });
