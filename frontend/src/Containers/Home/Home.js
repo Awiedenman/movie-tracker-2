@@ -23,7 +23,7 @@ export class Home extends Component {
 
   toggleFavorite = (movie, userId) => {
     const { userFavorites } = this.props;
-    const favoritedMovie = userFavorites.find(favorite => favorite.movie_id === movie.id);
+    const favoritedMovie = userFavorites.find(favorite => favorite.id === movie.id);
 
     if (!favoritedMovie) {
       postUserFavorites(movie, userId);
