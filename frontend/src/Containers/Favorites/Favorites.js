@@ -12,6 +12,7 @@ export class Favorites extends Component {
 
     this.props.removeFavorite(movie);
     // TODO remove movie from db here
+
   }
 
   render() {

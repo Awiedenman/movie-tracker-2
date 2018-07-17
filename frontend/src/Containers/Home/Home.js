@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { movieFetch, postUserFavorites, fetchUserFavorites } from '../../helpers/apiCalls';
+import { movieFetch, postUserFavorites, fetchUserFavorites, deleteUserFavorite } from '../../helpers/apiCalls';
 import { cleanMovieResponse, cleanFavoritesResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies, addFavorite, removeFavorite, addExistingFavorites } from '../../Actions';
 import Card from '../../Components/Card/Card';
@@ -21,36 +21,36 @@ export class Home extends Component {
      }
    }
 
-  toggleFavorite = (movie, userId) => {
-    const { userFavorites } = this.props;
-    const favoritedMovie = userFavorites.find(favorite => favorite.id === movie.id);
+    toggleFavorite = async (movie, userId) => {
+      const { userFavorites } = this.props;
+      const favoritedMovie = userFavorites.find(favorite => favorite.id === movie.id);
 
-    if (!favoritedMovie) {
-      postUserFavorites(movie, userId);
-      this.props.addFavorite(movie);
-    } else {
-      this.props.removeFavorite(movie);
-      // TODO delte from db here
+      if (!favoritedMovie) {
+        postUserFavorites(movie, userId);
+        this.props.addFavorite(movie);
+      } else {
+        this.props.removeFavorite(movie);
+        await deleteUserFavorite(userId, movie.id);
+      }
     }
-  }
 
-  render() {
-    const displayMoviesCards = this.props.movies.map(movie => (
-      <Card
-        movie={movie}
-        userId={this.props.userId}
-        key={movie.id}
-        toggleFavorite={this.toggleFavorite}
-        favorites={this.props.userFavorites}
-      />
-    ));
+    render() {
+      const displayMoviesCards = this.props.movies.map(movie => (
+        <Card
+          movie={movie}
+          userId={this.props.userId}
+          key={movie.id}
+          toggleFavorite={this.toggleFavorite}
+          favorites={this.props.userFavorites}
+        />
+      ));
 
-    return (
-      <div className="home-container">
-        {displayMoviesCards}
-      </div>
-    );
-  }
+      return (
+        <div className="home-container">
+          {displayMoviesCards}
+        </div>
+      );
+    }
 }
 
 Home.propTypes = {

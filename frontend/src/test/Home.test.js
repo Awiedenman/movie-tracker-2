@@ -4,7 +4,7 @@ import { Home, mapDispatchToProps, mapStateToProps } from '../Containers/Home/Ho
 import { fetchInitialMovies, addFavorite, addExistingFavorites, removeFavorite } from '../Actions';
 import { mockInitialMovieResponse } from '../mock-data/mock-responses';
 import { mockCleanedMovieList } from '../mock-data/mock-clean-data';
-import { postUserFavorites, fetchUserFavorites } from '../helpers/apiCalls';
+import { postUserFavorites, fetchUserFavorites, deleteUserFavorite } from '../helpers/apiCalls';
 import { cleanMovieResponse, cleanFavoritesResponse } from '../helpers/clean-responses';
 
 jest.mock('../helpers/apiCalls');
@@ -45,14 +45,25 @@ describe('Home', () => {
   });
 
   describe('toggleFavorites',  () => {
-    test('this.props.addFavorite should be called', async () => {
-      const mockMovie = { title: 'batman', average: 7, id: 3};
+    test('should call addFavorite be called', async () => {
+      const mockMovie = { title: 'batman', average: 7, id: 3 };
       const mockUserId = 6;
 
       await wrapper.instance().toggleFavorite(mockMovie, mockUserId);
       await postUserFavorites();
       expect(mockAddFav).toHaveBeenCalled();
     });
+
+    test('should should call removeFavorite if favorite already in fav array', async () => {
+      const mockMovie = { title: 'batman', average: 7, id: 3};
+      const mockUserId = 6;
+
+      await wrapper.instance().toggleFavorite(mockMovie, mockUserId);
+      await wrapper.instance().toggleFavorite(mockMovie, mockUserId);
+      await removeFavorite();
+      expect(mockAddFav).toHaveBeenCalled();
+    });
+
 
     test('should call removeFavorite if movie is favortied', async () => {
       const mockFavorites = [{ movie_id: 1 }, { movie_id: 2}];

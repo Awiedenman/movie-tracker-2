@@ -1,5 +1,5 @@
 import { API_KEY } from '../api-key';
-import { movieFetch, userLoginRequest, userSignUpRequest, postUserFavorites, fetchUserFavorites, deleteUserfavorite} from '../helpers/apiCalls';
+import { movieFetch, userLoginRequest, userSignUpRequest, postUserFavorites, fetchUserFavorites, deleteUserFavorite} from '../helpers/apiCalls';
 
 describe('HELPERS', () => {
   describe('Movie Fetch', () => {
@@ -171,9 +171,9 @@ describe('HELPERS', () => {
         ok: true,
         json: () => Promise.resolve({"status": "success", "message": "One row was deleted"})
       }));
-      
-   
-      const result = await deleteUserfavorite(mockUserId, mockMovieId);
+
+
+      const result = await deleteUserFavorite(mockUserId, mockMovieId);
 
       const expected = {"status": "success", "message": "One row was deleted"};
 
@@ -186,7 +186,7 @@ describe('HELPERS', () => {
         json: () => Promise.reject()
       }));
 
-      await expect(deleteUserfavorite())
+      await expect(deleteUserFavorite())
         .rejects.toEqual(Error('Sorry, we could not remove your favorite at this time.'));
     });
   });
