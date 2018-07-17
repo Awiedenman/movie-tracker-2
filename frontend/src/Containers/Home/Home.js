@@ -30,6 +30,7 @@ export class Home extends Component {
       this.props.addFavorite(movie);
     } else {
       this.props.removeFavorite(movie);
+      // TODO delte from db here
     }
   }
 
