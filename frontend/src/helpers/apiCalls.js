@@ -80,3 +80,18 @@ export const fetchUserFavorites = async userId => {
 
   return await response.json();
 };
+
+export const deleteUserfavorite = async (movieId, userId) => {
+  const response = await fetch(`http://localhost:3000/api/users/${userId}/favorites/${movieId}`, {
+    method: 'POST',
+    body: JSON.stringify(userId, movieId),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  if (!response.ok) {
+    throw Error('Sorry, we could not remove you favorite at this time.')
+  }
+  return await response.json();
+
+};
