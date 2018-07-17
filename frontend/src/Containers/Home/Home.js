@@ -10,14 +10,10 @@ import Card from '../../Components/Card/Card';
 import './Home.css';
 
 export class Home extends Component {
-  
+
   toggleFavorite = (movie, userId) => {
-    this.props.favorites(movie, userId);
-    try {
-      postUserFavorites(movie, userId);
-    } catch (error){
-      Error('shit broke');
-    }
+    this.props.addFavorites(movie, userId);
+    postUserFavorites(movie, userId);
   }
 
   async componentDidMount () {
@@ -48,7 +44,7 @@ Home.propTypes = {
   initialFetchData: PropTypes.func,
   movies: PropTypes.arrayOf(PropTypes.object),
   userId: PropTypes.number,
-  favorites: PropTypes.func
+  addFavorites: PropTypes.func
 };
 
 export const mapStateToProps = state => ({
@@ -58,7 +54,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   initialFetchData: movies => dispatch(fetchInitialMovies(movies)),
-  favorites: (movie, userId) => dispatch(addFavorite(movie, userId))
+  addFavorites: (movie, userId) => dispatch(addFavorite(movie, userId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
