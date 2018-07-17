@@ -8,8 +8,8 @@ export const cleanMovieResponse = response => response.items.map(item => ({
 }));
 
 export const cleanFavoritesResponse = response => response.data.map(favorite => ({
-  average: favorite.vote_average,
-  id: favorite.id,
+  average: Number(favorite.vote_average),
+  id: favorite.movie_id,
   title: favorite.title,
   image: favorite.poster_path,
   releaseDate: favorite.release_date,

@@ -9,4 +9,28 @@ describe('HELPERS', () => {
 
     expect(cleanedMovieList).toEqual(mockCleanedMovieList);
   });
+
+  test('should return a cleanedFavorite move', () => {
+    const { cleanFavoritesResponse } = fetchRequests;
+    const mockResponse = {
+      data: [{
+        movie_id: 1,
+        title: 'thor',
+        poster_path: 'some-thing',
+        release_date: 'date here',
+        overview: 'some overview',
+        vote_average: 2.22
+      }]
+    };
+    const expected = [{
+      id: 1, title: 'thor',
+      releaseDate: 'date here',
+      overview: 'some overview',
+      image:'some-thing',
+      average: 2.22
+    }];
+    const result = cleanFavoritesResponse(mockResponse);
+
+    expect(result).toEqual(expected);
+  });
 });

@@ -5,7 +5,7 @@ import { fetchInitialMovies, addFavorite, addExistingFavorites, removeFavorite }
 import { mockInitialMovieResponse } from '../mock-data/mock-responses';
 import { mockCleanedMovieList } from '../mock-data/mock-clean-data';
 import { postUserFavorites, fetchUserFavorites } from '../helpers/apiCalls';
-import { cleanMovieResponse } from '../helpers/clean-responses';
+import { cleanMovieResponse, cleanFavoritesResponse } from '../helpers/clean-responses';
 
 jest.mock('../helpers/apiCalls');
 jest.mock('../helpers/clean-responses');
@@ -35,6 +35,7 @@ describe('Home', () => {
       await wrapper.instance().componentDidMount();
       cleanMovieResponse();
       fetchUserFavorites();
+      cleanFavoritesResponse();
       expect(mockFetchData).toHaveBeenCalled();
     });
 
