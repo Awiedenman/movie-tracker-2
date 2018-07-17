@@ -46,8 +46,8 @@ describe('Home', () => {
 
   describe('toggleFavorites',  () => {
     test('should call addFavorite be called', async () => {
-      const mockMovie = { title: 'batman', average: 7, id: 3 };
-      const mockUserId = 6;
+      const mockMovie = { title: 'batman',  movie_id: 3 };
+      const mockUserId = 1;
 
       await wrapper.instance().toggleFavorite(mockMovie, mockUserId);
       await postUserFavorites();
@@ -55,10 +55,9 @@ describe('Home', () => {
     });
 
     test('should should call removeFavorite if favorite already in fav array', async () => {
-      const mockMovie = { title: 'batman', average: 7, id: 3};
-      const mockUserId = 6;
+      const mockMovie = { title: 'Nerds', id: 3 };
+      const mockUserId = 1;
 
-      await wrapper.instance().toggleFavorite(mockMovie, mockUserId);
       await wrapper.instance().toggleFavorite(mockMovie, mockUserId);
       await removeFavorite();
       expect(mockAddFav).toHaveBeenCalled();

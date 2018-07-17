@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { postUserFavorites, fetchUserFavorites } from '../../helpers/apiCalls';
+import { deleteUserFavorite  } from '../../helpers/apiCalls';
 import { removeFavorite } from '../../Actions';
 import Card from '../../Components/Card/Card';
 
 import './Favorites.css';
 
 export class Favorites extends Component {
-  toggleFavorite = (movie, userId) => {
-
+  toggleFavorite = async (movie, userId) => {
     this.props.removeFavorite(movie);
-    // TODO remove movie from db here
-
+    await deleteUserFavorite(userId, movie.id);
   }
 
   render() {
@@ -67,4 +65,4 @@ export const mapDispatchToProps = dispatch => ({
   removeFavorite: movie => dispatch(removeFavorite(movie))
 });
 
-export default connect(mapStateToProps)(Favorites);
+export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
