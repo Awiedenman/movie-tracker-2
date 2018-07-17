@@ -19,7 +19,7 @@ describe('Home', () => {
       initialFetchData={mockFetchData}
       movies={mockCleanedMovieList}
       userId={1}
-      addFavorites={mockFavFunc}
+      addFavorite={mockFavFunc}
     />
   ));
 
@@ -35,7 +35,7 @@ describe('Home', () => {
   });
 
   describe('toggleFavorites',  () => {
-    test('this.props.favorites should be called', async () => {
+    test('this.props.addFavorite should be called', async () => {
       const mockMovie = { title: 'batman', average: 7};
       const mockUserId = 6;
 
@@ -65,7 +65,7 @@ describe('Home', () => {
       const actionToDispatch = addFavorite(mockMovie, mockUserId);
       const mappedProps = mapDispatchToProps(mockDispatch);
 
-      mappedProps.addFavorites(mockMovie, mockUserId);
+      mappedProps.addFavorite(mockMovie, mockUserId);
 
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
 

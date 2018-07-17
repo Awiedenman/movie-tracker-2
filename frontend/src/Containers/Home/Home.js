@@ -12,7 +12,7 @@ import './Home.css';
 export class Home extends Component {
 
   toggleFavorite = (movie, userId) => {
-    this.props.addFavorites(movie, userId);
+    this.props.addFavorite(movie, userId);
     postUserFavorites(movie, userId);
   }
 
@@ -44,7 +44,7 @@ Home.propTypes = {
   initialFetchData: PropTypes.func,
   movies: PropTypes.arrayOf(PropTypes.object),
   userId: PropTypes.number,
-  addFavorites: PropTypes.func
+  addFavorite: PropTypes.func
 };
 
 export const mapStateToProps = state => ({
@@ -54,7 +54,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   initialFetchData: movies => dispatch(fetchInitialMovies(movies)),
-  addFavorites: (movie, userId) => dispatch(addFavorite(movie, userId))
+  addFavorite: (movie, userId) => dispatch(addFavorite(movie, userId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
