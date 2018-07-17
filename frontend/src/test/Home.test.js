@@ -43,6 +43,8 @@ describe('Home', () => {
       await postUserFavorites();
       expect(mockFavFunc).toHaveBeenCalled();
     });
+
+    
   });
 
 

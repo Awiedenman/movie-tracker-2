@@ -19,8 +19,23 @@ export const userSignOut = () => ({
   type: 'USER_SIGN_OUT'
 });
 
+export const clearUserFavorites = ( ) => ({
+  type: 'CLEAR_USER_FAVORITES'
+});
+
 export const addFavorite = (movie, userId) => ({
   type: 'ADD_FAVORITE',
   favorite: movie,
   userId
 });
+
+export const removeFavorite = () => ({
+  type: 'REMOVE_FAVORITE'
+});
+
+export const addExistingFavorites = (existingUserFavorites) => {
+  return {
+    type: 'ADD_EXISTING_FAVORITES',
+    favorites : existingUserFavorites
+  };
+};

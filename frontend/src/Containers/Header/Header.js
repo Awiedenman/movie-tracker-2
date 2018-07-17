@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink, Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { userSignOut } from '../../Actions/index';
+import { userSignOut, clearUserFavorites } from '../../Actions/index';
 import PropTypes from 'prop-types';
 
 import './Header.css';
 
 export const Header = props => {
-  const { user, signOut } = props;
+  const { user, signOut, clearUserFavorites } = props;
 
   return (
     <header className="header">
@@ -19,7 +19,7 @@ export const Header = props => {
         {user.id && !user.name && <p>Thanks for signing up</p>}
         {
           user.id ?
-            <button className="sign-out" onClick={() => signOut()}>Sign Out</button>
+            <button className="sign-out" onClick={() => signOut() && clearUserFavorites() }>Sign Out</button>
             :
             <div>
               <NavLink exact to="/login">Sign In</NavLink>
@@ -34,7 +34,8 @@ export const Header = props => {
 
 Header.propTypes = {
   user: PropTypes.object,
-  signOut: PropTypes.func
+  signOut: PropTypes.func,
+  clearUserFavorites: PropTypes.func
 };
 
 export const mapStateToProps = state => ({
@@ -42,7 +43,8 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  signOut: () => dispatch(userSignOut())
+  signOut: () => dispatch(userSignOut()),
+  clearUserFavorites: () => dispatch(clearUserFavorites())
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
