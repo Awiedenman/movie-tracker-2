@@ -48,6 +48,18 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
+          favorites={
+                    Array [
+                              Object {
+                                "id": 2,
+                                "title": "Thor",
+                              },
+                              Object {
+                                "id": 3,
+                                "title": "Nerds",
+                              },
+                            ]
+          }
           movie={
                     Object {
                               "average": 7.5,
@@ -71,6 +83,16 @@ ShallowWrapper {
         "key": "284053",
         "nodeType": "function",
         "props": Object {
+          "favorites": Array [
+            Object {
+              "id": 2,
+              "title": "Thor",
+            },
+            Object {
+              "id": 3,
+              "title": "Nerds",
+            },
+          ],
           "movie": Object {
             "average": 7.5,
             "id": 284053,
@@ -97,6 +119,18 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
+            favorites={
+                        Array [
+                                    Object {
+                                      "id": 2,
+                                      "title": "Thor",
+                                    },
+                                    Object {
+                                      "id": 3,
+                                      "title": "Nerds",
+                                    },
+                                  ]
+            }
             movie={
                         Object {
                                     "average": 7.5,
@@ -120,6 +154,16 @@ ShallowWrapper {
           "key": "284053",
           "nodeType": "function",
           "props": Object {
+            "favorites": Array [
+              Object {
+                "id": 2,
+                "title": "Thor",
+              },
+              Object {
+                "id": 3,
+                "title": "Nerds",
+              },
+            ],
             "movie": Object {
               "average": 7.5,
               "id": 284053,

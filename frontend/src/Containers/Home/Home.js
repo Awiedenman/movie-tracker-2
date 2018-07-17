@@ -39,6 +39,7 @@ export class Home extends Component {
         userId={this.props.userId}
         key={movie.id}
         toggleFavorite={this.toggleFavorite}
+        favorites={this.props.userFavorites}
       />
     ));
 

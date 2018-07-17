@@ -10,10 +10,10 @@
   - [x] The user has the ability to sign out.
 
 ##### Iteration 2: Favorites
-  - [ ] Each movie should be displayed with a favorite button.
-  - [ ] If the user is not signed in and clicks on a favorite button the user will be prompted with the request to create an account.
-  - [ ] Validate favorites before adding to db. Aka does that user already have the movie stored as favorites. There should be no duplicates.
-  - [ ] If the user visits `/favorites` they should see a list of all their favorite movies.
+  - [x] Each movie should be displayed with a favorite button.
+  - [x] If the user is not signed in and clicks on a favorite button the user will be prompted with the request to create an account.
+  - [x] Validate favorites before adding to db. Aka does that user already have the movie stored as favorites. There should be no duplicates.
+  - [x] If the user visits `/favorites` they should see a list of all their favorite movies.
   - [ ] The user should be able to delete favorites from `/favorites` or `/`.
   - [ ] Favorite movies should have a visual indication on `/`.
 
