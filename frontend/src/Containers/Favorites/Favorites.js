@@ -14,10 +14,26 @@ export class Favorites extends Component {
 
   render() {
     const { movies, user } = this.props;
-
     const userFavorites = movies.map(movie => <Card movie={movie.favorite} key={movie.id} userId={user.id}/>);
+
+    if (!user.id) {
+      return (
+        <div className="home-container">
+          <h2>Please Sign In/Sign Up to add Favorites</h2>
+        </div>
+      );
+    }
+
+    if (!movies.length) {
+      return (
+        <div className="home-container">
+          <h2>Please Add Favorites</h2>
+        </div>
+      );
+    }
+
     return (
-      <div className="home-container">
+      <div className="home-container ">
         {userFavorites}
       </div>
     );
@@ -29,7 +45,7 @@ Favorites.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object)
 };
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   user: state.userInfo,
   movies: state.favorites
 });
