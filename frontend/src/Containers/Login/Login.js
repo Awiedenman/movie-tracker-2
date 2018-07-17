@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { userLogin } from '../../Actions/index';
+import { userLogin, addExistingFavorites } from '../../Actions/index';
 import { userLoginRequest, fetchUserFavorites } from '../../helpers/apiCalls';
 import PropTypes from 'prop-types';
 // import { fetchUserFavorites } from '../../helpers/apiCalls';
@@ -29,13 +29,18 @@ export class Login extends Component {
 
     try {
       const user = await userLoginRequest(email, password);
-      console.log(user.data.id)
+      // console.log(user.data.id)
       this.props.handleUserLogin(user.data);
-      this.retreiveUserFavorites(user.data.id)
       this.setState({ email: '', password: '' });
       this.props.history.push('/');
     } catch (error) {
       this.setState({ failedLogin: true, error, email: '', password: ''});
+    }
+
+    if (this.props.userInfo.id) {
+      // console.log(userInfo.id);
+      const existingUserFavorites = await fetchUserFavorites(this.props.userInfo.id);
+      this.props.setUserFavorites(existingUserFavorites);
     }
   }
 
@@ -84,11 +89,13 @@ export const maspStateToProps = ( state ) =>({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  handleUserLogin: user => dispatch(userLogin(user))
+  handleUserLogin: user => dispatch(userLogin(user)),
+  setUserFavorites: (existingUserFavorites) => dispatch(addExistingFavorites(existingUserFavorites))
 });
 
 Login.propTypes = {
-  handleUserLogin: PropTypes.func
+  handleUserLogin: PropTypes.func,
+  setUserFavorites: PropTypes.func
 };
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(maspStateToProps, mapDispatchToProps)(Login);

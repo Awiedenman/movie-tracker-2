@@ -6,6 +6,8 @@ export const favoritesReducer = ( state = [], action) => {
      
     case 'CLEAR_USER_FAVORITES': 
       return [];
+    case 'ADD_EXISTING_FAVORITES': 
+      return action.favorites;
     default:
       return state;
   }

@@ -19,7 +19,7 @@ export class Home extends Component {
       Error('shit broke');
     }
     // this.retreiveUserFavorites(userId);
-    // userSignOut
+  
   }
   
   async componentDidMount () {
