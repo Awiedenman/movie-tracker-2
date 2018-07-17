@@ -34,6 +34,12 @@ ShallowWrapper {
                     Movie Tracker
           </h1>
 </Link>,
+        <Link
+          replace={false}
+          to="favorites"
+>
+          favorites
+</Link>,
         <nav>
           <p>
                     Welcome back 
@@ -74,6 +80,19 @@ ShallowWrapper {
           "rendered": "Movie Tracker",
           "type": "h1",
         },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "favorites",
+          "replace": false,
+          "to": "favorites",
+        },
+        "ref": null,
+        "rendered": "favorites",
         "type": [Function],
       },
       Object {
@@ -149,6 +168,12 @@ ShallowWrapper {
                         Movie Tracker
             </h1>
 </Link>,
+          <Link
+            replace={false}
+            to="favorites"
+>
+            favorites
+</Link>,
           <nav>
             <p>
                         Welcome back 
@@ -189,6 +214,19 @@ ShallowWrapper {
             "rendered": "Movie Tracker",
             "type": "h1",
           },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "favorites",
+            "replace": false,
+            "to": "favorites",
+          },
+          "ref": null,
+          "rendered": "favorites",
           "type": [Function],
         },
         Object {
@@ -289,6 +327,12 @@ ShallowWrapper {
                     Movie Tracker
           </h1>
 </Link>,
+        <Link
+          replace={false}
+          to="favorites"
+>
+          favorites
+</Link>,
         <nav>
           <div>
                     <NavLink
@@ -337,6 +381,19 @@ ShallowWrapper {
           "rendered": "Movie Tracker",
           "type": "h1",
         },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "favorites",
+          "replace": false,
+          "to": "favorites",
+        },
+        "ref": null,
+        "rendered": "favorites",
         "type": [Function],
       },
       Object {
@@ -451,6 +508,12 @@ ShallowWrapper {
                         Movie Tracker
             </h1>
 </Link>,
+          <Link
+            replace={false}
+            to="favorites"
+>
+            favorites
+</Link>,
           <nav>
             <div>
                         <NavLink
@@ -499,6 +562,19 @@ ShallowWrapper {
             "rendered": "Movie Tracker",
             "type": "h1",
           },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "favorites",
+            "replace": false,
+            "to": "favorites",
+          },
+          "ref": null,
+          "rendered": "favorites",
           "type": [Function],
         },
         Object {

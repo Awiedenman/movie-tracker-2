@@ -44,7 +44,7 @@ describe('Home', () => {
       expect(mockFavFunc).toHaveBeenCalled();
     });
 
-    
+
   });
 
 

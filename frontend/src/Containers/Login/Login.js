@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { userLogin, addExistingFavorites } from '../../Actions/index';
-import { userLoginRequest, fetchUserFavorites } from '../../helpers/apiCalls';
+import { userLogin } from '../../Actions/index';
+import { userLoginRequest } from '../../helpers/apiCalls';
 import PropTypes from 'prop-types';
-// import { fetchUserFavorites } from '../../helpers/apiCalls';
 
 import './Login.css';
 
@@ -24,31 +23,15 @@ export class Login extends Component {
   }
 
   handleSubmit = async event => {
-    const { email, password } = this.state;
     event.preventDefault();
-
+    const { email, password } = this.state;
     try {
       const user = await userLoginRequest(email, password);
-      // console.log(user.data.id)
       this.props.handleUserLogin(user.data);
       this.setState({ email: '', password: '' });
       this.props.history.push('/');
     } catch (error) {
       this.setState({ failedLogin: true, error, email: '', password: ''});
-    }
-
-    if (this.props.userInfo.id) {
-      // console.log(userInfo.id);
-      const existingUserFavorites = await fetchUserFavorites(this.props.userInfo.id);
-      this.props.setUserFavorites(existingUserFavorites);
-    }
-  }
-
-  retreiveUserFavorites = (user) => {
-    try {
-      fetchUserFavorites(user.data.id);
-    } catch (error) {
-      Error('Sorry, wecould not retreive your favorites at this time.');
     }
   }
 
@@ -84,21 +67,13 @@ export class Login extends Component {
   }
 }
 
-export const maspStateToProps = ( state ) =>({
-  userInfo: state.userInfo
-});
 
 export const mapDispatchToProps = dispatch => ({
-  handleUserLogin: user => dispatch(userLogin(user)),
-  setUserFavorites: (existingUserFavorites) => dispatch(addExistingFavorites(existingUserFavorites))
+  handleUserLogin: user => dispatch(userLogin(user))
 });
 
 Login.propTypes = {
-  handleUserLogin: PropTypes.func,
-  setUserFavorites: PropTypes.func,
-  userInfo: PropTypes.shape({
-    id: PropTypes.num
-  })
+  handleUserLogin: PropTypes.func
 };
 
-export default connect(maspStateToProps, mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(Login);

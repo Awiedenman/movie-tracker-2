@@ -6,30 +6,15 @@ import { cleanMovieResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies, addFavorite, removeFavorite } from '../../Actions';
 import Card from '../../Components/Card/Card';
 
-
 import './Home.css';
 
 export class Home extends Component {
-
   toggleFavorite = (movie, userId) => {
-    const matchedFavorite = this.props.userFavorites.find( favorite => {
-      return movie.id === favorite.id;
-    });
-    if (!matchedFavorite.length){
-      this.props.addFavorite(movie, userId);
-      try {
-        postUserFavorites(movie, userId);
-      } catch (error){
-        Error('shit broke');
-      }
-    } else {
-      this.props.removeFavorite(movie, userId);
-    }
+    this.props.addFavorite(movie, userId);
+    postUserFavorites(movie, userId);
   }
-    // this.retreiveUserFavorites(userId);
-  }
-  
-  async componentDidMount () {
+
+  async componentDidMount() {
     const initialFetch = await movieFetch();
     const movies = cleanMovieResponse(initialFetch);
     this.props.initialFetchData(movies);
@@ -58,7 +43,7 @@ Home.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object),
   userId: PropTypes.number,
   removeFavorite: PropTypes.func,
-  userFavorites: PropTypes.array
+  userFavorites: PropTypes.array,
   addFavorite: PropTypes.func
 };
 

@@ -38,6 +38,11 @@ ShallowWrapper {
                               exact={true}
                               path="/sign-up"
                     />
+                    <Route
+                              component={[Function]}
+                              exact={true}
+                              path="/favorites"
+                    />
                     <Redirect
                               component={[Function]}
                               push={false}
@@ -80,6 +85,11 @@ ShallowWrapper {
                         exact={true}
                         path="/sign-up"
             />
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/favorites"
+            />
             <Redirect
                         component={[Function]}
                         push={false}
@@ -109,6 +119,11 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/sign-up"
+/>,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/favorites"
 />,
               <Redirect
                 component={[Function]}
@@ -164,6 +179,19 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "component": [Function],
+                "exact": true,
+                "path": "/favorites",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
                 "push": false,
                 "to": "/",
               },
@@ -205,6 +233,11 @@ ShallowWrapper {
                                     component={[Function]}
                                     exact={true}
                                     path="/sign-up"
+                        />
+                        <Route
+                                    component={[Function]}
+                                    exact={true}
+                                    path="/favorites"
                         />
                         <Redirect
                                     component={[Function]}
@@ -248,6 +281,11 @@ ShallowWrapper {
                             exact={true}
                             path="/sign-up"
               />
+              <Route
+                            component={[Function]}
+                            exact={true}
+                            path="/favorites"
+              />
               <Redirect
                             component={[Function]}
                             push={false}
@@ -277,6 +315,11 @@ ShallowWrapper {
                   component={[Function]}
                   exact={true}
                   path="/sign-up"
+/>,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/favorites"
 />,
                 <Redirect
                   component={[Function]}
@@ -321,6 +364,19 @@ ShallowWrapper {
                   "component": [Function],
                   "exact": true,
                   "path": "/sign-up",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/favorites",
                 },
                 "ref": null,
                 "rendered": null,
