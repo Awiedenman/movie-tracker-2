@@ -35,9 +35,10 @@ describe('favoritesReducer', () => {
   });
 
   test('should remove a favorite when REMOVE_FAVORITE ', () => {
-    const mockState = [{movie_id: 1}, { movie_id: 2 }];
-    const expected = [{ movie_id: 2 }];
-    const result = favoritesReducer(mockState, actions.removeFavorite({ id: 1 }));
+    const mockState = [{id: 1}, {id: 2 }];
+    const mockMovie = {id: 1};
+    const expected = [{id: 2 }];
+    const result = favoritesReducer(mockState, actions.removeFavorite(mockMovie));
     expect(result).toEqual(expected);
   });
 
@@ -47,7 +48,6 @@ describe('favoritesReducer', () => {
 
     expect(result).toEqual([]);
   });
-
   test('should populate existing user favorites on login', () => {
     const mockFavorites = [{title: 'Batman'}, {title: 'Superman' }, {title: 'Howard the Duck' }];
     const expected = [{title: 'Batman'}, {title: 'Superman' }, {title: 'Howard the Duck' }];
