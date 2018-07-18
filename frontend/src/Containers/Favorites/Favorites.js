@@ -10,7 +10,7 @@ import './Favorites.css';
 export class Favorites extends Component {
   toggleFavorite = async (movie, userId) => {
     this.props.removeFavorite(movie);
-    await deleteUserFavorite(userId, movie.id);
+    await deleteUserFavorite(movie.id, userId);
   }
 
   render() {

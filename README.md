@@ -14,8 +14,8 @@
   - [x] If the user is not signed in and clicks on a favorite button the user will be prompted with the request to create an account.
   - [x] Validate favorites before adding to db. Aka does that user already have the movie stored as favorites. There should be no duplicates.
   - [x] If the user visits `/favorites` they should see a list of all their favorite movies.
-  - [ ] The user should be able to delete favorites from `/favorites` or `/`.
-  - [ ] Favorite movies should have a visual indication on `/`.
+  - [x] The user should be able to delete favorites from `/favorites` or `/`.
+  - [x] Favorite movies should have a visual indication on `/`.
 
 ##### Extensions:
   - [ ] A user stays signed in after refreshing the page. *Hint:* You will probably use localStorage.
