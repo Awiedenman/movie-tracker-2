@@ -1,6 +1,8 @@
 # MOVIE TRACKER
 
-Movie Tracker is a webiste that utilizes react, redux and react-router to allow users to create an account, browse current movies and select favorites to view when logged in. We consumed data from the moviedb api to display current movies and utilized a postgress database to create users and save their favorites.
+Movie Tracker is a website that utilizes React, Redux and React-Router to allow users to create an account, browse current movies and select favorites to view when logged in. We consumed data from the MovieDB api to display current movies and utilized a Postgres database to create users and save their favorites.
+
+You can clone the Reop [here](https://github.com/andrew-t-james/movie-tracker-2.git).
 
 ##### Iteration 0: Pull in movie API
  - [x] Pull most recent movies from MovieDB API.
