@@ -1,3 +1,7 @@
+# MOVIE TRACKER
+
+Movie Tracker is a webiste that utilizes react, redux and react-router to allow users to create an account, browse current movies and select favorites to view when logged in. We consumed data from the moviedb api to display current movies and utilized a postgress database to create users and save their favorites.
+
 ##### Iteration 0: Pull in movie API
  - [x] Pull most recent movies from MovieDB API.
  - [x] Display each movie on root index `/`
@@ -21,3 +25,12 @@
   - [ ] A user stays signed in after refreshing the page. *Hint:* You will probably use localStorage.
   - [ ] Should only take real email addresses *Hint:* Look into regular expressions
   - [ ] A user can click and view any individual movie.
+
+
+![Home page](./src/images/home-hover.png)
+![Sign-up page](./src/images/signUp.png)
+![User log-in page](./src/images/logIn.png)
+![Home page after logged in](./src/images/loggedIn.png)
+![Home page after signed up](./src/images/home-afterSignUp.png)
+![User home page with card favorite clicked](./src/images/home-cardFav.png)
+![Favorites page](./src/images/home-favorites.png)
