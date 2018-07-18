@@ -15,16 +15,16 @@ export const Header = props => {
         <h1>Movie Tracker</h1>
       </Link>
       <nav>
-        {user.name && <p>Welcome back {user.name}</p>}
-        {user.id && !user.name && <p>Thanks for signing up</p>}
+        {user.name && <p className="header__welcome-message">Welcome back {user.name}</p>}
+        {user.id && !user.name && <p className="header__welcome-message">Thanks for signing up</p>}
         {
           user.id ?
-            <div>
-              <button className="sign-out" onClick={() => signOut() && clearUserFavorites() }>Sign Out</button>
+            <div className="header__nav">
+              <a className="sign-out" onClick={() => signOut() && clearUserFavorites() }>Sign Out</a>
               <Link to="favorites">favorites</Link>
             </div>
             :
-            <div>
+            <div className="header__nav">
               <NavLink exact to="/login">Sign In</NavLink>
               <NavLink exact to="/sign-up">Sign Up</NavLink>
             </div>

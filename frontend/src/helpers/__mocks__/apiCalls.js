@@ -5,3 +5,8 @@ export const fetchUserFavorites = jest.fn().mockImplementation(() =>
     ok: true,
     data: []
   }));
+export const deleteUserFavorite = jest.fn().mockImplementation(() =>
+  Promise.resolve({
+    ok: true,
+    json: () => Promise.resolve({status: 'success', message: 'One row was deleted'})
+  }));
