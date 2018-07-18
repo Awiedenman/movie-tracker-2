@@ -11,7 +11,7 @@ export const Header = props => {
 
   return (
     <header className="header">
-      <Link to="/">
+      <Link className="header__home-link" to="/">
         <h1>Movie Tracker</h1>
       </Link>
       <nav>
@@ -20,15 +20,14 @@ export const Header = props => {
         {
           user.id ?
             <div className="header__nav">
-              <a className="sign-out" onClick={() => signOut() && clearUserFavorites() }>Sign Out</a>
-              <Link to="favorites">favorites</Link>
+              <NavLink exact to="/favorites">Favorites</NavLink>
+              <a className="sign-out" onClick={() => signOut() && clearUserFavorites()}>Sign Out</a>
             </div>
             :
             <div className="header__nav">
               <NavLink exact to="/login">Sign In</NavLink>
               <NavLink exact to="/sign-up">Sign Up</NavLink>
             </div>
-
         }
       </nav>
     </header>

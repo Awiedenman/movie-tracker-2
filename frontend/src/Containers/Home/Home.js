@@ -5,15 +5,28 @@ import { movieFetch, postUserFavorites, fetchUserFavorites, deleteUserFavorite }
 import { cleanMovieResponse, cleanFavoritesResponse } from '../../helpers/clean-responses';
 import { fetchInitialMovies, addFavorite, removeFavorite, addExistingFavorites } from '../../Actions';
 import Card from '../../Components/Card/Card';
+import Loader from '../../Components/Loader/Loader';
 
 import './Home.css';
 
 export class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoading: false
+    };
+  }
+
    componentDidMount = async () => {
      const { userId } = this.props;
+     this.setState({ isLoading: true });
+
      const currentMovies = await movieFetch();
      const movies = cleanMovieResponse(currentMovies);
      this.props.initialFetchData(movies);
+
+     this.setState({ isLoading: false });
+
      if (userId) {
        const response = await fetchUserFavorites(userId);
        const favorites = await cleanFavoritesResponse(response);
@@ -35,6 +48,15 @@ export class Home extends Component {
     }
 
     render() {
+      const { isLoading } = this.state;
+
+      if (isLoading) {
+        // TODO ADD LOADER
+        return (
+          <Loader />
+        );
+      }
+
       const displayMoviesCards = this.props.movies.map(movie => (
         <Card
           movie={movie}

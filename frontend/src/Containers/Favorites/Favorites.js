@@ -10,7 +10,7 @@ import './Favorites.css';
 export class Favorites extends Component {
   toggleFavorite = async (movie, userId) => {
     this.props.removeFavorite(movie);
-    await deleteUserFavorite(userId, movie.id);
+    await deleteUserFavorite(movie.id, userId);
   }
 
   render() {
@@ -29,7 +29,7 @@ export class Favorites extends Component {
     if (!user.id) {
       return (
         <div className="home-container">
-          <h2>Please Sign In/Sign Up to add Favorites</h2>
+          <h2 className="error-message">Please Sign In/Sign Up to add Favorites</h2>
         </div>
       );
     }
@@ -37,13 +37,13 @@ export class Favorites extends Component {
     if (!favorites.length) {
       return (
         <div className="home-container">
-          <h2>Please Add Favorites</h2>
+          <h2 className="error-message">Please Add Favorites</h2>
         </div>
       );
     }
 
     return (
-      <div className="favorite-container">
+      <div className="home-container">
         {userFavorites}
       </div>
     );
