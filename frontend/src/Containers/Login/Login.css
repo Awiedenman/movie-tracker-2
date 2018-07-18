@@ -72,3 +72,33 @@
   box-shadow: 0;
   top: 0;
 }
+
+@media screen and (max-width: 775px) {
+  .login,
+  .sign-up {
+    width: 50rem;
+  }
+
+  .form__input {
+    width: 30rem;
+  }
+
+  .form__button {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .login,
+  .sign-up {
+    width: 33rem;
+  }
+
+  .form__input {
+    width: 28rem;
+  }
+
+  .form__button {
+    width: 23rem;
+  }
+}
