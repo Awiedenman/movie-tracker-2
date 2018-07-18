@@ -34,7 +34,7 @@ export class Home extends Component {
      }
    }
 
-    toggleFavorite = async (movie, userId) => {
+    toggleFavorite = (movie, userId) => {
       const { userFavorites } = this.props;
       const favoritedMovie = userFavorites.find(favorite => favorite.id === movie.id);
 
@@ -42,7 +42,7 @@ export class Home extends Component {
         postUserFavorites(movie, userId);
         this.props.addFavorite(movie);
       } else {
-        await deleteUserFavorite(movie.id, userId);
+        deleteUserFavorite(movie.id, userId);
         this.props.removeFavorite(movie);
       }
     }
@@ -51,7 +51,6 @@ export class Home extends Component {
       const { isLoading } = this.state;
 
       if (isLoading) {
-        // TODO ADD LOADER
         return (
           <Loader />
         );
