@@ -18,3 +18,13 @@
   grid-area: main-container;
   height: 100vh;
 }
+
+@media screen and (max-width: 775px) {
+  .grid-container {
+    grid-template-rows: 20rem 1fr 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}
