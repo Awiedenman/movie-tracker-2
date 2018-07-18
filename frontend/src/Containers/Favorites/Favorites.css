@@ -1,3 +1,10 @@
-.favorite-container {
-
+.error-message {
+  color: var(--primary-white);
+  font-size: 2.5rem;
+  font-weight: 400;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

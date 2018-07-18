@@ -60,7 +60,7 @@ ShallowWrapper {
           userId={1}
 />,
       ],
-      "className": "favorite-container",
+      "className": "home-container",
     },
     "ref": null,
     "rendered": Array [
@@ -115,7 +115,7 @@ ShallowWrapper {
             userId={1}
 />,
         ],
-        "className": "favorite-container",
+        "className": "home-container",
       },
       "ref": null,
       "rendered": Array [
@@ -188,7 +188,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h2>
+      "children": <h2
+        className="error-message"
+>
         Please Add Favorites
 </h2>,
       "className": "home-container",
@@ -200,6 +202,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": "Please Add Favorites",
+        "className": "error-message",
       },
       "ref": null,
       "rendered": "Please Add Favorites",
@@ -213,7 +216,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h2>
+        "children": <h2
+          className="error-message"
+>
           Please Add Favorites
 </h2>,
         "className": "home-container",
@@ -225,6 +230,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Please Add Favorites",
+          "className": "error-message",
         },
         "ref": null,
         "rendered": "Please Add Favorites",
@@ -272,7 +278,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h2>
+      "children": <h2
+        className="error-message"
+>
         Please Sign In/Sign Up to add Favorites
 </h2>,
       "className": "home-container",
@@ -284,6 +292,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": "Please Sign In/Sign Up to add Favorites",
+        "className": "error-message",
       },
       "ref": null,
       "rendered": "Please Sign In/Sign Up to add Favorites",
@@ -297,7 +306,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h2>
+        "children": <h2
+          className="error-message"
+>
           Please Sign In/Sign Up to add Favorites
 </h2>,
         "className": "home-container",
@@ -309,6 +320,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Please Sign In/Sign Up to add Favorites",
+          "className": "error-message",
         },
         "ref": null,
         "rendered": "Please Sign In/Sign Up to add Favorites",

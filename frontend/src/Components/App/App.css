@@ -2,19 +2,19 @@
   display: grid;
   grid-template-areas: "header header header header" "main-container main-container main-container main-container" "main-container main-container main-container main-container";
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 9rem 1fr 1fr;
+  grid-template-rows: 10rem 1fr 1fr;
   height: 100%;
 }
 
 .header {
   align-items: center;
-  border: 1px solid red;
   display: flex;
   grid-area: header;
   justify-content: space-between;
 }
 
 .main-container {
-  border: 1px solid blue;
+  background: var(--primary-white);
   grid-area: main-container;
+  height: 100vh;
 }

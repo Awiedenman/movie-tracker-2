@@ -28,6 +28,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
+          className="header__home-link"
           replace={false}
           to="/"
 >
@@ -36,23 +37,29 @@ ShallowWrapper {
           </h1>
 </Link>,
         <nav>
-          <p>
+          <p
+                    className="header__welcome-message"
+          >
                     Welcome back 
                     Bob
           </p>
-          <div>
-                    <button
+          <div
+                    className="header__nav"
+          >
+                    <NavLink
+                              activeClassName="active"
+                              aria-current="page"
+                              exact={true}
+                              to="/favorites"
+                    >
+                              Favorites
+                    </NavLink>
+                    <a
                               className="sign-out"
                               onClick={[Function]}
                     >
                               Sign Out
-                    </button>
-                    <Link
-                              replace={false}
-                              to="favorites"
-                    >
-                              favorites
-                    </Link>
+                    </a>
           </div>
 </nav>,
       ],
@@ -68,6 +75,7 @@ ShallowWrapper {
           "children": <h1>
             Movie Tracker
 </h1>,
+          "className": "header__home-link",
           "replace": false,
           "to": "/",
         },
@@ -91,24 +99,30 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <p>
+            <p
+              className="header__welcome-message"
+>
               Welcome back 
               Bob
 </p>,
             false,
-            <div>
-              <button
+            <div
+              className="header__nav"
+>
+              <NavLink
+                            activeClassName="active"
+                            aria-current="page"
+                            exact={true}
+                            to="/favorites"
+              >
+                            Favorites
+              </NavLink>
+              <a
                             className="sign-out"
                             onClick={[Function]}
               >
                             Sign Out
-              </button>
-              <Link
-                            replace={false}
-                            to="favorites"
-              >
-                            favorites
-              </Link>
+              </a>
 </div>,
           ],
         },
@@ -123,6 +137,7 @@ ShallowWrapper {
                 "Welcome back ",
                 "Bob",
               ],
+              "className": "header__welcome-message",
             },
             "ref": null,
             "rendered": Array [
@@ -138,22 +153,40 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <button
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  exact={true}
+                  to="/favorites"
+>
+                  Favorites
+</NavLink>,
+                <a
                   className="sign-out"
                   onClick={[Function]}
 >
                   Sign Out
-</button>,
-                <Link
-                  replace={false}
-                  to="favorites"
->
-                  favorites
-</Link>,
+</a>,
               ],
+              "className": "header__nav",
             },
             "ref": null,
             "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": "Favorites",
+                  "exact": true,
+                  "to": "/favorites",
+                },
+                "ref": null,
+                "rendered": "Favorites",
+                "type": [Function],
+              },
               Object {
                 "instance": null,
                 "key": undefined,
@@ -165,20 +198,7 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": "Sign Out",
-                "type": "button",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "favorites",
-                  "replace": false,
-                  "to": "favorites",
-                },
-                "ref": null,
-                "rendered": "favorites",
-                "type": [Function],
+                "type": "a",
               },
             ],
             "type": "div",
@@ -197,6 +217,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
+            className="header__home-link"
             replace={false}
             to="/"
 >
@@ -205,23 +226,29 @@ ShallowWrapper {
             </h1>
 </Link>,
           <nav>
-            <p>
+            <p
+                        className="header__welcome-message"
+            >
                         Welcome back 
                         Bob
             </p>
-            <div>
-                        <button
+            <div
+                        className="header__nav"
+            >
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    exact={true}
+                                    to="/favorites"
+                        >
+                                    Favorites
+                        </NavLink>
+                        <a
                                     className="sign-out"
                                     onClick={[Function]}
                         >
                                     Sign Out
-                        </button>
-                        <Link
-                                    replace={false}
-                                    to="favorites"
-                        >
-                                    favorites
-                        </Link>
+                        </a>
             </div>
 </nav>,
         ],
@@ -237,6 +264,7 @@ ShallowWrapper {
             "children": <h1>
               Movie Tracker
 </h1>,
+            "className": "header__home-link",
             "replace": false,
             "to": "/",
           },
@@ -260,24 +288,30 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <p>
+              <p
+                className="header__welcome-message"
+>
                 Welcome back 
                 Bob
 </p>,
               false,
-              <div>
-                <button
+              <div
+                className="header__nav"
+>
+                <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                exact={true}
+                                to="/favorites"
+                >
+                                Favorites
+                </NavLink>
+                <a
                                 className="sign-out"
                                 onClick={[Function]}
                 >
                                 Sign Out
-                </button>
-                <Link
-                                replace={false}
-                                to="favorites"
-                >
-                                favorites
-                </Link>
+                </a>
 </div>,
             ],
           },
@@ -292,6 +326,7 @@ ShallowWrapper {
                   "Welcome back ",
                   "Bob",
                 ],
+                "className": "header__welcome-message",
               },
               "ref": null,
               "rendered": Array [
@@ -307,22 +342,40 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <button
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    exact={true}
+                    to="/favorites"
+>
+                    Favorites
+</NavLink>,
+                  <a
                     className="sign-out"
                     onClick={[Function]}
 >
                     Sign Out
-</button>,
-                  <Link
-                    replace={false}
-                    to="favorites"
->
-                    favorites
-</Link>,
+</a>,
                 ],
+                "className": "header__nav",
               },
               "ref": null,
               "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "aria-current": "page",
+                    "children": "Favorites",
+                    "exact": true,
+                    "to": "/favorites",
+                  },
+                  "ref": null,
+                  "rendered": "Favorites",
+                  "type": [Function],
+                },
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -334,20 +387,7 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "Sign Out",
-                  "type": "button",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "favorites",
-                    "replace": false,
-                    "to": "favorites",
-                  },
-                  "ref": null,
-                  "rendered": "favorites",
-                  "type": [Function],
+                  "type": "a",
                 },
               ],
               "type": "div",
@@ -391,6 +431,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
+          className="header__home-link"
           replace={false}
           to="/"
 >
@@ -399,7 +440,9 @@ ShallowWrapper {
           </h1>
 </Link>,
         <nav>
-          <div>
+          <div
+                    className="header__nav"
+          >
                     <NavLink
                               activeClassName="active"
                               aria-current="page"
@@ -431,6 +474,7 @@ ShallowWrapper {
           "children": <h1>
             Movie Tracker
 </h1>,
+          "className": "header__home-link",
           "replace": false,
           "to": "/",
         },
@@ -456,7 +500,9 @@ ShallowWrapper {
           "children": Array [
             undefined,
             undefined,
-            <div>
+            <div
+              className="header__nav"
+>
               <NavLink
                             activeClassName="active"
                             aria-current="page"
@@ -503,6 +549,7 @@ ShallowWrapper {
                   Sign Up
 </NavLink>,
               ],
+              "className": "header__nav",
             },
             "ref": null,
             "rendered": Array [
@@ -553,6 +600,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
+            className="header__home-link"
             replace={false}
             to="/"
 >
@@ -561,7 +609,9 @@ ShallowWrapper {
             </h1>
 </Link>,
           <nav>
-            <div>
+            <div
+                        className="header__nav"
+            >
                         <NavLink
                                     activeClassName="active"
                                     aria-current="page"
@@ -593,6 +643,7 @@ ShallowWrapper {
             "children": <h1>
               Movie Tracker
 </h1>,
+            "className": "header__home-link",
             "replace": false,
             "to": "/",
           },
@@ -618,7 +669,9 @@ ShallowWrapper {
             "children": Array [
               undefined,
               undefined,
-              <div>
+              <div
+                className="header__nav"
+>
                 <NavLink
                                 activeClassName="active"
                                 aria-current="page"
@@ -665,6 +718,7 @@ ShallowWrapper {
                     Sign Up
 </NavLink>,
                 ],
+                "className": "header__nav",
               },
               "ref": null,
               "rendered": Array [
