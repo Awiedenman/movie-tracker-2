@@ -35,11 +35,19 @@ export class SignUp extends Component {
   }
 
   render() {
+    const { failedSignUp, error, userName, email, password } = this.state;
+
     return (
       <section className="sign-up">
         <h1 className="sign-up__title">Sign Up</h1>
-        {this.state.failedSignUp && <p className="sign-up__error">{this.state.error.message}</p>}
-        <form onSubmit={this.handleSubmit} className="form">
+        {
+          failedSignUp && 
+          <p className="sign-up__error">{error.message}</p>
+        }
+        <form 
+          onSubmit={this.handleSubmit} 
+          className="form"
+        >
           <input
             onChange={this.handleChange}
             type="text"
@@ -47,7 +55,7 @@ export class SignUp extends Component {
             name="userName"
             className="form__input"
             required
-            value={this.state.userName}
+            value={userName}
           />
           <input
             onChange={this.handleChange}
@@ -56,7 +64,7 @@ export class SignUp extends Component {
             name="email"
             className="form__input"
             required
-            value={this.state.email}
+            value={email}
           />
           <input
             onChange={this.handleChange}
@@ -65,7 +73,7 @@ export class SignUp extends Component {
             name="password"
             className="form__input"
             required
-            value={this.state.password}
+            value={password}
           />
           <button className="form__button">Sign Up</button>
         </form>

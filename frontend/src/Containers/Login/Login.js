@@ -42,7 +42,10 @@ export class Login extends Component {
       <section className="login">
         <h1 className="login__title">Sign In</h1>
         {failedLogin && <p className="login__error">{error.message}</p>}
-        <form className="form"  onSubmit={this.handleSubmit}>
+        <form 
+          className="form"  
+          onSubmit={this.handleSubmit}
+        >
           <input type="text"
             value={email}
             name="email"
@@ -67,13 +70,12 @@ export class Login extends Component {
   }
 }
 
+Login.propTypes = {
+  handleUserLogin: PropTypes.func
+};
 
 export const mapDispatchToProps = dispatch => ({
   handleUserLogin: user => dispatch(userLogin(user))
 });
-
-Login.propTypes = {
-  handleUserLogin: PropTypes.func
-};
 
 export default connect(null, mapDispatchToProps)(Login);
