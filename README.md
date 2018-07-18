@@ -27,10 +27,10 @@ Movie Tracker is a webiste that utilizes react, redux and react-router to allow 
   - [ ] A user can click and view any individual movie.
 
 
-![Home page](./src/images/home-hover.png)
-![Sign-up page](./src/images/signUp.png)
-![User log-in page](./src/images/logIn.png)
-![Home page after logged in](./src/images/loggedIn.png)
-![Home page after signed up](./src/images/home-afterSignUp.png)
-![User home page with card favorite clicked](./src/images/home-cardFav.png)
-![Favorites page](./src/images/home-favorites.png)
+![Home page](./frontend/src/images/home-hover.png)
+![Sign-up page](./frontend/./src/images/signUp.png)
+![User log-in page](./frontend/./src/images/logIn.png)
+![Home page after logged in](./frontend//src/images/loggedIn.png)
+![Home page after signed up](./frontend//src/images/home-afterSignUp.png)
+![User home page with card favorite clicked](./frontend//src/images/home-cardFav.png)
+![Favorites page](./frontend/src/images/favorites.png)
